@@ -5,43 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>빅데이터분석기사 필기 CBT</title>
 <style>
-  /* ══ THEME VARIABLES ══ */
-  :root {
-    --accent:   #00f5ff;
-    --accent2:  #bf00ff;
-    --correct:  #00ff88;
-    --wrong:    #ff2d55;
-    --correct-bg:    rgba(0,255,136,.13);
-    --correct-border: rgba(0,255,136,.7);
-    --correct-text:   #00e676;
-    --wrong-bg:      rgba(255,45,85,.13);
-    --wrong-border:  rgba(255,45,85,.7);
-    --wrong-text:    #ff5370;
-  }
+  /* ══ THEME VARIABLES ══
+     모든 색상은 각 테마 블록 안에 정의 → 모드 전환 시 전부 자동 교체됨
+  ══════════════════════════════════════ */
 
   [data-theme="dark"] {
-    --bg:     #0a0a14;
-    --surface:#111128;
-    --card:   #161630;
-    --border: #2a2a4a;
-    --text:   #e2e8f0;
-    --sub:    #8892b0;
-    --primary:#1a1a3e;
-    --btn-secondary: #1e1e40;
-    --btn-secondary-text: #ccd6f6;
-    --shadow: rgba(0,245,255,.06);
+    /* 배경/표면 */
+    --bg:      #0a0a14;
+    --surface: #111128;
+    --card:    #161630;
+    --border:  #2a2a4a;
+    --shadow:  rgba(0,245,255,.06);
+
+    /* 텍스트 — 어두운 배경에서 밝은 색 */
+    --text:    #f0f4ff;
+    --sub:     #b0bacf;
+
+    /* 버튼 보조 */
+    --btn-secondary:      #1e1e40;
+    --btn-secondary-text: #f0f4ff;
+
+    /* 네온 강조색 (밝은 원색 — 어두운 배경에서 잘 보임) */
+    --accent:  #00f5ff;
+    --accent2: #bf00ff;
+
+    /* 텍스트용 강조색 (배경 위에 읽기 편한 색) */
+    --accent-text:  #00f5ff;
+    --accent2-text: #d480ff;
+    --badge-text:   #00e5ff;
+    --timer-color:  #00f5ff;
+
+    /* 정답/오답 */
+    --correct-bg:     rgba(0,255,136,.14);
+    --correct-border: rgba(0,255,136,.75);
+    --correct-text:   #00e676;
+    --wrong-bg:       rgba(255,45,85,.14);
+    --wrong-border:   rgba(255,45,85,.75);
+    --wrong-text:     #ff5370;
   }
+
   [data-theme="light"] {
-    --bg:     #f0f4ff;
-    --surface:#e8ecfa;
-    --card:   #ffffff;
-    --border: #c8cfe8;
-    --text:   #1a1a3e;
-    --sub:    #5a6480;
-    --primary:#1a1a3e;
-    --btn-secondary: #e2e6f8;
-    --btn-secondary-text: #1a1a3e;
-    --shadow: rgba(100,80,255,.08);
+    /* 배경/표면 */
+    --bg:      #f0f4ff;
+    --surface: #e4e9f8;
+    --card:    #ffffff;
+    --border:  #bcc5e4;
+    --shadow:  rgba(80,60,200,.07);
+
+    /* 텍스트 — 밝은 배경에서 진한 색 */
+    --text:    #0d0d2b;
+    --sub:     #3a4268;
+
+    /* 버튼 보조 */
+    --btn-secondary:      #dde2f5;
+    --btn-secondary-text: #0d0d2b;
+
+    /* 네온 강조색 (글로우·테두리용 — 밝아도 장식 OK) */
+    --accent:  #00b8d4;
+    --accent2: #9c27b0;
+
+    /* 텍스트용 강조색 (밝은 배경 위에서 잘 보이도록 진하게) */
+    --accent-text:  #005f7a;
+    --accent2-text: #6a0080;
+    --badge-text:   #005f7a;
+    --timer-color:  #005f7a;
+
+    /* 정답/오답 */
+    --correct-bg:     rgba(0,160,80,.10);
+    --correct-border: rgba(0,140,70,.55);
+    --correct-text:   #006830;
+    --wrong-bg:       rgba(200,0,40,.09);
+    --wrong-border:   rgba(185,0,35,.50);
+    --wrong-text:     #b0001a;
   }
 
   /* ══ BASE ══ */
@@ -51,7 +86,7 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    transition: background .3s, color .3s;
+    transition: background .3s, color .3s, border-color .3s;
   }
 
   /* ══ SCREEN ══ */
@@ -111,11 +146,11 @@
   }
   .home-card h1 {
     font-size: 2rem; font-weight: 800;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background: linear-gradient(90deg, var(--accent-text), var(--accent2-text));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: .4rem;
-    filter: drop-shadow(0 0 8px var(--accent));
+    filter: drop-shadow(0 0 6px var(--accent));
   }
   .home-card > p { color: var(--sub); margin-bottom: 2rem; font-size: .95rem; }
 
@@ -123,7 +158,7 @@
   .badge {
     background: var(--surface);
     border: 1px solid var(--accent);
-    color: var(--accent);
+    color: var(--badge-text);
     padding: .3rem .85rem; border-radius: 999px; font-size: .8rem; font-weight: 600;
     box-shadow: 0 0 6px rgba(0,245,255,.2);
   }
@@ -141,13 +176,13 @@
   .subject-btn.sel {
     border-color: var(--accent);
     background: rgba(0,245,255,.1);
-    color: var(--accent);
+    color: var(--accent-text);
     box-shadow: 0 0 14px rgba(0,245,255,.3);
   }
   .subject-btn.sel-all {
     border-color: var(--accent2);
-    background: rgba(191,0,255,.15);
-    color: var(--accent2);
+    background: rgba(191,0,255,.12);
+    color: var(--accent2-text);
     box-shadow: 0 0 14px rgba(191,0,255,.35);
   }
 
@@ -192,10 +227,10 @@
     font-size: .82rem; font-weight: 800;
     box-shadow: 0 0 10px rgba(0,245,255,.35);
   }
-  .q-counter { color: var(--sub); font-size: .9rem; }
+  .q-counter { color: var(--sub); font-size: .9rem; font-weight: 600; }
   .timer {
     font-size: .9rem; font-weight: 800;
-    color: var(--accent);
+    color: var(--timer-color);
     text-shadow: 0 0 8px var(--accent);
   }
 
@@ -217,9 +252,9 @@
     box-shadow: 0 4px 30px var(--shadow);
     margin-bottom: 1rem;
   }
-  .q-card .q-num { font-size: .82rem; color: var(--sub); margin-bottom: .6rem; }
+  .q-card .q-num { font-size: .82rem; color: var(--sub); margin-bottom: .6rem; font-weight: 600; }
   .q-card .q-text {
-    font-size: 1.02rem; font-weight: 600;
+    font-size: 1.05rem; font-weight: 700;
     line-height: 1.7; color: var(--text);
   }
 
@@ -276,16 +311,18 @@
     border: 2px solid var(--correct-border);
     color: var(--correct-text);
     box-shadow: 0 0 20px rgba(0,255,136,.25);
+    font-weight: 600;
   }
   .feedback-box.wrong-fb {
     background: var(--wrong-bg);
     border: 2px solid var(--wrong-border);
     color: var(--wrong-text);
     box-shadow: 0 0 20px rgba(255,45,85,.25);
+    font-weight: 600;
   }
-  .fb-title { font-weight: 800; margin-bottom: .3rem; font-size: 1rem; }
+  .fb-title { font-weight: 900; margin-bottom: .3rem; font-size: 1.05rem; }
 
-  .nav-row { display: flex; gap: .7rem; justify-content: flex-end; }
+  .nav-row { display: flex; gap: .7rem; justify-content: flex-end; margin-top: 1rem; }
   .btn-next {
     padding: .7rem 1.8rem;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -316,7 +353,7 @@
   }
   .result-card h2 {
     text-align: center; font-size: 1.6rem; font-weight: 800;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background: linear-gradient(90deg, var(--accent-text), var(--accent2-text));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text; margin-bottom: .5rem;
   }
@@ -333,7 +370,7 @@
   }
   .score-circle .score-num {
     font-size: 2.3rem; font-weight: 900;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    background: linear-gradient(135deg, var(--accent-text), var(--accent2-text));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
   }
@@ -347,14 +384,8 @@
   }
   .subj-result-item .subj-name { font-size: .82rem; color: var(--sub); margin-bottom: .4rem; }
   .subj-result-item .subj-score { font-size: 1.3rem; font-weight: 800; }
-  .subj-result-item .pass {
-    color: var(--correct-text);
-    text-shadow: 0 0 8px rgba(0,255,136,.5);
-  }
-  .subj-result-item .fail {
-    color: var(--wrong-text);
-    text-shadow: 0 0 8px rgba(255,45,85,.5);
-  }
+  .subj-result-item .pass { color: var(--correct-text); }
+  .subj-result-item .fail { color: var(--wrong-text); }
   .result-msg {
     text-align: center; font-size: 1.05rem; font-weight: 700;
     margin-bottom: 1.5rem; padding: .85rem; border-radius: 12px;
@@ -396,7 +427,7 @@
   .review-wrap { max-width: 700px; margin: 0 auto; }
   .review-wrap h2 {
     font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background: linear-gradient(90deg, var(--accent-text), var(--accent2-text));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
   }
@@ -432,9 +463,9 @@
     margin-top: .8rem; padding: .75rem 1rem;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 10px; font-size: .88rem; color: var(--sub); line-height: 1.6;
+    border-radius: 10px; font-size: .9rem; color: var(--text); line-height: 1.6;
   }
-  .review-exp strong { color: var(--text); }
+  .review-exp strong { color: var(--text); font-weight: 800; }
   .back-btn {
     display: inline-block; margin-bottom: 1.2rem;
     padding: .5rem 1.3rem;
