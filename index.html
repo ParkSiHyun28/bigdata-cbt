@@ -652,7 +652,7 @@ function buildExam(subjects) {
 
 function startExam() {
   // 선택 과목 문제 필터링 및 동적 생성
-  let allQ = buildExam(selectedSubjects);
+  allQ = buildExam(selectedSubjects);
   if(document.getElementById('shuffleChk').checked) allQ = shuffle([...allQ]);
   answered = new Array(allQ.length).fill(null);
   curIdx = 0;
