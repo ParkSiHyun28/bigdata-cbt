@@ -1529,7 +1529,7 @@ const QUESTION_BANK = [
     subj: 3, 
     q: "시계열 데이터가 가지고 있는 시간에 따른 일정한 패턴을 분석하기 위해 시계열이 갖추어야 할 조건인 정상성(Stationarity)을 확보하는 방법 중 하나로, 현 시점의 관측치에서 바로 이전 시점의 관측치를 빼는 작업을 무엇이라 하는가?", 
     choices: ["계절 조정(Seasonal Adjustment)", "차분(Differencing)", "로그 변환(Log Transformation)", "이동평균(Moving Average)"], 
-    ans: 0, 
+    ans: 1, 
     exp: "차분(Differencing)은 Δyₜ = yₜ - yₜ₋₁으로 추세를 제거하여 정상 시계열로 변환합니다. ARIMA(p,d,q)에서 d가 차분 횟수입니다. 계절 조정은 계절성 제거, 로그 변환은 분산 안정화, 이동평균은 단기 변동 평활화에 사용됩니다. ☞ 암기 팁: 차분=현재값-이전값→추세 제거(ARIMA의 d) / 로그변환=분산 안정화" 
   },
   { 
