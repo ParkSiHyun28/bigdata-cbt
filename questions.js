@@ -2,23 +2,23 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "DIKW 피라미드(DIKW Pyramid)에서 데이터(Data)를 통해 패턴을 인식하는 단계를 의미하는 것은?", 
-    choices: ["데이터(Data)", "정보(Information)", "지식(Knowledge)", "지혜(Wisdom)"], 
+    choices: ["지식(Knowledge)", "정보(Information)", "데이터(Data)", "지혜(Wisdom)"], 
     ans: 1, 
-    exp: "정보(Information)는 데이터로부터 가공된 자료로, 데이터를 통해 패턴을 인식하는 단계입니다. 지식(Knowledge)은 패턴을 통해 의사결정에 활용하는 단계입니다." 
+    exp: "DIKW 피라미드에서 '패턴을 인식하는 단계'는 정보(Information)입니다. 데이터(Data)는 가공되지 않은 원시 사실이고, 지식(Knowledge)은 정보에서 도출된 원리·규칙을 의사결정에 활용하는 단계이며, 지혜(Wisdom)는 지식을 바탕으로 미래 행동을 판단하는 최상위 단계입니다. '정보'와 '지식'은 혼동하기 쉬우나, 패턴 인식·해석까지는 정보 단계입니다. ☞ 암기 팁: Data(원시)→Information(패턴인식)→Knowledge(원리·의사결정)→Wisdom(미래판단)" 
   },
   { 
     subj: 1, 
     q: "암묵지(Tacit Knowledge)와 형식지(Explicit Knowledge)의 상호작용 과정 중, 암묵지 지식을 매뉴얼이나 문서로 전환하는 과정은?", 
-    choices: ["공통화(Socialization)", "표출화(Externalization)", "연결화(Combination)", "내면화(Internalization)"], 
-    ans: 1, 
-    exp: "표출화(Externalization)는 개인에게 습득되어 겉으로 드러나지 않는 암묵지를 문서나 매뉴얼 등의 형식지로 변환하는 과정입니다." 
+    choices: ["표출화(Externalization)", "내면화(Internalization)", "공통화(Socialization)", "연결화(Combination)"], 
+    ans: 0, 
+    exp: "표출화(Externalization)는 암묵지→형식지 변환입니다. 내면화(Internalization)는 형식지→암묵지(책·매뉴얼을 읽어 몸에 익히는 것), 공통화(Socialization)는 암묵지→암묵지(경험 공유), 연결화(Combination)는 형식지→형식지(문서 통합·재구성)입니다. ☞ 암기 팁: 표출화(Externalization) = 암묵지를 문서(형식지)로 '표출'" 
   },
   { 
     subj: 1, 
     q: "데이터베이스(Database)의 4가지 대표적인 특징에 해당하지 않는 것은?", 
-    choices: ["공용 데이터(Shared Data)", "통합된 데이터(Integrated Data)", "휘발성 데이터(Volatile Data)", "저장된 데이터(Stored Data)"], 
+    choices: ["공용 데이터(Shared Data)", "통합된 데이터(Integrated Data)", "휘발성 데이터(Volatile Data)", "운영 데이터(Operational Data)"], 
     ans: 2, 
-    exp: "데이터베이스의 특징은 공용 데이터, 통합된 데이터, 저장된 데이터, 변화되는 데이터(Operational Data)입니다. 휘발성은 해당하지 않습니다." 
+    exp: "데이터베이스 4대 특성: 공용 데이터(Shared), 통합된 데이터(Integrated), 저장된 데이터(Stored), 변화되는 데이터(Operational)입니다. '휘발성 데이터'는 전원 차단 시 사라지는 RAM 특성으로 DB 특성이 아닙니다. '운영 데이터(Operational Data)'는 실제 DB 특성이므로 구별에 주의해야 합니다. ☞ 암기 팁: DB특성=공(Shared)·통(Integrated)·저(Stored)·운(Operational) — 휘발성은 RAM!" 
   },
   { 
     subj: 1, 
@@ -30,8 +30,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "SQL 언어 중 데이터베이스 조작언어(DML, Data Manipulation Language)에 해당하는 명령어들로만 짝지어진 것은?", 
-    choices: ["CREATE, ALTER, DROP", "SELECT, INSERT, DELETE, UPDATE", "GRANT, REVOKE", "COMMIT, ROLLBACK"], 
-    ans: 1, 
+    choices: ["CREATE, ALTER, DROP", "COMMIT, ROLLBACK", "GRANT, REVOKE", "SELECT, INSERT, DELETE, UPDATE"], 
+    ans: 3, 
     exp: "SELECT, INSERT, DELETE, UPDATE는 데이터를 조회하고 수정하는 조작언어(DML)입니다. CREATE, ALTER, DROP은 정의언어(DDL)입니다." 
   },
   { 
@@ -44,30 +44,30 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "가트너(Gartner)가 정의한 빅데이터의 3V 특징에 해당하지 않는 것은?", 
-    choices: ["Volume(규모)", "Variety(다양성)", "Velocity(속도)", "Veracity(신뢰성)"], 
+    choices: ["Volume(규모)", "Variety(다양성)", "Velocity(속도)", "Validity(유효성)"], 
     ans: 3, 
-    exp: "가트너가 정의한 3V는 Volume(규모), Variety(다양성), Velocity(속도)입니다. Veracity(신뢰성)는 5V 또는 7V에 추가되는 개념입니다." 
+    exp: "가트너가 최초 정의한 빅데이터 3V는 Volume·Variety·Velocity입니다. Veracity(신뢰성)는 IBM이 추가한 4번째 V이며, Validity(유효성)는 7V 확장 개념 중 하나입니다. 시험에서 Veracity가 자주 오답으로 제시되므로 Validity와의 혼동에 주의하세요. ☞ 암기 팁: 가트너 3V=Volume+Variety+Velocity / Veracity(신뢰)는 IBM이 추가" 
   },
   { 
     subj: 1, 
     q: "빅데이터가 만들어내는 가치 패러다임의 변화로 올바르지 않은 것은?", 
-    choices: ["표본조사에서 전수조사로 변화", "사전처리에서 사후처리로 변화", "질(Quality)에서 양(Quantity)으로 변화", "상관관계에서 인과관계로 변화"], 
+    choices: ["표본조사에서 전수조사로 변화", "사전처리에서 사후처리로 변화", "양(Quantity)에서 질(Quality)로의 강조로 변화", "상관관계에서 인과관계로 변화"], 
     ans: 3, 
-    exp: "빅데이터 환경에서는 인과관계(Causality)를 분석하던 방식에서, 데이터 간의 상관관계(Correlation)를 분석하는 방식으로 변화하였습니다." 
+    exp: "빅데이터 변화: ①표본→전수조사, ②사전→사후처리, ③질(Quality)→양(Quantity) 강조로의 변화가 올바릅니다. '상관관계에서 인과관계로'는 역방향이 잘못됩니다. 빅데이터는 오히려 인과관계 규명보다 방대한 데이터에서 상관관계를 찾는 방향으로 변화합니다. ☞ 암기 팁: 빅데이터 = 인과관계→상관관계(역방향 주의!), 질→양 강조" 
   },
   { 
     subj: 1, 
     q: "데이터 사이언티스트(Data Scientist)에게 요구되는 소프트 스킬(Soft Skill)에 해당하는 것은?", 
-    choices: ["통계학 지식", "분석 모델링 기술", "스토리텔링 및 커뮤니케이션", "데이터 관리 기술"], 
-    ans: 2, 
-    exp: "통계학, 프로그래밍, 분석 모델링 등은 하드 스킬(Hard Skill)이며, 통찰력, 스토리텔링, 커뮤니케이션 등은 소프트 스킬(Soft Skill)에 해당합니다." 
+    choices: ["빅데이터 인프라 이해 능력", "데이터 마이닝 알고리즘 구현 능력", "통계적 모델링 및 검증 능력", "스토리텔링 및 커뮤니케이션"], 
+    ans: 3, 
+    exp: "소프트 스킬은 비판적 사고, 스토리텔링, 커뮤니케이션, 통찰력 등 대인·의사소통 역량입니다. 빅데이터 인프라 이해, 데이터 마이닝 구현, 통계적 모델링은 모두 전문 기술(하드 스킬)입니다. ☞ 암기 팁: 소프트스킬=스토리텔링·커뮤니케이션·비판적사고 / 하드스킬=통계·프로그래밍·알고리즘" 
   },
   { 
     subj: 1, 
     q: "빅데이터 분석 조직 구조 중 독립적인 전담 조직을 구성하지만, 타 부서와 중복 업무 가능성이 존재하는 구조는?", 
-    choices: ["집중 구조", "기능 구조", "분산 구조", "매트릭스 구조"], 
+    choices: ["집중 구조", "분산 구조", "기능 구조", "매트릭스 구조"], 
     ans: 0, 
-    exp: "집중 구조는 독립적인 전담 조직(DSCoE)을 구성하는 방식이나 현업 부서와 분석 업무가 중복될 가능성이 있습니다." 
+    exp: "집중 구조는 독립 전담 조직(DSCoE)을 구성하지만 현업 부서와 업무가 중복될 수 있습니다. 분산 구조는 각 부서에 분석가를 배치하는 방식, 기능 구조는 부서 내 기능 일부로 분석 수행, 매트릭스 구조는 겸직 형태입니다. ☞ 암기 팁: 집중구조=독립조직+중복가능, 분산구조=현업배치+민첩대응" 
   },
   { 
     subj: 1, 
@@ -79,30 +79,30 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "머신러닝(Machine Learning)의 종류 중 정답을 가르쳐주지 않고 데이터의 패턴을 학습시키는 방법은?", 
-    choices: ["지도학습(Supervised Learning)", "비지도학습(Unsupervised Learning)", "준지도학습(Semi-supervised Learning)", "강화학습(Reinforcement Learning)"], 
+    choices: ["지도학습(Supervised Learning)", "비지도학습(Unsupervised Learning)", "준지도학습(Semi-supervised Learning)", "자기지도학습(Self-supervised Learning)"], 
     ans: 1, 
-    exp: "비지도학습(Unsupervised Learning)은 정답 레이블 없이 데이터 자체의 패턴과 구조를 파악하는 학습 방법입니다." 
+    exp: "비지도학습은 레이블 없이 데이터의 패턴·구조를 스스로 파악합니다. 지도학습은 레이블 데이터로 학습, 준지도학습은 일부 레이블+다량 비레이블 혼합 학습, 자기지도학습은 데이터 일부를 마스킹하고 이를 예측하는 방식(BERT 등)입니다. ☞ 암기 팁: 비지도=레이블 없이 패턴 발견, 준지도=레이블 일부만 사용" 
   },
   { 
     subj: 1, 
     q: "우리나라의 데이터 3법에 포함되지 않는 법률은?", 
-    choices: ["개인정보보호법", "정보통신망 이용 촉진 및 정보보호 등에 관한 법률", "신용정보의 이용 및 보호에 관한 법률", "위치정보의 보호 및 이용 등에 관한 법률"], 
+    choices: ["개인정보보호법", "정보통신망 이용 촉진 및 정보보호 등에 관한 법률", "신용정보의 이용 및 보호에 관한 법률", "전자금융거래법"], 
     ans: 3, 
-    exp: "데이터 3법은 개인정보보호법, 정보통신망법, 신용정보법으로 구성되어 있습니다." 
+    exp: "데이터 3법: ①개인정보보호법, ②정보통신망법, ③신용정보법입니다. 전자금융거래법, 위치정보법은 포함되지 않습니다. 시험에서는 '위치정보법'이나 '전자금융거래법'을 오답으로 자주 제시합니다. ☞ 암기 팁: 데이터 3법=개인정보보호+정보통신망+신용정보 (위치·전자금융은 제외)" 
   },
   { 
     subj: 1, 
     q: "개인정보 비식별 조치 방법 중 '홍길동, 35세'를 '임꺽정, 30세'로 변경하는 기법은?", 
-    choices: ["총계처리(Aggregation)", "가명처리(Pseudonymization)", "데이터 삭제(Data Suppression)", "데이터 마스킹(Data Masking)"], 
+    choices: ["총계처리(Aggregation)", "가명처리(Pseudonymization)", "데이터 범주화(Data Categorization)", "데이터 마스킹(Data Masking)"], 
     ans: 1, 
-    exp: "가명처리(Pseudonymization)는 개인 식별 정보를 다른 값으로 대체하여 추가 정보 없이는 특정 개인을 알아볼 수 없게 하는 조치입니다." 
+    exp: "가명처리는 실명→다른 이름, 나이→근사값으로 대체합니다. 총계처리는 개별값→집계통계로 대체, 범주화는 '35세'→'30대'처럼 범주로 묶기, 마스킹은 '홍길*'처럼 일부를 '*'으로 가리기입니다. ☞ 암기 팁: 가명처리=이름·나이 등을 다른 유사값으로 대체 / 마스킹=일부 *로 가리기" 
   },
   { 
     subj: 1, 
     q: "프라이버시 보호 모델 중 민감한 정보의 다양성을 높여 동질성 공격과 배경 지식에 의한 공격으로부터 보호하는 모델은?", 
-    choices: ["k-익명성(k-Anonymity)", "l-다양성(l-Diversity)", "t-근접성(t-Closeness)", "차등정보보호(Differential Privacy)"], 
+    choices: ["k-익명성(k-Anonymity)", "l-다양성(l-Diversity)", "t-근접성(t-Closeness)", "δ-존재성(δ-Presence)"], 
     ans: 1, 
-    exp: "l-다양성(l-Diversity)은 동일한 조건을 가진 그룹 내에서 민감 정보가 최소 l개 이상 다양하게 분포하도록 하여 추론을 방지하는 기법입니다." 
+    exp: "l-다양성은 같은 준식별자 그룹 내 민감 속성이 l개 이상 다양하게 존재하도록 합니다. k-익명성은 동일 레코드 k개 이상 보장, t-근접성은 민감속성 분포가 전체 분포와 유사하도록 보장, δ-존재성은 레코드 존재 여부 보호입니다. ☞ 암기 팁: l-다양성=민감속성 l개 이상 다양화, t-근접성=분포 유사성 보장" 
   },
   { 
     subj: 1, 
@@ -135,8 +135,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "하둡 에코시스템(Hadoop Ecosystem)에서 분산 코디네이터 역할을 수행하는 서브 프로젝트는?", 
-    choices: ["HDFS", "MapReduce", "Zookeeper", "Flume"], 
-    ans: 2, 
+    choices: ["Zookeeper", "MapReduce", "HDFS", "Flume"], 
+    ans: 0, 
     exp: "Zookeeper는 분산 환경에서 서버 간의 상호 조정이 필요한 다양한 서비스를 제공하는 분산 코디네이터입니다." 
   },
   { 
@@ -163,8 +163,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "인공지능(Artificial Intelligence), 머신러닝(Machine Learning), 딥러닝(Deep Learning)의 포함 관계로 올바른 것은?", 
-    choices: ["머신러닝 ⊂ 딥러닝 ⊂ 인공지능", "딥러닝 ⊂ 머신러닝 ⊂ 인공지능", "인공지능 ⊂ 딥러닝 ⊂ 머신러닝", "딥러닝 ⊂ 인공지능 ⊂ 머신러닝"], 
-    ans: 1, 
+    choices: ["딥러닝 ⊂ 머신러닝 ⊂ 인공지능", "머신러닝 ⊂ 딥러닝 ⊂ 인공지능", "인공지능 ⊂ 딥러닝 ⊂ 머신러닝", "딥러닝 ⊂ 인공지능 ⊂ 머신러닝"], 
+    ans: 0, 
     exp: "인공지능이 가장 넓은 개념이며, 그 안에 머신러닝이 포함되고, 머신러닝의 하위 개념으로 인공신경망을 활용하는 딥러닝이 포함됩니다." 
   },
   { 
@@ -177,8 +177,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "빅데이터의 부작용을 통제하기 위한 방안 중, 알고리즘으로 인해 부당하게 피해를 입은 사람들을 구제하는 전문 인력을 지칭하는 용어는?", 
-    choices: ["데이터 엔지니어(Data Engineer)", "데이터 사이언티스트(Data Scientist)", "알고리즈미스트(Algorithmicist)", "데이터 스튜어드(Data Steward)"], 
-    ans: 2, 
+    choices: ["데이터 엔지니어(Data Engineer)", "데이터 사이언티스트(Data Scientist)", "데이터 스튜어드(Data Steward)", "알고리즈미스트(Algorithmicist)"], 
+    ans: 3, 
     exp: "알고리즈미스트(Algorithmicist)는 알고리즘의 편향이나 오류로 인해 발생한 피해자를 구제하고 알고리즘을 해석하는 역할을 담당합니다." 
   },
   { 
@@ -212,16 +212,16 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "소프트웨어 개발 모델 중 일부분을 우선 개발하여 사용자에게 제공하고, 피드백을 통해 점진적으로 보완해 나가는 모델은?", 
-    choices: ["폭포수 모델(Waterfall Model)", "나선형 모델(Spiral Model)", "프로토타입 모델(Prototyping Model)", "계층적 프로세스 모델(Hierarchical Process Model)"], 
+    choices: ["폭포수 모델(Waterfall Model)", "애자일 모델(Agile Model)", "프로토타입 모델(Prototyping Model)", "나선형 모델(Spiral Model)"], 
     ans: 2, 
-    exp: "프로토타입 모델(Prototyping Model)은 핵심 기능을 먼저 구현한 시제품(프로토타입)을 만들어 요구사항을 명확히 하고 보완하는 방식입니다." 
+    exp: "프로토타입 모델은 핵심 기능을 먼저 구현해 피드백으로 점진 보완합니다. 폭포수는 단방향 순차 진행, 애자일은 짧은 스프린트로 반복 개발(팀 중심), 나선형은 위험 분석을 포함한 반복 개발입니다. ☞ 암기 팁: 프로토타입=시제품 먼저+피드백 반영 / 애자일=짧은 스프린트 반복 / 나선형=위험분석 포함" 
   },
   { 
     subj: 1, 
     q: "KDD(Knowledge Discovery in Databases) 분석 방법론에서 이상값(Outlier)과 잡음(Noise)을 식별하고 데이터를 가공하는 단계는?", 
-    choices: ["데이터 선택(Selection)", "전처리(Preprocessing)", "변환(Transformation)", "마이닝(Data Mining)"], 
+    choices: ["데이터 선택(Selection)", "전처리(Preprocessing)", "통합(Integration)", "변환(Transformation)"], 
     ans: 1, 
-    exp: "KDD 방법론의 전처리(Preprocessing) 단계에서는 이상값 및 잡음 식별, 결측치 처리 등 데이터 가공 작업이 이루어집니다." 
+    exp: "KDD 전처리(Preprocessing)는 이상값·잡음 제거, 결측치 처리를 수행합니다. 데이터 선택은 분석 목적에 맞는 데이터 부분집합 추출, 통합은 여러 소스 병합, 변환은 마이닝에 적합한 형태로 가공합니다. ☞ 암기 팁: KDD=선택→전처리(이상값/잡음)→변환→마이닝→평가" 
   },
   { 
     subj: 1, 
@@ -240,16 +240,16 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "데이터 수집 기술 중, 응용 프로그램에서 다른 프로그램으로 데이터를 전송할 수 있도록 제공되는 인터페이스는?", 
-    choices: ["ETL", "FTP", "API", "Sqoop"], 
-    ans: 2, 
+    choices: ["API", "FTP", "ETL", "Sqoop"], 
+    ans: 0, 
     exp: "API(Application Programming Interface)는 소프트웨어 애플리케이션들이 서로 상호작용하고 데이터를 교환할 수 있게 해주는 인터페이스입니다." 
   },
   { 
     subj: 1, 
     q: "데이터 유형 중 메타데이터(Metadata)를 포함하여 데이터의 구조를 파악할 수 있는 HTML, XML, JSON 등의 데이터 형태는?", 
-    choices: ["정형 데이터(Structured Data)", "반정형 데이터(Semi-structured Data)", "비정형 데이터(Unstructured Data)", "정성적 데이터(Qualitative Data)"], 
+    choices: ["정형 데이터(Structured Data)", "반정형 데이터(Semi-structured Data)", "비정형 데이터(Unstructured Data)", "연속형 데이터(Continuous Data)"], 
     ans: 1, 
-    exp: "반정형 데이터(Semi-structured Data)는 고정된 스키마는 없지만 메타데이터나 스키마 정보를 포함하고 있는 데이터 유형입니다." 
+    exp: "반정형 데이터는 고정 스키마 없지만 메타데이터·태그로 구조 파악 가능(HTML, XML, JSON, 로그 등)합니다. 정형은 RDBMS 테이블, 비정형은 이미지·동영상·음성·텍스트, 연속형은 데이터 형태가 아닌 측정 척도입니다. ☞ 암기 팁: 반정형=메타데이터 포함(HTML/XML/JSON) / 비정형=이미지·음성·자연어" 
   },
   { 
     subj: 1, 
@@ -261,23 +261,23 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "데이터 품질 기준 중 여러 시스템에 저장된 데이터가 서로 동일한 값을 유지하고 있는지를 나타내는 지표는?", 
-    choices: ["완전성(Completeness)", "정확성(Accuracy)", "일관성(Consistency)", "최신성(Timeliness)"], 
-    ans: 2, 
+    choices: ["완전성(Completeness)", "정확성(Accuracy)", "최신성(Timeliness)", "일관성(Consistency)"], 
+    ans: 3, 
     exp: "일관성(Consistency)은 데이터가 여러 저장소나 시스템 간에 모순 없이 동일한 상태를 유지하는 것을 의미합니다." 
   },
   { 
     subj: 1, 
     q: "하둡 분산 파일 시스템(HDFS)의 구성 요소 중, 슬레이브 노드를 관리하고 파일 시스템의 네임스페이스를 유지하는 역할을 하는 것은?", 
-    choices: ["데이터 노드(Data Node)", "네임 노드(Name Node)", "청크 서버(Chunk Server)", "마스터 서버(Master Server)"], 
-    ans: 1, 
-    exp: "HDFS에서 네임 노드(Name Node)는 마스터 역할을 수행하며 파일 시스템 관리 및 통제를 담당합니다. 실제 데이터 처리는 데이터 노드가 수행합니다." 
+    choices: ["네임 노드(Name Node)", "데이터 노드(Data Node)", "보조 네임 노드(Secondary Name Node)", "노드 매니저(Node Manager)"], 
+    ans: 0, 
+    exp: "네임 노드는 파일 시스템 메타데이터(파일명·블록 위치·권한)를 관리하는 마스터 역할입니다. 데이터 노드는 실제 데이터 블록 저장, 보조 네임 노드는 네임 노드 체크포인트 보조, 노드 매니저는 YARN의 자원·컨테이너 관리를 담당합니다. ☞ 암기 팁: 네임 노드=마스터(메타데이터관리) / 데이터 노드=슬레이브(실제 데이터)" 
   },
   { 
     subj: 1, 
     q: "NoSQL 데이터베이스 유형 중 문서를 트리 구조로 저장하거나 검색하며, MongoDB가 대표적인 솔루션인 유형은?", 
-    choices: ["키-값 데이터베이스(Key-Value DB)", "열 데이터베이스(Column DB)", "문서 데이터베이스(Document DB)", "그래프 데이터베이스(Graph DB)"], 
-    ans: 2, 
-    exp: "문서 데이터베이스(Document DB)는 JSON이나 XML 같은 문서 형태로 데이터를 저장하며 유연한 스키마를 제공합니다." 
+    choices: ["키-값 데이터베이스(Key-Value DB)", "열 지향 데이터베이스(Column-family DB)", "그래프 데이터베이스(Graph DB)", "문서 데이터베이스(Document DB)"], 
+    ans: 3, 
+    exp: "문서 DB는 JSON·BSON·XML 형태로 데이터 저장, MongoDB가 대표적입니다. 키-값 DB는 Redis·DynamoDB, 열 지향 DB는 HBase·Cassandra, 그래프 DB는 Neo4j가 대표적입니다. ☞ 암기 팁: 문서DB=MongoDB(JSON), 열DB=HBase·Cassandra, 그래프DB=Neo4j" 
   },
   { 
     subj: 1, 
@@ -303,8 +303,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "데이터 단위의 크기를 작은 것부터 큰 순서로 올바르게 나열한 것은?", 
-    choices: ["TB - PB - ZB - EB", "PB - EB - ZB - YB", "EB - PB - YB - ZB", "TB - EB - PB - YB"], 
-    ans: 1, 
+    choices: ["PB - EB - ZB - YB", "TB - PB - ZB - EB", "EB - PB - YB - ZB", "TB - EB - PB - YB"], 
+    ans: 0, 
     exp: "데이터 단위는 KB, MB, GB, TB, PB(Peta), EB(Exa), ZB(Zetta), YB(Yotta) 순으로 커집니다." 
   },
   { 
@@ -345,8 +345,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "분석 과제 발굴에서 분석 대상(What)을 모르고 분석 방법(How)은 알려져 있을 때 도출하는 과제 유형은?", 
-    choices: ["최적화(Optimization)", "솔루션(Solution)", "통찰(Insight)", "발견(Discovery)"], 
-    ans: 2, 
+    choices: ["통찰(Insight)", "솔루션(Solution)", "최적화(Optimization)", "발견(Discovery)"], 
+    ans: 0, 
     exp: "분석 방법은 알지만 대상을 정확히 모르는 경우, 기존의 방법론을 데이터를 통해 탐색하여 새로운 지식이나 통찰(Insight)을 도출하게 됩니다." 
   },
   { 
@@ -380,8 +380,8 @@ const QUESTION_BANK = [
   { 
     subj: 1, 
     q: "데이터 분석 수준 진단을 위한 분석 성숙도(Maturity) 평가에서 기반으로 삼는 모델은?", 
-    choices: ["CRISP-DM", "CMMI", "SEMMA", "KDD"], 
-    ans: 1, 
+    choices: ["CMMI", "CRISP-DM", "SEMMA", "KDD"], 
+    ans: 0, 
     exp: "분석 성숙도 진단은 소프트웨어 공학에서 프로세스 개선을 위해 널리 쓰이는 CMMI(Capability Maturity Model Integration)의 5단계(도입, 활용, 확산, 최적화 등) 모형을 기반으로 합니다." 
   },
   { 
@@ -417,7 +417,7 @@ const QUESTION_BANK = [
     q: "데이터 웨어하우스(Data Warehouse)의 특징 중 한 번 적재된 데이터를 갱신하거나 삭제하지 않고 역사적 기록을 보존하는 읽기 전용 형태를 의미하는 특성은?", 
     choices: ["주제지향성(Subject-Oriented)", "데이터 통합(Integrated)", "시계열성(Time-Variant)", "비휘발성(Non-Volatile)"], 
     ans: 3, 
-    exp: "비휘발성(Non-Volatile)은 데이터 웨어하우스에 저장된 데이터가 수시로 변하거나 지워지지 않고 읽기 전용으로 보존된다는 주요 특성입니다." 
+    exp: "DW 4특성: ①주제지향성(업무 주제별 구성), ②통합성(일관된 형식으로 통합), ③시계열성(시간 변화 추적), ④비휘발성(한번 저장 후 수정 없이 보존)입니다. 시계열성과 비휘발성은 모두 시간 관련이지만, 시계열성은 시간에 따른 변화 추적, 비휘발성은 데이터의 불변성을 의미합니다. ☞ 암기 팁: 비휘발성=한번 저장→읽기전용보존 / 시계열성=시간 흐름에 따른 변화 추적" 
   },
   {
     subj: 1,
@@ -499,15 +499,15 @@ const QUESTION_BANK = [
   {
     subj: 1,
     q: "분석 프로젝트 관리를 위한 5대 주요 영역에 해당하지 않는 것은?",
-    choices: ["데이터 규모(Data Size)", "분석 복잡도(Data Complexity)", "네트워크 속도(Network Speed)", "정확도와 정밀도(Accuracy & Precision)"],
-    ans: 2,
+    choices: ["데이터 규모(Data Size)", "분석 복잡도(Data Complexity)", "정확도와 정밀도(Accuracy & Precision)", "네트워크 속도(Network Speed)"],
+    ans: 3,
     exp: "분석 프로젝트 관리의 5대 주요 영역은 데이터 규모, 데이터 복잡도, 속도(Speed), 분석 복잡도, 정확도와 정밀도입니다. 네트워크 속도는 IT 인프라 영역입니다."
   },
   {
     subj: 1,
     q: "투자 대비 효과(ROI) 관점에서 빅데이터의 성과를 평가할 때 고려해야 할 투자 비용(Investment) 요소에 해당하는 것은?",
-    choices: ["비즈니스 효과", "가치(Value)", "데이터 볼륨(Volume) 및 다양성(Variety)", "핵심성과지표(KPI) 달성"],
-    ans: 2,
+    choices: ["데이터 볼륨(Volume) 및 다양성(Variety)", "가치(Value)", "비즈니스 효과", "핵심성과지표(KPI) 달성"],
+    ans: 0,
     exp: "ROI 관점에서 Volume(규모), Variety(다양성), Velocity(속도)는 투자 비용(Investment) 요소이며, Value(가치)는 비즈니스 효과(Return) 요소입니다."
   },
   {
@@ -527,8 +527,8 @@ const QUESTION_BANK = [
   {
     subj: 1,
     q: "분석 마스터플랜 수립 시 우선순위 평가 기준 중 '비즈니스 효과(Return)'에 해당하는 세부 평가 항목은?",
-    choices: ["데이터 획득 비용", "데이터 가공 비용", "전략적 중요도", "시스템 연동 난이도"],
-    ans: 2,
+    choices: ["데이터 획득 비용", "데이터 가공 비용", "시스템 연동 난이도", "전략적 중요도"],
+    ans: 3,
     exp: "비즈니스 효과는 전략적 중요도와 비즈니스 성과(KPI)로 평가합니다. 데이터 획득 및 가공 비용, 시스템 연동은 투자 비용(Investment)에 해당합니다."
   },
   {
@@ -541,15 +541,15 @@ const QUESTION_BANK = [
   {
     subj: 1,
     q: "빅데이터 조직 구조 모델 중, 별도의 분석 전담 조직 없이 각 부서 내에서 자체적으로 분석 인력을 확보하여 업무를 수행하는 구조는?",
-    choices: ["집중 구조", "기능 구조", "분산 구조", "하이브리드 구조"],
-    ans: 1,
+    choices: ["집중 구조", "하이브리드 구조", "분산 구조", "기능 구조"],
+    ans: 3,
     exp: "기능 구조는 해당 업무 부서 내에서 직접 데이터 분석을 수행하므로, 전사적 핵심 분석이 어렵고 부서 간 업무 중복이 발생할 수 있습니다."
   },
   {
     subj: 1,
     q: "데이터 사이언티스트에게 필요한 역량 중 통계학, 선형대수학, 프로그래밍 기술 등을 포괄하는 역량은?",
-    choices: ["소프트 스킬(Soft Skill)", "하드 스킬(Hard Skill)", "비즈니스 스킬(Business Skill)", "커뮤니케이션 스킬(Communication Skill)"],
-    ans: 1,
+    choices: ["하드 스킬(Hard Skill)", "소프트 스킬(Soft Skill)", "비즈니스 스킬(Business Skill)", "커뮤니케이션 스킬(Communication Skill)"],
+    ans: 0,
     exp: "수학적 지식, 통계적 분석 역량, 프로그래밍 및 데이터 처리 기술 등은 분석가가 갖춰야 할 하드 스킬(Hard Skill)입니다."
   },
   {
@@ -569,8 +569,8 @@ const QUESTION_BANK = [
   {
     subj: 1,
     q: "KDD 분석 방법론 중, 분석 목적에 맞는 변수를 찾고 차원을 축소하여 데이터를 효율적으로 구성하는 단계는?",
-    choices: ["전처리(Preprocessing)", "변환(Transformation)", "마이닝(Data Mining)", "데이터 선택(Selection)"],
-    ans: 1,
+    choices: ["전처리(Preprocessing)", "데이터 선택(Selection)", "마이닝(Data Mining)", "변환(Transformation)"],
+    ans: 3,
     exp: "변환(Transformation) 단계에서는 분석 목적에 맞게 데이터를 변경하거나 차원을 축소하여 학습에 용이한 형태로 데이터를 가공합니다."
   },
   {
@@ -688,8 +688,8 @@ const QUESTION_BANK = [
   {
     subj: 1,
     q: "소프트웨어 생명주기(SDLC) 모델 중 각 단계가 한 번 완료되면 다시 이전 단계로 돌아가기 어려운 가장 전통적인 모델은?",
-    choices: ["애자일 모델(Agile Model)", "폭포수 모델(Waterfall Model)", "나선형 모델(Spiral Model)", "프로토타입 모델(Prototyping Model)"],
-    ans: 1,
+    choices: ["폭포수 모델(Waterfall Model)", "애자일 모델(Agile Model)", "나선형 모델(Spiral Model)", "프로토타입 모델(Prototyping Model)"],
+    ans: 0,
     exp: "폭포수 모델(Waterfall Model)은 폭포에서 물이 떨어지듯 요구사항 분석부터 설계, 구현, 테스트, 유지보수까지 순차적으로 진행되는 모델입니다."
   },
   {
@@ -702,86 +702,86 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "데이터의 척도(Scale) 중 절대적인 기준인 0이 존재하고 사칙연산이 모두 가능한 척도는 무엇인가?", 
-    choices: ["명목척도(Nominal Scale)", "순서척도(Ordinal Scale)", "등간척도(Interval Scale)", "비율척도(Ratio Scale)"], 
+    choices: ["순서척도(Ordinal Scale)", "등간척도(Interval Scale)", "명목척도(Nominal Scale)", "비율척도(Ratio Scale)"], 
     ans: 3, 
-    exp: "비율척도(Ratio Scale)는 절대적 기준인 0이 존재하며, 덧셈, 뺄셈, 곱셈, 나눗셈 등 사칙연산이 모두 가능한 척도입니다. 몸무게, 나이 등이 이에 해당합니다." 
+    exp: "비율척도는 절대 0점 존재+사칙연산 모두 가능합니다. 등간척도는 구간 간격은 일정하지만 절대 0 없음(온도 등), 순서척도는 순위 가능하지만 간격 불균등(등수 등), 명목척도는 이름만 다름(성별, 혈액형 등)입니다. ☞ 암기 팁: 비율척도=절대0+사칙연산 / 등간척도=구간균등+절대0없음 (온도가 0도라도 '아무것도 없는 것'이 아님!)" 
   },
   { 
     subj: 2, 
     q: "결측값(Missing Value)의 종류 중, 특정 정치 성향 유권자들의 응답률이 낮은 것처럼 특정 변수와 관련되어 발생하였지만 분석하고자 하는 결과와는 관계가 없는 경우는?", 
-    choices: ["완전 무작위 결측(MCAR)", "무작위 결측(MAR)", "비 무작위 결측(MNAR)", "단순 결측(Simple Missing)"], 
+    choices: ["완전 무작위 결측(MCAR)", "무작위 결측(MAR)", "비 무작위 결측(MNAR)", "구조적 결측(Structural Missing)"], 
     ans: 1, 
-    exp: "무작위 결측(Missing At Random, MAR)은 결측치가 특정 변수와 관련되어 발생했지만, 결과 자체와는 무관한 경우를 의미합니다. 결과에 영향을 미치면 비 무작위 결측(MNAR)입니다." 
+    exp: "MAR(무작위 결측): 결측이 다른 관측 변수와 관련되지만 결과 변수와는 무관합니다. MCAR은 결측이 완전히 무작위(어떤 변수와도 무관), MNAR은 결측이 결측값 자체나 결과 변수와 직접 관련됩니다. 구조적 결측은 논리적으로 존재할 수 없는 값(예: 미혼자의 배우자 나이)입니다. ☞ 암기 팁: MCAR=완전무작위, MAR=다른변수와관련(결과무관), MNAR=결과와직접관련" 
   },
   { 
     subj: 2, 
     q: "이상값(Outlier) 판단 기법 중, 평균으로부터 표준편차의 3배를 넘어가는 데이터를 이상값으로 판단하는 기법은?", 
-    choices: ["사분위수(Quartile)", "ESD(Extreme Studentized Deviation)", "Z-Score", "DBScan"], 
+    choices: ["사분위수(IQR)", "ESD(Extreme Studentized Deviation)", "DBScan", "Z-Score"], 
     ans: 1, 
-    exp: "ESD(Extreme Studentized Deviation)는 정규분포를 가정할 때 평균으로부터 표준편차의 3배가 넘어가는 데이터를 이상값으로 판단하는 기법입니다." 
+    exp: "ESD는 평균±3σ 기준의 이상값 판별법입니다. Z-Score도 표준화 후 임계값 초과를 이상값으로 보지만, ESD는 특히 정규분포 가정 하에 그룹 내 극단값을 반복 검정하는 방법입니다. IQR은 Q1-1.5IQR ~ Q3+1.5IQR 기준, DBScan은 밀도 기반입니다. ☞ 암기 팁: ESD=평균±3σ(정규분포 가정) / IQR=Q1-1.5IQR~Q3+1.5IQR / DBScan=밀도 기반" 
   },
   { 
     subj: 2, 
     q: "분석 변수 선택(Feature Selection) 방법 중, 모델의 성능을 기준으로 변수를 선택하며 전진 선택법(Forward Selection)과 후진 제거법(Backward Elimination)을 포함하는 방법은?", 
-    choices: ["필터 방법(Filter Method)", "래퍼 방법(Wrapper Method)", "임베디드 방법(Embedded Method)", "차원 축소(Dimensionality Reduction)"], 
-    ans: 1, 
-    exp: "래퍼 방법(Wrapper Method)은 예측 모델의 성능을 기준으로 최적의 변수 부분집합을 선택하는 방법으로, 전진 선택법, 후진 제거법, 단계적 선택법 등이 있습니다." 
+    choices: ["임베디드 방법(Embedded Method)", "차원 축소(Dimensionality Reduction)", "필터 방법(Filter Method)", "래퍼 방법(Wrapper Method)"], 
+    ans: 3, 
+    exp: "래퍼 방법은 모델 성능을 직접 평가 기준으로 변수 선택(전진선택법·후진제거법·단계적선택법). 필터 방법은 상관계수·카이제곱 등 통계량으로 모델과 독립적으로 변수 선택, 임베디드 방법은 Lasso처럼 모델 학습 내에서 변수 선택이 동시 수행됩니다. ☞ 암기 팁: 래퍼=모델성능기준(전진/후진), 필터=통계량기준, 임베디드=Lasso 등 학습 중 선택" 
   },
   { 
     subj: 2, 
     q: "선형 차원 축소 기법 중, 분류 문제에서 클래스 간 분산을 최대화하면서 차원을 축소하는 기법은?", 
-    choices: ["주성분 분석(PCA)", "요인 분석(Factor Analysis)", "선형 판별 분석(LDA)", "특이값 분해(SVD)"], 
-    ans: 2, 
-    exp: "선형 판별 분석(Linear Discriminant Analysis, LDA)은 데이터의 범주(Class) 간 분산을 최대화하고 범주 내 분산을 최소화하는 방향으로 차원을 축소하는 선형 기법입니다." 
+    choices: ["주성분 분석(PCA)", "요인 분석(Factor Analysis)", "특이값 분해(SVD)", "선형 판별 분석(LDA)"], 
+    ans: 3, 
+    exp: "LDA는 클래스 간 분산/클래스 내 분산 비율을 최대화하는 방향으로 차원 축소 → 분류에 최적화. PCA는 분산 최대화(클래스 무관), 요인 분석은 잠재요인 추출, SVD는 행렬 분해 기법입니다. ☞ 암기 팁: LDA=클래스 간 분산↑ 클래스 내 분산↓(분류 목적) / PCA=전체 분산 최대화(비지도)" 
   },
   { 
     subj: 2, 
     q: "비선형 차원 축소 기법 중, 고차원 데이터 간의 거리 정보를 확률적으로 유지하여 차원을 축소하며 주로 복잡한 데이터의 시각화에 많이 쓰이는 기법은?", 
-    choices: ["MDS(Multi-Dimensional Scaling)", "t-SNE(t-Distributed Stochastic Neighbor Embedding)", "AutoEncoder", "PCA(Principal Component Analysis)"], 
+    choices: ["MDS(Multi-Dimensional Scaling)", "t-SNE(t-Distributed Stochastic Neighbor Embedding)", "UMAP(Uniform Manifold Approximation)", "오토인코더(AutoEncoder)"], 
     ans: 1, 
-    exp: "t-SNE(t-Distributed Stochastic Neighbor Embedding)는 고차원 데이터의 비선형적 구조를 보존하면서 확률적인 방법을 사용해 저차원으로 축소하는 기법으로 시각화에 탁월합니다." 
+    exp: "t-SNE는 확률 분포로 이웃 관계를 보존하며 2D·3D로 시각화하는 비선형 기법입니다. MDS는 거리 보존(Stress 최소화), UMAP은 t-SNE보다 빠르며 전역 구조도 보존, 오토인코더는 신경망 기반 비선형 차원 축소입니다. ☞ 암기 팁: t-SNE=확률적 이웃 보존+시각화 / UMAP=t-SNE보다 빠르고 전역구조도 보존" 
   },
   { 
     subj: 2, 
     q: "수치형 변수 변환 방법 중, 데이터의 평균을 0으로, 표준편차를 1로 변환하는 기법은?", 
-    choices: ["정규화(Min-Max Scaling)", "표준화(Standardization/Z-Score)", "로그 변환(Log Transformation)", "지수 변환(Exponential Transformation)"], 
+    choices: ["정규화(Min-Max Scaling)", "표준화(Standardization/Z-Score)", "Box-Cox 변환(Box-Cox Transformation)", "로그 변환(Log Transformation)"], 
     ans: 1, 
-    exp: "표준화(Standardization 혹은 Z-Score)는 각 데이터에서 평균을 뺀 뒤 표준편차로 나누어, 평균이 0이고 표준편차가 1인 정규분포 형태로 변환하는 기법입니다." 
+    exp: "표준화(Z-Score)는 (X-μ)/σ로 평균=0, 표준편차=1로 변환합니다. 정규화(Min-Max)는 (X-min)/(max-min)으로 0~1 범위로 변환, Box-Cox는 비대칭 분포를 정규분포로 변환, 로그 변환은 양수 비대칭 분포에 사용합니다. ☞ 암기 팁: 표준화=평균0·표준편차1(Z-Score) / 정규화=0~1 범위(Min-Max)" 
   },
   { 
     subj: 2, 
     q: "불균형 데이터 처리(Imbalanced Data Handling) 기법 중, 소수 클래스의 데이터를 복사하거나 SMOTE 알고리즘 등으로 유사한 데이터를 새롭게 생성하여 비율을 맞추는 방법은?", 
-    choices: ["가중치 균형(Weighted Balance)", "과소표집(UnderSampling)", "과대표집(OverSampling)", "단순대치법(Simple Imputation)"], 
+    choices: ["가중치 균형(Weighted Balance)", "과소표집(UnderSampling)", "과대표집(OverSampling)", "앙상블 기법(Ensemble Method)"], 
     ans: 2, 
-    exp: "과대표집(OverSampling)은 데이터의 수가 적은 클래스의 샘플을 늘려 데이터의 불균형을 해소하는 기법입니다. 반대로 다수 클래스의 샘플을 줄이는 것은 과소표집(UnderSampling)입니다." 
+    exp: "과대표집은 소수 클래스를 늘리는 방법으로 SMOTE(합성 데이터 생성)가 대표적입니다. 과소표집은 다수 클래스를 줄이는 방법, 가중치 균형은 손실 함수에서 소수 클래스에 더 높은 가중치 부여, 앙상블은 여러 모델 결합 방식입니다. ☞ 암기 팁: 과대표집(OverSampling)=소수 클래스 늘리기(SMOTE) / 과소표집=다수 줄이기" 
   },
   { 
     subj: 2, 
     q: "범주형 변수 변환(Categorical Variable Transformation) 기법 중, 고유 값에 해당하는 컬럼만 1로 표시하고 나머지는 0으로 표시하는 방법은?", 
-    choices: ["레이블 인코딩(Label Encoding)", "원-핫 인코딩(One-Hot Encoding)", "타깃 인코딩(Target Encoding)", "스무딩(Smoothing)"], 
+    choices: ["레이블 인코딩(Label Encoding)", "원-핫 인코딩(One-Hot Encoding)", "타깃 인코딩(Target Encoding)", "이진 인코딩(Binary Encoding)"], 
     ans: 1, 
-    exp: "원-핫 인코딩(One-Hot Encoding)은 각 범주를 독립적인 열로 만들고 해당 범주에만 1, 나머지는 0을 부여하여 범주 간의 순서나 서열이 학습에 영향을 주지 않도록 하는 기법입니다." 
+    exp: "원-핫 인코딩은 범주마다 별도 열을 만들어 해당 범주만 1, 나머지 0으로 표현합니다. 레이블 인코딩은 범주에 정수 번호 부여(순서 정보 생성), 타깃 인코딩은 범주별 타깃 변수 평균값으로 변환, 이진 인코딩은 레이블→이진수 변환입니다. ☞ 암기 팁: 원-핫=범주당 열 생성(해당만 1) / 레이블=정수 번호 부여(순서 정보 발생 위험)" 
   },
   { 
     subj: 2, 
     q: "탐색적 자료 분석(EDA, Exploratory Data Analysis)의 4가지 주요 주제에 해당하지 않는 것은?", 
     choices: ["저항성의 강조(Resistance)", "잔차 계산(Residuals)", "자료변수의 재표현(Re-expression)", "교호작용의 반영(Interaction)"], 
     ans: 3, 
-    exp: "탐색적 자료 분석(EDA)의 4가지 주제는 저항성의 강조, 잔차 계산, 자료변수의 재표현, 그래프를 통한 현시성(시각화)입니다. 교호작용의 반영은 파생변수 생성 방법에 해당합니다." 
+    exp: "EDA의 4가지 주제: ①저항성 강조(Resistance), ②잔차 계산(Residuals), ③자료 재표현(Re-expression), ④현시성(시각화, Revelation)입니다. 교호작용(Interaction)은 파생변수 생성 방법의 하나로 EDA 4주제가 아닙니다. ☞ 암기 팁: EDA 4주제=저(Resistance)·잔(Residuals)·재(Re-expression)·현(Revelation) — 교호작용은 파생변수!" 
   },
   { 
     subj: 2, 
     q: "상관관계 분석(Correlation Analysis)에서 양적 척도이며 연속형 변수일 때 선형 관계의 크기를 측정하기 위해 주로 사용하는 상관계수는?", 
-    choices: ["피어슨 상관계수(Pearson Correlation Coefficient)", "스피어만 상관계수(Spearman Correlation Coefficient)", "켄달 타우(Kendall Tau)", "공분산(Covariance)"], 
+    choices: ["피어슨 상관계수(Pearson Correlation Coefficient)", "스피어만 상관계수(Spearman Correlation Coefficient)", "켄달 타우(Kendall Tau)", "점이연 상관계수(Point-Biserial Correlation)"], 
     ans: 0, 
-    exp: "피어슨 상관계수(Pearson Correlation Coefficient)는 연속형 변수들 간의 선형 관계를 측정할 때 사용합니다. 서열 척도일 때는 비선형 관계도 파악할 수 있는 스피어만 상관계수를 사용합니다." 
+    exp: "피어슨 상관계수는 연속형 변수 간 선형 관계 측정에 사용합니다. 스피어만은 서열 척도 또는 비선형 관계, 켄달 타우는 순위 기반 비모수 상관, 점이연은 연속형과 이분형 변수 간 상관 측정에 사용됩니다. ☞ 암기 팁: 피어슨=연속형+선형 / 스피어만=서열형·비선형 / 켄달타우=순위기반" 
   },
   { 
     subj: 2, 
     q: "기초 통계량 중 데이터의 분산 정도 측면을 나타내는 지표로, 측정 단위가 다르거나 평균 차이가 큰 두 변수 간의 산포도를 상대적으로 비교할 때 유용한 지표는?", 
-    choices: ["분산(Variance)", "범위(Range)", "사분위수 범위(IQR)", "변동계수(Coefficient of Variation)"], 
+    choices: ["분산(Variance)", "범위(Range)", "표준편차(Standard Deviation)", "변동계수(Coefficient of Variation)"], 
     ans: 3, 
-    exp: "변동계수(Coefficient of Variation, CV)는 표준편차를 평균으로 나눈 값의 백분율로, 평균의 규모가 다른 두 집단의 산포도를 상대적으로 비교할 때 사용합니다." 
+    exp: "변동계수(CV) = 표준편차/평균 × 100(%)로 단위에 무관한 상대적 산포 비교에 유용합니다. 분산·표준편차는 단위에 영향 받아 단위가 다른 변수 간 비교 불가, 범위는 최대-최소로 이상값에 취약합니다. ☞ 암기 팁: 변동계수(CV)=표준편차/평균×100 → 단위 무관, 상대적 산포 비교" 
   },
   { 
     subj: 2, 
@@ -793,16 +793,16 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "확률변수의 비대칭 정도를 나타내는 통계량으로, 값이 0보다 크면 오른쪽으로 꼬리가 길어지고 최빈값보다 평균값이 더 크게 나타나는 지표는?", 
-    choices: ["첨도(Kurtosis)", "왜도(Skewness)", "분산(Variance)", "기댓값(Expected Value)"], 
+    choices: ["첨도(Kurtosis)", "왜도(Skewness)", "분산(Variance)", "사분위수 범위(IQR)"], 
     ans: 1, 
-    exp: "왜도(Skewness)는 분포의 비대칭 정도를 나타냅니다. 왜도가 0보다 크면 꼬리가 오른쪽으로 길어지며, 최빈값, 중앙값, 평균값 순서로 위치하게 됩니다." 
+    exp: "왜도(Skewness): 양수=오른쪽 꼬리(최빈값<중앙값<평균), 음수=왼쪽 꼬리(평균<중앙값<최빈값). 첨도(Kurtosis)는 분포의 뾰족함 정도(정규분포 기준=3), 분산은 평균으로부터의 편차 제곱합, IQR은 Q3-Q1 범위입니다. ☞ 암기 팁: 왜도 양수=오른쪽꼬리(평균>최빈값), 왜도 음수=왼쪽꼬리(평균<최빈값)" 
   },
   { 
     subj: 2, 
     q: "비정형 데이터 분석을 위한 자연어 전처리(Natural Language Preprocessing) 단계 중, 의미가 있는 최소 단위의 말뭉치로 문자를 나누는 작업은?", 
-    choices: ["토큰화(Tokenization)", "불용어 처리(Stop Words Removal)", "어간 추출(Stemming)", "정규화(Normalization)"], 
+    choices: ["토큰화(Tokenization)", "어간 추출(Stemming)", "불용어 처리(Stop Words Removal)", "표제어 추출(Lemmatization)"], 
     ans: 0, 
-    exp: "토큰화(Tokenization)는 주어진 텍스트 문서를 분석하기 위해 단어나 형태소 등 의미를 가진 최소 단위(토큰)로 나누는 과정입니다." 
+    exp: "토큰화는 텍스트를 의미 단위(단어, 형태소, 문장 등)로 분리하는 첫 전처리 단계입니다. 어간 추출은 접사 제거→어근, 표제어 추출은 사전 기반 원형 복원, 불용어 처리는 의미 없는 단어(은·는·이·가 등) 제거입니다. ☞ 암기 팁: 토큰화→불용어제거→어간추출/표제어추출 (전처리 순서)" 
   },
   { 
     subj: 2, 
@@ -820,13 +820,6 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "중심극한정리(Central Limit Theorem)에 따르면 임의의 모집단으로부터 추출된 표본평균분포는 표본의 크기가 충분히 클 때 어떤 분포를 따르게 되는가?", 
-    choices: ["이항 분포(Binomial Distribution)", "t 분포(t Distribution)", "정규 분포(Normal Distribution)", "카이제곱 분포(Chi-square Distribution)"], 
-    ans: 2, 
-    exp: "중심극한정리에 따르면 모집단의 분포가 무엇이든 상관없이, 추출된 표본의 크기가 충분히 크면(보통 30개 이상) 표본평균의 분포는 정규분포(Normal Distribution)에 가까워집니다." 
-  },
-  { 
-    subj: 2, 
     q: "점추정(Point Estimation)에서 추정량(Estimator)이 갖추어야 할 4가지 조건에 해당하지 않는 것은?", 
     choices: ["불편성(Unbiasedness)", "효율성(Efficiency)", "일치성(Consistency)", "다양성(Diversity)"], 
     ans: 3, 
@@ -835,9 +828,9 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "가설검정(Hypothesis Testing)에서 귀무가설(Null Hypothesis)이 실제로 참임에도 불구하고, 이를 잘못 기각하고 대립가설을 채택해버리는 오류는?", 
-    choices: ["제1종 오류(Type 1 Error)", "제2종 오류(Type 2 Error)", "기각역(Rejection Region)", "유의수준(Significance Level)"], 
+    choices: ["제1종 오류(Type 1 Error)", "검정력(Power)", "제2종 오류(Type 2 Error)", "유의수준(Significance Level)"], 
     ans: 0, 
-    exp: "제1종 오류(Type 1 Error, 알파 오류)는 귀무가설이 사실인데도 불구하고 잘못하여 기각하는 오류입니다. 제2종 오류는 귀무가설이 거짓인데도 채택하는 오류입니다." 
+    exp: "제1종 오류(α): 귀무가설이 참인데 기각하는 오류. 제2종 오류(β): 귀무가설이 거짓인데 채택하는 오류. 검정력(1-β)은 귀무가설이 거짓일 때 올바르게 기각하는 확률. 유의수준(α)은 제1종 오류의 최대 허용 확률입니다. ☞ 암기 팁: 1종 오류=참인데 기각(없는데 있다고), 2종 오류=거짓인데 채택(있는데 없다고)" 
   },
   { 
     subj: 2, 
@@ -898,15 +891,15 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "두 변수가 서열 척도(순서형 변수)일 때 사용하며, 선형 관계뿐만 아니라 비선형적 관계의 크기까지 측정할 수 있는 상관계수는?", 
-    choices: ["피어슨 상관계수(Pearson)", "스피어만 상관계수(Spearman)", "켄달 타우(Kendall)", "공분산(Covariance)"], 
-    ans: 1, 
+    choices: ["스피어만 상관계수(Spearman)", "피어슨 상관계수(Pearson)", "켄달 타우(Kendall)", "공분산(Covariance)"], 
+    ans: 0, 
     exp: "스피어만 상관계수는 서열 척도로 측정된 변수 간의 순위(Rank)를 바탕으로 선형 및 비선형적 상관관계를 모두 나타낼 수 있는 지표입니다[cite: 745]." 
   },
   { 
     subj: 2, 
     q: "기초 통계량 중에서 여러 값들의 비율적 증가율이나 연평균 성장률 등을 계산할 때 가장 적합한 대푯값은?", 
-    choices: ["산술평균(Arithmetic Mean)", "기하평균(Geometric Mean)", "조화평균(Harmonic Mean)", "최빈값(Mode)"], 
-    ans: 1, 
+    choices: ["산술평균(Arithmetic Mean)", "최빈값(Mode)", "조화평균(Harmonic Mean)", "기하평균(Geometric Mean)"], 
+    ans: 3, 
     exp: "기하평균(Geometric Mean)은 모든 값들을 곱한 후 n 제곱근을 구하는 방식으로, 물가 상승률이나 인구 증가율 등 비율적 증가율을 평균 낼 때 주로 사용합니다[cite: 763]." 
   },
   { 
@@ -933,8 +926,8 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "비정형 텍스트 데이터 전처리 과정 중, 단어의 접사를 제거하여 품사에 상관없이 문법적인 기본 형태를 찾아내는 작업은?", 
-    choices: ["토큰화(Tokenization)", "어간 추출(Stemming)", "표제어 추출(Lemmatization)", "불용어 처리(Stop Words)"], 
-    ans: 1, 
+    choices: ["토큰화(Tokenization)", "불용어 처리(Stop Words)", "표제어 추출(Lemmatization)", "어간 추출(Stemming)"], 
+    ans: 3, 
     exp: "어간 추출(Stemming)은 어형이 변형된 단어에서 접사를 제거하여 그 단어의 핵심 의미를 담고 있는 기본 형태(어간)를 찾아내는 작업입니다[cite: 844]." 
   },
   { 
@@ -953,16 +946,9 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "두 확률 변수의 사전 확률(Prior Probability)과 사후 확률(Posterior Probability) 사이의 관계를 나타내며, 새로운 증거가 나타났을 때 기존의 확률을 갱신하는 데 사용되는 정리는?", 
-    choices: ["중심극한정리(Central Limit Theorem)", "큰 수의 법칙(Law of Large Numbers)", "베이즈 정리(Bayes' Theorem)", "체비쇼프 정리(Chebyshev's Theorem)"], 
-    ans: 2, 
-    exp: "베이즈 정리는 조건부 확률을 계산하는 방법 중 하나로, 어떤 사건의 사전 확률에 새로운 정보(우도)를 결합하여 사후 확률을 도출하는 정리입니다[cite: 884]." 
-  },
-  { 
-    subj: 2, 
     q: "유한한 N개의 모집단에서 비복원 추출로 n번을 추출했을 때, 원하는 결과가 k번 나올 확률을 나타내는 이산 확률분포는?", 
-    choices: ["다항 분포(Multinomial Distribution)", "초기하 분포(Hypergeometric Distribution)", "기하 분포(Geometric Distribution)", "베르누이 분포(Bernoulli Distribution)"], 
-    ans: 1, 
+    choices: ["다항 분포(Multinomial Distribution)", "베르누이 분포(Bernoulli Distribution)", "기하 분포(Geometric Distribution)", "초기하 분포(Hypergeometric Distribution)"], 
+    ans: 3, 
     exp: "초기하 분포(Hypergeometric Distribution)는 복원 추출을 가정한 이항 분포와 달리, 비복원 추출 환경에서 특정 특성을 가진 표본이 몇 개 뽑힐지 예측하는 확률분포입니다[cite: 896]." 
   },
   { 
@@ -971,13 +957,6 @@ const QUESTION_BANK = [
     choices: ["카이제곱 분포(Chi-square Distribution)", "F 분포(F Distribution)", "t 분포(t Distribution)", "지수 분포(Exponential Distribution)"], 
     ans: 2, 
     exp: "t 분포(t Distribution)는 정규분포와 형태가 유사하지만 꼬리 부분이 더 두껍고 긴 특징을 가지며, 주로 데이터 수가 적은 소표본 집단의 평균 검정에 사용됩니다[cite: 910, 911]." 
-  },
-  { 
-    subj: 2, 
-    q: "일정 단위 시간이나 단위 공간 내에서 무작위로 발생할 수 있는 드문 사건의 발생 횟수를 모델링할 때 사용하는 확률분포는?", 
-    choices: ["포아송 분포(Poisson Distribution)", "감마 분포(Gamma Distribution)", "베타 분포(Beta Distribution)", "균일 분포(Uniform Distribution)"], 
-    ans: 0, 
-    exp: "포아송 분포(Poisson Distribution)는 하루 동안 발생하는 출생자 수나 한 시간 동안 걸려 온 전화 수처럼, 정해진 시간이나 공간 내에서 특정 사건이 발생하는 횟수에 대한 이산 확률분포입니다[cite: 900, 901]." 
   },
   { 
     subj: 2, 
@@ -1010,8 +989,8 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "범주형 변수 변환 기법 중, 각 범주를 해당 범주에 속한 관측치들의 타깃 변수(종속 변수) 평균값으로 변환하는 기법은?", 
-    choices: ["레이블 인코딩(Label Encoding)", "원-핫 인코딩(One-Hot Encoding)", "타깃 인코딩(Target Encoding)", "스무딩(Smoothing)"], 
-    ans: 2, 
+    choices: ["레이블 인코딩(Label Encoding)", "원-핫 인코딩(One-Hot Encoding)", "스무딩(Smoothing)", "타깃 인코딩(Target Encoding)"], 
+    ans: 3, 
     exp: "타깃 인코딩은 타깃 변수를 평균값으로 변환하는 범주형 변수 변환 방식입니다. [cite: 26]" 
   },
   { 
@@ -1059,8 +1038,8 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "연속 확률분포 중 독립적인 표준정규분포를 따르는 확률변수들의 제곱합으로 구성되며, 두 집단의 동질성 검정이나 단일 집단 모분산 검정에 널리 사용되는 분포는?", 
-    choices: ["t 분포", "카이제곱 분포", "F 분포", "지수 분포"], 
-    ans: 1, 
+    choices: ["t 분포", "지수 분포", "F 분포", "카이제곱 분포"], 
+    ans: 3, 
     exp: "카이제곱분포는 독립적인 정규분포를 따르는 변수들의 제곱합으로 구성되며 두 집단의 동질성 검정, 단일 집단 모분산 검정에 활용됩니다. [cite: 32]" 
   },
   { 
@@ -1079,27 +1058,6 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "표본비율(P)의 표본분포에서 표본비율의 평균은 모비율 p와 같다. 그렇다면 표본비율의 표준오차(Standard Error)를 구하는 올바른 공식은? (단, q = 1 - p, n은 표본의 크기)", 
-    choices: ["pq/n", "√(pq/n)", "σ/√n", "√(npq)"], 
-    ans: 1, 
-    exp: "표본비율의 표본분포에서 표본비율의 표준오차는 모비율과 실패 확률을 곱해 n으로 나눈 후 제곱근한 형태입니다. [cite: 33]" 
-  },
-  { 
-    subj: 2, 
-    q: "모수를 추정하기 위한 점추정량(Estimator)의 조건 중, 여러 번 표본을 추출하여 구한 추정량들의 평균(기댓값)이 실제 모집단의 모수와 같아져 편향이 0이 되는 특성은?", 
-    choices: ["불편성(Unbiasedness)", "효율성(Efficiency)", "일치성(Consistency)", "충족성(Sufficiency)"], 
-    ans: 0, 
-    exp: "불편성은 추정량의 기댓값이 실제 모수와 같아 편향이 0이 되는 것을 의미합니다. [cite: 34]" 
-  },
-  { 
-    subj: 2, 
-    q: "점추정량의 조건 중, 불편성을 만족하는 여러 추정량들 사이에서 분산이 더 작은 추정량이 더 바람직하다고 판단하는 기준은 무엇인가?", 
-    choices: ["불편성(Unbiasedness)", "효율성(Efficiency)", "일치성(Consistency)", "충족성(Sufficiency)"], 
-    ans: 1, 
-    exp: "효율성은 여러 추정량 중 분산이 작은 것이 더 효율적인 추정량이라고 판단하는 기준입니다. [cite: 34]" 
-  },
-  { 
-    subj: 2, 
     q: "가설검정 시 귀무가설(Null Hypothesis)이 실제로 거짓임에도 불구하고, 이를 올바르게 기각하지 못하고 귀무가설을 채택해버리는 오류를 무엇이라 하는가?", 
     choices: ["제1종 오류(Type 1 Error)", "제2종 오류(Type 2 Error)", "유의수준(Significance Level)", "신뢰수준(Confidence Level)"], 
     ans: 1, 
@@ -1108,16 +1066,9 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "가설검정의 검증 방향을 결정할 때, 대립가설(Alternative Hypothesis)이 '크다' 혹은 '작다'와 같이 특정 방향성을 가지고 있을 때 수행하는 검정 방식은?", 
-    choices: ["단측검정(One-tailed Test)", "양측검정(Two-tailed Test)", "일표본 검정(One-sample Test)", "이표본 검정(Two-sample Test)"], 
+    choices: ["단측검정(One-tailed Test)", "양측검정(Two-tailed Test)", "비모수 검정(Non-parametric Test)", "모수 검정(Parametric Test)"], 
     ans: 0, 
-    exp: "검증 방향 결정 시 대립가설이 크다 혹은 작다로 설정되면 단측검정을 수행합니다. [cite: 35]" 
-  },
-  { 
-    subj: 2, 
-    q: "가설검정을 시작할 때 '차이가 없다', '효과가 없다', '독립이다' 등의 기존 상태를 기본적으로 가정하여 기각의 대상이 되는 가설은 무엇인가?", 
-    choices: ["귀무가설(Null Hypothesis)", "대립가설(Alternative Hypothesis)", "연구가설(Research Hypothesis)", "통계가설(Statistical Hypothesis)"], 
-    ans: 0, 
-    exp: "가설 설정 단계에서 차이가 없다, 효과가 없다 등의 상태를 가정하는 가설은 귀무가설입니다. [cite: 34, 35]" 
+    exp: "단측검정은 대립가설이 방향성(>또는<)을 가질 때 사용하며 기각역이 한쪽에만 위치합니다. 양측검정은 대립가설이 '다르다(≠)'일 때 기각역이 양쪽에 나뉩니다. 비모수 검정은 분포 가정 없을 때, 모수 검정은 정규분포 등 분포 가정 있을 때 사용합니다. ☞ 암기 팁: 단측검정=방향 있음(>또는<) / 양측검정=방향 없음(≠)" 
   },
   { 
     subj: 2, 
@@ -1129,15 +1080,15 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "여러 시점에 걸쳐 측정된 시계열 데이터의 특성과 한 시점에 측정된 횡단면적 데이터의 특성을 모두 포함하고 있는 데이터 유형은?", 
-    choices: ["단변량 데이터(Univariate Data)", "다변량 데이터(Multivariate Data)", "패널 데이터(Panel Data)", "정성적 데이터(Qualitative Data)"], 
-    ans: 2, 
+    choices: ["패널 데이터(Panel Data)", "다변량 데이터(Multivariate Data)", "단변량 데이터(Univariate Data)", "정성적 데이터(Qualitative Data)"], 
+    ans: 0, 
     exp: "패널 데이터(Panel Data)는 동일한 개체들을 여러 시점에 걸쳐 반복적으로 추적 조사하여 얻은 데이터로, 종단면적 특성과 횡단면적 특성을 모두 가집니다." 
   },
   { 
     subj: 2, 
     q: "결측값(Missing Value)의 종류 중, 소득이 낮은 응답자들의 설문 응답률이 낮게 나타나는 현상처럼 결측치가 변수의 결과에 직접적인 상관이 있는 경우는?", 
-    choices: ["완전 무작위 결측(MCAR)", "무작위 결측(MAR)", "비 무작위 결측(MNAR)", "단순 결측(Simple Missing)"], 
-    ans: 2, 
+    choices: ["완전 무작위 결측(MCAR)", "무작위 결측(MAR)", "단순 결측(Simple Missing)", "비 무작위 결측(MNAR)"], 
+    ans: 3, 
     exp: "비 무작위 결측(Missing Not At Random, MNAR)은 결측값의 발생이 해당 변수의 값 자체나 결과와 직접적인 관련이 있는 경우를 의미합니다." 
   },
   { 
@@ -1157,8 +1108,8 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "선형 차원 축소 기법 중, 관측된 여러 변수들 사이의 상관관계를 분석하여 이들을 설명할 수 있는 소수의 잠재 요인으로 차원을 축소하는 방법은?", 
-    choices: ["주성분 분석(PCA)", "선형 판별 분석(LDA)", "요인 분석(Factor Analysis)", "특이값 분해(SVD)"], 
-    ans: 2, 
+    choices: ["요인 분석(Factor Analysis)", "선형 판별 분석(LDA)", "주성분 분석(PCA)", "특이값 분해(SVD)"], 
+    ans: 0, 
     exp: "요인 분석(Factor Analysis)은 데이터 내의 숨겨진 잠재 변수(Latent Variable)나 요인을 추출하여 데이터의 차원을 축소하고 구조를 해석하는 데 유용한 기법입니다." 
   },
   { 
@@ -1185,15 +1136,15 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "상관관계 분석(Correlation Analysis) 중 제3의 변수가 미치는 영향을 통제한 상태에서 두 변수 간의 순수한 상관관계를 분석하는 기법은?", 
-    choices: ["단순상관분석(Simple Correlation Analysis)", "다중상관분석(Multiple Correlation Analysis)", "편상관관계분석(Partial Correlation Analysis)", "교차분석(Cross Tabulation Analysis)"], 
-    ans: 2, 
+    choices: ["단순상관분석(Simple Correlation Analysis)", "다중상관분석(Multiple Correlation Analysis)", "교차분석(Cross Tabulation Analysis)", "편상관관계분석(Partial Correlation Analysis)"], 
+    ans: 3, 
     exp: "편상관관계분석(Partial Correlation Analysis)은 다른 변수들의 영향을 통제하거나 제거한 후 두 변수 사이의 상관관계만을 측정하는 방법입니다." 
   },
   { 
     subj: 2, 
     q: "기초 통계량 중에서 역수의 산술평균을 구한 후 다시 역수를 취하는 방식으로, 주로 속도나 비율의 평균을 계산할 때 사용하는 대푯값은?", 
-    choices: ["산술평균(Arithmetic Mean)", "기하평균(Geometric Mean)", "조화평균(Harmonic Mean)", "중앙값(Median)"], 
-    ans: 2, 
+    choices: ["조화평균(Harmonic Mean)", "기하평균(Geometric Mean)", "산술평균(Arithmetic Mean)", "중앙값(Median)"], 
+    ans: 0, 
     exp: "조화평균(Harmonic Mean)은 변수들의 역수에 대한 산술평균을 구한 뒤 그 값의 역수를 취하는 평균으로 특정 비율이나 속도를 평균 낼 때 적합합니다." 
   },
   { 
@@ -1212,45 +1163,10 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "통계적 실험이나 관찰에 의하여 일어날 수 있는 모든 가능한 결과들의 집합을 의미하는 확률 용어는?", 
-    choices: ["사건(Event)", "확률변수(Random Variable)", "표본공간(Sample Space)", "독립사건(Independent Events)"], 
-    ans: 2, 
-    exp: "표본공간(Sample Space)은 어떤 통계적 실험에서 발생할 수 있는 모든 가능한 결과들의 집합을 뜻하며, 사건은 이 표본공간의 부분 집합입니다." 
-  },
-  { 
-    subj: 2, 
     q: "N번의 시행에서 각 시행이 여러 개의 결과를 가질 수 있을 때, 각 결과가 나타나는 횟수에 대한 확률 분포를 나타내는 이산 확률분포는?", 
-    choices: ["이항 분포(Binomial Distribution)", "초기하 분포(Hypergeometric Distribution)", "다항 분포(Multinomial Distribution)", "포아송 분포(Poisson Distribution)"], 
-    ans: 2, 
-    exp: "다항 분포(Multinomial Distribution)는 베르누이 시행을 확장하여, 주사위를 여러 번 던지는 것처럼 각 시행에서 나올 수 있는 결과가 세 개 이상인 경우의 확률분포입니다." 
-  },
-  { 
-    subj: 2, 
-    q: "정규분포(Normal Distribution) 중에서 평균이 0이고 표준편차가 1인 특별한 형태의 분포를 무엇이라 하는가?", 
-    choices: ["표준정규분포(Standard Normal Distribution)", "t 분포(t Distribution)", "카이제곱 분포(Chi-square Distribution)", "균일 분포(Uniform Distribution)"], 
+    choices: ["다항 분포(Multinomial Distribution)", "초기하 분포(Hypergeometric Distribution)", "이항 분포(Binomial Distribution)", "포아송 분포(Poisson Distribution)"], 
     ans: 0, 
-    exp: "표준정규분포(Standard Normal Distribution)는 다양한 정규분포를 서로 비교하거나 확률을 쉽게 계산하기 위해 평균을 0, 표준편차를 1로 표준화한 분포입니다." 
-  },
-  { 
-    subj: 2, 
-    q: "중심극한정리(Central Limit Theorem)에 따르면, 모집단의 분포가 정규분포가 아니더라도 표본의 크기가 최소 몇 개 이상일 때 표본평균의 분포가 정규분포에 근사한다고 가정하는가?", 
-    choices: ["10개", "20개", "30개", "50개"], 
-    ans: 2, 
-    exp: "중심극한정리에서는 일반적으로 표본의 크기(n)가 30개 이상일 때, 모집단의 분포 형태와 무관하게 표본평균분포가 정규분포를 따른다고 가정합니다." 
-  },
-  { 
-    subj: 2, 
-    q: "구간추정(Interval Estimation)에서 표본 크기가 작거나 모집단의 분산을 모를 때, 모평균의 신뢰구간을 추정하기 위해 주로 사용하는 통계 분포는?", 
-    choices: ["Z 분포", "t 분포", "카이제곱 분포", "F 분포"], 
-    ans: 1, 
-    exp: "모분산을 모르고 표본 수가 적은 경우에는 정규분포(Z 분포) 대신 자유도가 n-1인 t 분포를 이용하여 신뢰구간을 추정합니다." 
-  },
-  { 
-    subj: 2, 
-    q: "가설검정(Hypothesis Testing) 시, 산출된 검정통계량(Test Statistic)이 이 영역에 속하게 되면 귀무가설을 기각하고 대립가설을 채택하게 되는 영역을 무엇이라 하는가?", 
-    choices: ["신뢰 구간(Confidence Interval)", "기각역(Rejection Region)", "유의수준(Significance Level)", "채택역(Acceptance Region)"], 
-    ans: 1, 
-    exp: "기각역(Rejection Region)은 귀무가설이 기각되고 대립가설이 채택되는 검정통계량 값들의 범위를 의미합니다." 
+    exp: "다항 분포(Multinomial Distribution)는 베르누이 시행을 확장하여, 주사위를 여러 번 던지는 것처럼 각 시행에서 나올 수 있는 결과가 세 개 이상인 경우의 확률분포입니다." 
   },
   { 
     subj: 2, 
@@ -1290,8 +1206,8 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "시각적 데이터 탐색 도구 중에서 데이터의 최솟값, 1사분위수, 중앙값, 3사분위수, 최댓값뿐만 아니라 이상치(Outlier)의 존재 여부를 직관적으로 확인하기 가장 용이한 그래프는?", 
-    choices: ["히스토그램(Histogram)", "산점도(Scatter Plot)", "박스플롯(Box Plot)", "모자이크 차트(Mosaic Chart)"], 
-    ans: 2, 
+    choices: ["히스토그램(Histogram)", "산점도(Scatter Plot)", "모자이크 차트(Mosaic Chart)", "박스플롯(Box Plot)"], 
+    ans: 3, 
     exp: "박스플롯(Box Plot)은 사분위수를 기반으로 상자와 수염을 그려 데이터의 산포도와 중앙값, 그리고 정상 범위를 벗어난 이상치를 시각적으로 쉽게 파악할 수 있는 그래프입니다." 
   },
   { 
@@ -1324,16 +1240,9 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "두 사건 A와 B에 대하여 P(A|B) = P(A)가 성립할 때, 즉 특정 사건 B의 발생 여부가 사건 A가 발생할 확률에 아무런 영향을 주지 않는 관계를 무엇이라 하는가?", 
-    choices: ["배반 사건(Mutually Exclusive Events)", "독립 사건(Independent Events)", "종속 사건(Dependent Events)", "교집합(Intersection)"], 
-    ans: 1, 
-    exp: "독립 사건(Independent Events)은 한 사건의 발생이 다른 사건의 발생 확률에 영향을 미치지 않는 사건을 의미하며, 이 경우 P(A∩B) = P(A)P(B)가 성립합니다." 
-  },
-  { 
-    subj: 2, 
     q: "성공 확률이 p인 베르누이 시행을 독립적으로 반복할 때, 목표로 하는 성공 횟수 r번을 달성할 때까지 필요한 전체 시행 횟수의 확률 분포는?", 
-    choices: ["이항 분포(Binomial Distribution)", "포아송 분포(Poisson Distribution)", "음이항 분포(Negative Binomial Distribution)", "초기하 분포(Hypergeometric Distribution)"], 
-    ans: 2, 
+    choices: ["음이항 분포(Negative Binomial Distribution)", "포아송 분포(Poisson Distribution)", "이항 분포(Binomial Distribution)", "초기하 분포(Hypergeometric Distribution)"], 
+    ans: 0, 
     exp: "음이항 분포(Negative Binomial Distribution)는 지정된 횟수(r)의 성공을 얻을 때까지 베르누이 시행을 반복해야 하는 횟수에 대한 이산 확률분포입니다." 
   },
   { 
@@ -1352,23 +1261,9 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "좋은 점추정량(Estimator)이 갖추어야 할 조건 중, 추출하는 표본의 크기(n)가 무한히 증가함에 따라 추정량이 실제 모수 값에 한없이 가까워지는 성질은?", 
-    choices: ["불편성(Unbiasedness)", "효율성(Efficiency)", "일치성(Consistency)", "충족성(Sufficiency)"], 
-    ans: 2, 
-    exp: "일치성(Consistency)은 표본의 크기가 커질수록 오차가 줄어들어 추정량이 모집단의 모수에 수렴하게 되는 통계적 성질을 의미합니다." 
-  },
-  { 
-    subj: 2, 
-    q: "점추정량의 조건 중, 해당 추정량이 모집단에 대해 가지고 있는 모든 유용한 정보를 하나도 빠짐없이 완벽하게 담고 있어야 한다는 성질은?", 
-    choices: ["불편성(Unbiasedness)", "효율성(Efficiency)", "일치성(Consistency)", "충족성(Sufficiency)"], 
-    ans: 3, 
-    exp: "충족성(Sufficiency, 충분성)은 계산된 추정량이 모수에 대한 모집단의 정보를 최대한 포함하고 있어, 다른 어떤 통계량을 추가하더라도 모수 추정에 더 이상 도움이 되지 않는 상태를 말합니다." 
-  },
-  { 
-    subj: 2, 
     q: "점추정에서 추정량과 실제 모수 간의 평균적인 오차 크기를 나타내는 평균제곱오차(MSE)를 구하는 식은 분산(Variance)과 무엇의 제곱의 합으로 이루어지는가?", 
-    choices: ["표준오차(Standard Error)", "편향(Bias)", "자유도(Degree of Freedom)", "기댓값(Expected Value)"], 
-    ans: 1, 
+    choices: ["편향(Bias)", "표준오차(Standard Error)", "자유도(Degree of Freedom)", "기댓값(Expected Value)"], 
+    ans: 0, 
     exp: "평균제곱오차(MSE)는 추정량의 분산(Variance)과 편향(Bias)의 제곱을 더한 값으로 정의되며, 모수 추정의 정확도를 평가하는 지표로 활용됩니다." 
   },
   { 
@@ -1380,24 +1275,10 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "가설검정에서 유의수준(Significance Level, α)이 의미하는 바를 가장 정확하게 설명한 것은?", 
-    choices: ["대립가설이 참일 때 귀무가설을 기각할 확률", "귀무가설이 거짓일 때 귀무가설을 기각할 확률", "귀무가설이 참일 때 대립가설을 기각할 확률", "귀무가설이 참일 때 귀무가설을 기각하는 제1종 오류의 허용 한계"], 
-    ans: 3, 
-    exp: "유의수준(알파)은 귀무가설이 실제로 참인데도 불구하고 실수로 대립가설을 채택해버리는 제1종 오류를 범할 최대 허용 확률을 의미하며 일반적으로 0.05를 사용합니다." 
-  },
-  { 
-    subj: 2, 
     q: "가설검정의 표본 유형 중, 같은 대상에게 특정 약물을 투여하기 전과 투여한 후의 혈압 변화를 비교하는 것처럼 동일 모집단에 대한 평균 비교 검정을 수행할 때 적용하는 표본 유형은?", 
-    choices: ["단일표본(One-Sample)", "독립표본(Independent-Sample)", "대응표본(Paired-Sample)", "계통표본(Systematic-Sample)"], 
-    ans: 2, 
+    choices: ["단일표본(One-Sample)", "독립표본(Independent-Sample)", "계통표본(Systematic-Sample)", "대응표본(Paired-Sample)"], 
+    ans: 3, 
     exp: "대응표본(Paired-Sample)은 동일한 개체나 밀접하게 연관된 두 집단(예: 다이어트 전후 체중)을 대상으로 쌍을 지어 차이를 검정할 때 사용하는 표본 유형입니다." 
-  },
-  { 
-    subj: 2, 
-    q: "가설검정 절차에서, 표본 데이터로부터 계산된 검정통계량(Test Statistic)이 사전에 설정된 기각역(Rejection Region) 안에 존재할 경우 내리게 되는 최종적인 통계적 판단은?", 
-    choices: ["귀무가설 채택", "귀무가설 기각", "대립가설 기각", "검정 보류"], 
-    ans: 1, 
-    exp: "검정통계량이 기각역에 존재한다는 것은 귀무가설이 참이라고 가정했을 때 현재의 표본 데이터가 나올 확률이 유의수준보다 낮다는 뜻이므로, 귀무가설을 기각하고 대립가설을 채택하게 됩니다." 
   },
   { 
     subj: 2, 
@@ -1422,13 +1303,6 @@ const QUESTION_BANK = [
   },
   { 
     subj: 2, 
-    q: "가설검정의 검증 방향을 결정할 때, 대립가설이 '차이가 있다' 혹은 '같지 않다'로 설정되는 경우 수행해야 하는 검정 방식은?", 
-    choices: ["단측검정(One-tailed Test)", "양측검정(Two-tailed Test)", "좌측검정(Left-tailed Test)", "우측검정(Right-tailed Test)"], 
-    ans: 1, 
-    exp: "대립가설이 같지 않다 혹은 차이가 있다와 같이 특정 방향성이 없을 때는 양측검정을 수행합니다." 
-  },
-  { 
-    subj: 2, 
     q: "모수 유의성 검정을 수행하기 위해 표본 데이터가 기본적으로 만족해야 하는 3가지 전제 조건에 해당하지 않는 것은?", 
     choices: ["정규성(Normality)", "등분산성(Homoscedasticity)", "독립성(Independence)", "다중공선성(Multicollinearity)"], 
     ans: 3, 
@@ -1437,8 +1311,8 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "모집단에 대한 아무런 정보가 없어 관측 자료가 특정 확률분포를 따른다고 가정할 수 없을 때, 데이터의 순위나 부호 등을 이용하여 수행하는 통계적 검정 방법은?", 
-    choices: ["모수 검정(Parametric Test)", "비모수 검정(Non-parametric Test)", "t-검정(t-Test)", "Z-검정(Z-Test)"], 
-    ans: 1, 
+    choices: ["비모수 검정(Non-parametric Test)", "모수 검정(Parametric Test)", "t-검정(t-Test)", "Z-검정(Z-Test)"], 
+    ans: 0, 
     exp: "비모수 검정은 데이터가 정규분포를 따른다는 등의 모수적 가정을 할 수 없거나 표본 수가 매우 적을 때 데이터의 순위나 차이 부호를 기반으로 수행하는 검정 방법입니다." 
   },
   { 
@@ -1475,20 +1349,6 @@ const QUESTION_BANK = [
     choices: ["23", "37", "47", "50"], 
     ans: 1, 
     exp: "기댓값의 선형성에 따라 E(4X - 2Y + 7) = 4*E(X) - 2*E(Y) + 7 = 40 - 10 + 7 = 37 이 됩니다." 
-  },
-  { 
-    subj: 2, 
-    q: "자료의 분포가 정규분포보다 얼마나 더 뾰족한지, 혹은 평평한지를 나타내는 척도인 첨도(Kurtosis)의 기준값이 되는 완벽한 정규분포의 첨도 값은 얼마인가?", 
-    choices: ["-1", "0", "1", "3"], 
-    ans: 3, 
-    exp: "완벽한 정규분포의 첨도 값은 3입니다. 통계 프로그램에 따라 이 3을 기준으로 빼서 0을 정규분포의 기준으로 삼기도 합니다." 
-  },
-  { 
-    subj: 2, 
-    q: "일정한 단위 시간이나 일정한 공간 내에서 드물게 발생하는 사건의 횟수를 확률적으로 모델링할 때 사용하는 이산 확률분포는?", 
-    choices: ["이항 분포(Binomial Distribution)", "초기하 분포(Hypergeometric Distribution)", "포아송 분포(Poisson Distribution)", "기하 분포(Geometric Distribution)"], 
-    ans: 2, 
-    exp: "포아송 분포는 일정한 시간이나 공간 내에서 발생하는 사건의 수(예: 하루 동안 걸려온 문의 전화 수)를 나타낼 때 사용하는 확률분포입니다." 
   },
   { 
     subj: 2, 
@@ -1542,9 +1402,9 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "분석모형 정의 시 모델이 훈련 데이터의 특징과 노이즈까지 지나치게 세밀하게 학습하여, 새로운 테스트 데이터에 대한 예측 성능이 오히려 떨어지는 현상을 무엇이라 하는가?", 
-    choices: ["과소적합(Underfitting)", "과대적합(Overfitting)", "모형 선택의 오류", "데이터 편향(Data Bias)"], 
+    choices: ["과대적합(Overfitting)", "과소적합(Underfitting)", "편향(Bias)", "분산(Variance)"], 
     ans: 1, 
-    exp: "과대적합(Overfitting)은 모델이 훈련 데이터에만 너무 맞추어져(High Variance) 일반화 성능이 떨어지고 복잡해진 상태를 의미합니다." 
+    exp: "과대적합(Overfitting)은 모델이 훈련 데이터의 노이즈까지 학습하여 새 데이터에 성능이 낮아지는 현상입니다. 과소적합(Underfitting)은 모델이 너무 단순하여 훈련 데이터조차 제대로 학습하지 못하는 상태입니다. 편향(Bias)은 예측이 실제값에서 얼마나 벗어나는지, 분산(Variance)은 예측값의 변동성입니다. 과적합=높은 분산+낮은 편향. ☞ 암기 팁: 과적합=훈련정확도↑·테스트정확도↓(노이즈까지 암기) / 과소적합=훈련·테스트 모두 낮음" 
   },
   { 
     subj: 3, 
@@ -1570,9 +1430,9 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "규제항이 포함된 선형 회귀모델 중, 회귀계수의 크기를 제어하기 위해 L2 규제항(회귀계수 제곱의 합)을 추가하여 다중공선성 문제를 완화하는 모델은?", 
-    choices: ["릿지 회귀(Ridge Regression)", "라쏘 회귀(Lasso Regression)", "엘라스틱넷 회귀(Elastic Net)", "로지스틱 회귀(Logistic Regression)"], 
+    choices: ["릿지 회귀(Ridge Regression)", "라쏘 회귀(Lasso Regression)", "엘라스틱 넷(Elastic Net)", "주성분 회귀(PCR)"], 
     ans: 0, 
-    exp: "릿지 회귀(Ridge)는 L2 규제(계수 제곱의 합)를 사용하여 계수 크기를 줄이는 방식이며, 라쏘 회귀(Lasso)는 L1 규제(계수 절대값의 합)를 사용하여 특정 계수를 완전히 0으로 만들어 변수를 선택합니다." 
+    exp: "릿지(Ridge)=L2 규제(계수 제곱합 최소화→0에 수렴하지만 0이 되지 않음), 라쏘(Lasso)=L1 규제(계수 절댓값합 최소화→일부 계수를 정확히 0으로 만들어 변수 선택), 엘라스틱 넷=L1+L2 혼합. ☞ 암기 팁: Ridge=L2(계수 제곱, 다중공선성 완화), Lasso=L1(계수 절댓값, 변수 선택), ElasticNet=L1+L2" 
   },
   { 
     subj: 3, 
@@ -1584,58 +1444,58 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "다중 선형 회귀분석에서 독립변수들 간에 강한 상관관계가 존재하여 회귀계수 추정의 신뢰도를 떨어뜨리는 현상을 무엇이라 하는가?", 
-    choices: ["자기상관성(Autocorrelation)", "이분산성(Heteroscedasticity)", "다중공선성(Multicollinearity)", "과적합(Overfitting)"], 
+    choices: ["다중공선성(Multicollinearity)", "이분산성(Heteroscedasticity)", "자기상관(Autocorrelation)", "내생성(Endogeneity)"], 
     ans: 2, 
-    exp: "다중공선성(Multicollinearity)은 독립변수들 간에 선형 종속 관계가 존재할 때 발생하며, VIF(분산팽창인수) 값을 통해 진단할 수 있습니다." 
+    exp: "다중공선성은 독립변수 간 강한 상관관계로 회귀계수 추정 불안정·분산팽창(VIF 증가)을 초래합니다. 이분산성은 오차분산이 일정하지 않은 상태, 자기상관은 오차항 간에 상관이 있는 상태, 내생성은 독립변수와 오차항이 상관된 상태입니다. ☞ 암기 팁: 다중공선성=독립변수 간 상관↑(VIF>10이면 문제) / Ridge로 완화 가능" 
   },
   { 
     subj: 3, 
     q: "로지스틱 회귀분석에서 특정 사건이 발생할 확률(P)과 발생하지 않을 확률(1-P)의 비율을 나타내는 용어는?", 
-    choices: ["오즈(Odds)", "로짓(Logit)", "시그모이드(Sigmoid)", "소프트맥스(Softmax)"], 
+    choices: ["오즈(Odds)", "로짓(Logit)", "오즈비(Odds Ratio)", "상대 위험도(Relative Risk)"], 
     ans: 0, 
-    exp: "오즈(Odds)는 성공할 확률을 실패할 확률로 나눈 값(P / (1-P))이며, 로지스틱 회귀분석은 이 오즈에 자연로그를 취한 로짓 변환을 기본 원리로 사용합니다." 
+    exp: "오즈(Odds) = P/(1-P)로 사건 발생/비발생 확률의 비율입니다. 로짓(Logit) = log(오즈) = log(P/(1-P))로 -∞~+∞ 범위. 오즈비(Odds Ratio)는 두 집단 간 오즈의 비율, 상대위험도(RR)는 두 집단 간 발생률의 비율입니다. ☞ 암기 팁: 오즈=P/(1-P) / 로짓=log(오즈) / 오즈비=집단A오즈÷집단B오즈" 
   },
   { 
     subj: 3, 
     q: "의사결정나무(Decision Tree) 알고리즘 중 CART 알고리즘이 분류 나무에서 노드를 분할할 때 불순도를 측정하기 위해 사용하는 기준 지표는?", 
-    choices: ["카이제곱 통계량(Chi-square Statistic)", "엔트로피 지수(Entropy Index)", "지니 지수(Gini Index)", "정보 이득(Information Gain)"], 
+    choices: ["지니 지수(Gini Index)", "엔트로피(Entropy)", "정보이득비율(Gain Ratio)", "카이제곱 통계량(Chi-square)"], 
     ans: 2, 
-    exp: "CART(Classification and Regression Trees) 알고리즘은 범주형 목표 변수에 대해 노드를 분할할 때 지니 지수(Gini Index)를 사용하여 불순도가 가장 많이 감소하는 방향을 찾습니다." 
+    exp: "CART 분류=지니 지수(Gini Index), CART 회귀=분산 감소. ID3=엔트로피 기반 정보이득, C4.5=정보이득비율(Gain Ratio), CHAID=카이제곱 통계량. 지니 지수=1-Σpᵢ²로 0일 때 완전 순수 노드. ☞ 암기 팁: CART분류=지니지수 / ID3=엔트로피 / C4.5=이득비율 / CHAID=카이제곱" 
   },
   { 
     subj: 3, 
     q: "인공신경망의 은닉층에서 입력 신호의 총합을 출력 신호로 변환하는 활성함수(Activation Function) 중, 입력값이 0보다 작으면 0을 반환하고 0보다 크면 그 값을 그대로 반환하여 기울기 소실 문제를 효과적으로 극복한 함수는?", 
-    choices: ["시그모이드 함수(Sigmoid Function)", "소프트맥스 함수(Softmax Function)", "하이퍼볼릭 탄젠트 함수(Tanh)", "ReLU 함수"], 
+    choices: ["ReLU(Rectified Linear Unit)", "시그모이드(Sigmoid)", "하이퍼볼릭 탄젠트(tanh)", "Leaky ReLU"], 
     ans: 3, 
-    exp: "ReLU(Rectified Linear Unit) 함수는 max(0, x)의 형태를 가지며, 양수 영역에서 미분값이 1로 유지되어 다층 신경망 학습 시 발생하는 기울기 소실(Vanishing Gradient) 문제를 크게 개선했습니다." 
+    exp: "ReLU(f(x)=max(0,x))는 양수 기울기=1로 기울기 소실 완화, 계산 단순합니다. 시그모이드는 출력 0~1(이진분류 출력층), tanh는 출력 -1~1, Leaky ReLU는 음수 구간도 작은 기울기(αx, α≈0.01)를 허용하여 dead neuron 문제를 보완합니다. ☞ 암기 팁: ReLU=max(0,x)(양수 그대로, 음수 0) / Leaky ReLU=음수 구간도 작은 기울기 허용" 
   },
   { 
     subj: 3, 
     q: "딥러닝 모델 학습 과정에서 과대적합(Overfitting)을 방지하기 위해 신경망의 은닉층에 있는 일부 노드(퍼셉트론)를 무작위로 비활성화한 상태로 학습을 진행하는 기법은?", 
-    choices: ["배치 정규화(Batch Normalization)", "조기 종료(Early Stopping)", "드롭아웃(Dropout)", "역전파(Backpropagation)"], 
+    choices: ["드롭아웃(Dropout)", "배치 정규화(Batch Normalization)", "조기 종료(Early Stopping)", "가중치 감쇠(Weight Decay)"], 
     ans: 2, 
-    exp: "드롭아웃(Dropout)은 학습 시마다 신경망의 뉴런을 일정 비율로 꺼두어 특정 뉴런에 대한 의존도를 낮추고 모델이 더 범용적인 특징을 학습하도록 유도하는 규제 기법입니다." 
+    exp: "드롭아웃(Dropout)은 매 학습 배치마다 일부 노드를 무작위로 비활성화하여 앙상블 효과·과적합 방지에 사용됩니다. 배치 정규화는 레이어 입력 분포 정규화(학습 안정), 조기 종료는 검증 오차 증가 시 학습 중단, 가중치 감쇠는 L2 정규화로 가중치 크기 제한입니다. ☞ 암기 팁: 드롭아웃=노드 무작위 비활성화 / 배치 정규화=입력 분포 정규화 / 조기 종료=검증오차 기준 학습 중단" 
   },
   { 
     subj: 3, 
     q: "서포트벡터머신(SVM)에서 원래 2차원 등 저차원 공간에서 선형으로 완벽하게 분리할 수 없는 데이터를 고차원 공간으로 매핑하여 비선형 분류를 가능하게 해주는 수학적 함수는?", 
-    choices: ["활성 함수(Activation Function)", "손실 함수(Loss Function)", "커널 함수(Kernel Function)", "목적 함수(Objective Function)"], 
-    ans: 2, 
-    exp: "커널 함수(Kernel Function)는 데이터 벡터들을 실제로 고차원으로 변환하는 복잡한 연산 없이도 고차원 공간에서의 내적 값을 계산해 주어 비선형 결정 경계를 쉽게 찾을 수 있도록 돕습니다." 
+    choices: ["커널 함수(Kernel Function)", "활성화 함수(Activation Function)", "링크 함수(Link Function)", "손실 함수(Loss Function)"], 
+    ans: 3, 
+    exp: "커널 함수는 내적 계산만으로 고차원 매핑 효과를 얻는 커널 트릭에 사용됩니다. 대표 커널: RBF(Gaussian), 다항식, 선형 커널. 활성화 함수는 신경망, 손실 함수는 예측오차 측정, 링크 함수는 GLM(일반화선형모델)에서 선형 결합→반응변수 연결에 사용됩니다. ☞ 암기 팁: SVM 비선형 분류=커널 함수(RBF·다항식 등)로 고차원 매핑" 
   },
   { 
     subj: 3, 
     q: "연관성 분석(Association Analysis)에서 항목 A가 포함된 거래 중에서 항목 B도 함께 포함된 거래의 비율을 나타내는 지표로, 조건부 확률 P(B|A)에 해당하는 것은?", 
-    choices: ["지지도(Support)", "신뢰도(Confidence)", "향상도(Lift)", "이익도(Profit)"], 
-    ans: 1, 
-    exp: "신뢰도(Confidence)는 A를 구매했을 때 B도 구매할 확률을 의미하며, P(A∩B) / P(A) 공식으로 계산됩니다." 
+    choices: ["신뢰도(Confidence)", "기대 신뢰도(Expected Confidence)", "향상도(Lift)", "지지도(Support)"], 
+    ans: 3, 
+    exp: "신뢰도(Confidence) = P(A∩B)/P(A) = P(B|A). 지지도(Support) = P(A∩B) = 전체 거래 중 A∩B 비율. 향상도(Lift) = 신뢰도/P(B) = P(A∩B)/(P(A)·P(B)). 기대 신뢰도는 향상도 계산을 위한 기준값 P(B)입니다. ☞ 암기 팁: 지지도=P(A∩B), 신뢰도=P(B|A)=P(A∩B)/P(A), 향상도=신뢰도/P(B)" 
   },
   { 
     subj: 3, 
     q: "장바구니 분석(연관규칙 도출)에서 연산량을 획기적으로 줄이기 위해, 사용자가 사전에 설정한 최소 지지도(Minimum Support)를 만족하는 빈발 항목 집합만을 대상으로 규칙을 탐색하는 알고리즘은?", 
-    choices: ["Apriori 알고리즘", "K-Means 알고리즘", "FP-Growth 알고리즘", "DBSCAN 알고리즘"], 
+    choices: ["Apriori 알고리즘", "FP-Growth 알고리즘", "ECLAT 알고리즘", "PageRank 알고리즘"], 
     ans: 0, 
-    exp: "Apriori 알고리즘은 어떤 항목 집합이 빈발하지 않다면 그 집합의 모든 부분집합 역시 빈발하지 않다는 원리를 이용하여 탐색 범위를 크게 줄이는 대표적인 연관 분석 알고리즘입니다." 
+    exp: "Apriori 알고리즘은 '최소 지지도를 만족하는 항목 집합의 부분집합도 모두 빈발'이라는 성질(Apriori Property)을 이용해 탐색 공간을 축소합니다. FP-Growth는 트리 구조로 더 빠르게 빈발 항목 탐색, ECLAT는 수직 데이터 포맷 기반입니다. ☞ 암기 팁: Apriori=최소지지도로 가지치기(하위집합도 빈발) / FP-Growth=Apriori보다 빠른 트리기반" 
   },
   { 
     subj: 3, 
@@ -1647,16 +1507,16 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "K-평균 군집화(K-means Clustering) 알고리즘의 특징으로 가장 올바르지 않은 것은?", 
-    choices: ["군집의 개수(K)를 분석가가 사전에 지정해야 한다.", "초기 중심점 설정 위치에 따라 최종 결과가 달라질 수 있다.", "거리 기반이므로 이상치(Outlier)의 영향에 매우 민감하다.", "밀도 기반 알고리즘으로 임의의 비선형 형태 군집을 잘 찾아낸다."], 
+    choices: ["군집의 수(K)를 사전에 결정해야 한다.", "초기 중심점 선정에 따라 결과가 달라질 수 있다.", "군집의 형태가 항상 타원형 혹은 볼록 형태일 필요가 없다.", "범주형 변수보다 연속형 수치 변수에 더 적합하다."], 
     ans: 3, 
-    exp: "K-means는 중심점과 데이터 간의 거리를 기반으로 구형(원형)의 군집을 형성하므로, 복잡하고 불규칙한 형태의 군집을 찾는 데는 한계가 있습니다. 밀도 기반의 유연한 군집화는 DBSCAN 알고리즘의 특징입니다." 
+    exp: "K-means는 구형(원형) 군집을 가정하며 타원형·오목형 군집에는 잘 작동하지 않습니다. K 사전 결정 필요, 초기 중심점 의존성, 연속형 수치 변수에 적합(범주형에는 K-modes)은 올바른 특징입니다. ☞ 암기 팁: K-means 단점=K 사전지정·초기값 의존·구형 군집만·이상값 민감·범주형 불가" 
   },
   { 
     subj: 3, 
     q: "비계층적 군집분석 기법 중 데이터가 모여 있는 밀도(Density)를 계산하여, 일정 반경(Eps) 내에 지정된 최소 데이터 수(MinPts)가 존재하는 핵심 노드를 중심으로 군집을 확장해 나가는 알고리즘은?", 
-    choices: ["K-Means", "계층적 군집(Hierarchical Clustering)", "SOM(Self-Organizing Map)", "DBSCAN"], 
+    choices: ["DBSCAN", "K-평균(K-means)", "계층적 군집분석(Hierarchical Clustering)", "자기조직화지도(SOM)"], 
     ans: 3, 
-    exp: "DBSCAN은 밀도 기반 군집화 알고리즘으로, 군집의 수를 미리 지정할 필요가 없으며 노이즈(이상치)를 효과적으로 걸러낼 수 있는 장점이 있습니다." 
+    exp: "DBSCAN은 Eps(반경)와 MinPts(최소 데이터 수)로 핵심점·경계점·잡음점을 구분하며, 군집 수를 사전에 지정하지 않아도 되고 비구형·임의 형태 군집 및 이상값 탐지에 유리합니다. K-means는 K 사전 지정+구형 군집, 계층적 군집은 덴드로그램 사용, SOM은 자기조직화 신경망 기반입니다. ☞ 암기 팁: DBSCAN=밀도기반·K 불필요·이상값 탐지 가능·비구형 군집" 
   },
   { 
     subj: 3, 
@@ -1668,23 +1528,23 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "시계열 데이터가 가지고 있는 시간에 따른 일정한 패턴을 분석하기 위해 시계열이 갖추어야 할 조건인 정상성(Stationarity)을 확보하는 방법 중 하나로, 현 시점의 관측치에서 바로 이전 시점의 관측치를 빼는 작업을 무엇이라 하는가?", 
-    choices: ["지수 평활법(Exponential Smoothing)", "차분(Differencing)", "로그 변환(Log Transformation)", "이동 평균(Moving Average)"], 
-    ans: 1, 
-    exp: "차분(Differencing)은 시간에 따라 평균이 일정하지 않고 추세가 있는 비정상 시계열 데이터를 평균이 일정한 정상 시계열로 변환하기 위해 인접한 데이터 간의 차이를 구하는 기법입니다." 
+    choices: ["계절 조정(Seasonal Adjustment)", "차분(Differencing)", "로그 변환(Log Transformation)", "이동평균(Moving Average)"], 
+    ans: 0, 
+    exp: "차분(Differencing)은 Δyₜ = yₜ - yₜ₋₁으로 추세를 제거하여 정상 시계열로 변환합니다. ARIMA(p,d,q)에서 d가 차분 횟수입니다. 계절 조정은 계절성 제거, 로그 변환은 분산 안정화, 이동평균은 단기 변동 평활화에 사용됩니다. ☞ 암기 팁: 차분=현재값-이전값→추세 제거(ARIMA의 d) / 로그변환=분산 안정화" 
   },
   { 
     subj: 3, 
     q: "딥러닝의 합성곱 신경망(CNN) 구조에서 컨볼루션 레이어를 거친 후, 데이터의 중요한 공간적 특성은 유지하면서 행렬의 크기를 줄여 연산량을 대폭 감소시키는 역할을 하는 계층은?", 
-    choices: ["완전 연결 계층(Fully Connected Layer)", "출력 계층(Output Layer)", "풀링 계층(Pooling Layer)", "순환 계층(Recurrent Layer)"], 
+    choices: ["풀링 레이어(Pooling Layer)", "완전연결 레이어(Fully Connected Layer)", "드롭아웃(Dropout)", "배치 정규화(Batch Normalization)"], 
     ans: 2, 
-    exp: "풀링 계층(Pooling Layer, 또는 Subsampling Layer)은 특정 영역의 최댓값(Max Pooling)이나 평균값(Average Pooling)을 추출하여 이미지의 해상도를 낮추고 필수적인 특징만 남겨 연산량을 줄이는 계층입니다." 
+    exp: "풀링 레이어는 최대 풀링(Max Pooling)이나 평균 풀링(Average Pooling)으로 특징 맵 크기를 축소합니다. 완전연결 레이어는 최종 분류 단계, 드롭아웃은 과적합 방지, 배치 정규화는 입력 분포 정규화입니다. ☞ 암기 팁: CNN 구조=Conv(특징추출)→Pooling(크기축소)→FC(분류) / Max/Average Pooling" 
   },
   { 
     subj: 3, 
     q: "범주형 자료 분석에서 두 범주형 변수 간의 연관성이 있는지 확인하기 위해, 관측된 빈도와 기대 빈도의 차이를 활용하는 통계적 검정 방법은?", 
-    choices: ["t-검정(t-Test)", "분산분석(ANOVA)", "카이제곱 독립성 검정", "Z-검정(Z-Test)"], 
+    choices: ["카이제곱 검정(Chi-square Test)", "t-검정(t-test)", "F-검정(F-test)", "맥니마 검정(McNemar Test)"], 
     ans: 2, 
-    exp: "카이제곱 검정은 교차표(분할표)를 활용하여 관측빈도와 기대빈도의 차이를 통해 두 범주형 변수 간의 독립성과 동질성을 검정하는 방법입니다." 
+    exp: "카이제곱 검정은 교차표에서 관측빈도와 기대빈도의 차이(χ²)로 두 범주형 변수 간의 독립성·연관성을 검정합니다. t-검정은 연속형 변수의 평균 비교, F-검정은 분산 비교·ANOVA, 맥니마 검정은 대응 이진 변수의 변화 검정에 사용됩니다. ☞ 암기 팁: 범주형 두 변수 관계=카이제곱 검정 / 연속형 평균 비교=t-검정" 
   },
   { 
     subj: 3, 
@@ -1696,16 +1556,16 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "다변량 분석 기법 중, 세 개 이상의 여러 집단 간의 평균을 비교하여 그 차이가 통계적으로 유의미한지 확인하는 분석 방법은?", 
-    choices: ["상관 분석(Correlation Analysis)", "회귀 분석(Regression Analysis)", "분산 분석(ANOVA)", "주성분 분석(PCA)"], 
-    ans: 2, 
-    exp: "분산 분석(ANOVA)은 집단 간 분산과 집단 내 분산을 비교하여 다수 집단의 평균 차이를 검정하는 기법입니다." 
+    choices: ["다중회귀분석(Multiple Regression)", "독립표본 t-검정(Independent t-test)", "분산분석(ANOVA: Analysis of Variance)", "주성분분석(PCA)"], 
+    ans: 0, 
+    exp: "ANOVA는 3개 이상 집단의 평균 비교 시 사용합니다. 독립표본 t-검정은 2개 집단 평균 비교, 다중회귀는 여러 독립변수로 종속변수 예측, PCA는 차원 축소입니다. ANOVA 후 사후검정(Tukey, Bonferroni 등)으로 어느 집단 간 차이가 유의한지 확인합니다. ☞ 암기 팁: ANOVA=3개↑집단 평균 비교 / t-검정=2개 집단 평균 비교" 
   },
   { 
     subj: 3, 
     q: "요인 분석(Factor Analysis)의 요인 추출 방법 중, 데이터의 전체 분산을 토대로 상관성이 높은 변수들을 선형 결합하여 분산이 가장 큰 축부터 순차적으로 주성분을 추출하는 방법은?", 
-    choices: ["주축 요인 분석(Principal Axis Factoring)", "최소 제곱 요인 분석(Least Squares Factoring)", "최대 우도 요인 분석(Maximum Likelihood Factoring)", "주성분 분석(PCA)"], 
+    choices: ["주성분 분석(PCA: Principal Component Analysis)", "공통 요인 분석(Common Factor Analysis)", "최대 우도법(Maximum Likelihood Method)", "알파 요인 추출(Alpha Factoring)"], 
     ans: 3, 
-    exp: "주성분 분석(PCA)은 전체 분산을 최대로 설명할 수 있는 직교하는 새로운 축을 찾아 요인을 추출하는 가장 보편적인 차원 축소 기법입니다." 
+    exp: "PCA는 전체 분산을 최대화하는 방향으로 주성분을 추출하는 방법입니다. 공통 요인 분석은 공통 분산(공통인자)만을 기반으로 잠재 요인 추출, 최대 우도법은 정규분포 가정 하에 MLE로 요인 추출, 알파 요인 추출은 척도의 신뢰도 최적화 방법입니다. ☞ 암기 팁: PCA=전체분산 최대화→주성분 추출(비지도, 방향성 있음)" 
   },
   { 
     subj: 3, 
@@ -1738,8 +1598,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "분해 시계열 분석에서 시계열 데이터를 4가지 요인으로 분해할 때, 알려지지 않은 주기를 갖고 거시 경제 전반이나 특정 산업의 장기적인 변동 추이를 나타내는 요인은?", 
-    choices: ["추세 요인(Trend Factor)", "계절 요인(Seasonal Factor)", "순환 요인(Cyclical Factor)", "불규칙 요인(Irregular Factor)"], 
-    ans: 2, 
+    choices: ["추세 요인(Trend Factor)", "계절 요인(Seasonal Factor)", "불규칙 요인(Irregular Factor)", "순환 요인(Cyclical Factor)"], 
+    ans: 3, 
     exp: "순환 요인(Cyclical Factor)은 고정된 주기를 갖는 계절 요인과 달리, 수년에 걸쳐 경기 변동처럼 주기와 진폭이 불규칙하게 나타나는 변동 요인입니다." 
   },
   { 
@@ -1801,8 +1661,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "소셜 네트워크 분석(SNA)에서 네트워크 내 특정 노드가 다른 노드들과 얼마나 많은 직접적인 연결 관계를 맺고 있는지를 측정하여 영향력을 평가하는 중심성 지표는?", 
-    choices: ["매개 중심성(Betweenness Centrality)", "근접 중심성(Closeness Centrality)", "연결 중심성(Degree Centrality)", "위세 중심성(Eigenvector Centrality)"], 
-    ans: 2, 
+    choices: ["연결 중심성(Degree Centrality)", "근접 중심성(Closeness Centrality)", "매개 중심성(Betweenness Centrality)", "위세 중심성(Eigenvector Centrality)"], 
+    ans: 0, 
     exp: "연결 중심성(Degree Centrality)은 자신과 직접 연결된 이웃 노드의 수가 많을수록 핵심적인 역할을 한다고 평가하는 가장 기본적이고 직관적인 지표입니다." 
   },
   { 
@@ -1878,8 +1738,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "서포트벡터머신(SVM)에서 데이터를 두 개의 집단으로 분류하는 결정 경계면인 초평면(Hyperplane)을 설정할 때, 이 경계면과 가장 가까운 거리에 위치하여 마진(Margin)을 결정짓는 핵심 데이터 샘플들을 무엇이라 하는가?", 
-    choices: ["중심점(Centroid)", "서포트 벡터(Support Vector)", "핵심 노드(Core Node)", "은닉 노드(Hidden Node)"], 
-    ans: 1, 
+    choices: ["서포트 벡터(Support Vector)", "중심점(Centroid)", "핵심 노드(Core Node)", "은닉 노드(Hidden Node)"], 
+    ans: 0, 
     exp: "서포트 벡터(Support Vector)는 초평면의 위치와 방향을 결정하는 데 직접적인 영향을 미치는 경계 근처의 데이터들로 다른 일반 데이터들은 경계 설정에 영향을 주지 않습니다." 
   },
   { 
@@ -1906,8 +1766,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "인공신경망을 활용한 비지도 학습 군집 기법으로, 고차원의 복잡한 데이터를 2차원의 그리드 형태 지도로 매핑하여 데이터의 위상학적 구조를 시각적으로 이해하기 쉽게 표현하는 모델은?", 
-    choices: ["오토인코더(Autoencoder)", "합성곱 신경망(CNN)", "자기조직화지도(SOM)", "퍼지 군집화(Fuzzy Clustering)"], 
-    ans: 2, 
+    choices: ["자기조직화지도(SOM)", "합성곱 신경망(CNN)", "오토인코더(Autoencoder)", "퍼지 군집화(Fuzzy Clustering)"], 
+    ans: 0, 
     exp: "자기조직화지도(Self-Organizing Map, SOM)는 출력층의 뉴런들이 승자 독식 방식으로 경쟁 학습을 수행하며 입력 데이터의 다차원적 패턴을 군집화하여 지도로 형상화합니다." 
   },
   { 
@@ -1934,8 +1794,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "로지스틱 회귀분석 모델이 구축되었을 때, 이 모델에 포함된 독립변수들이 종속변수를 설명하는 데 통계적으로 유의미한 역할을 하는지 모형 전체의 적합성을 검정하기 위해 사용하는 방법은?", 
-    choices: ["Z-검정(Z-Test)", "우도비 검정(Likelihood Ratio Test)", "분산분석(ANOVA)", "T-검정(T-Test)"], 
-    ans: 1, 
+    choices: ["우도비 검정(Likelihood Ratio Test)", "Z-검정(Z-Test)", "분산분석(ANOVA)", "T-검정(T-Test)"], 
+    ans: 0, 
     exp: "우도비 검정(Likelihood Ratio Test)은 독립변수가 전혀 없는 기본 모형과 독립변수들이 모두 포함된 확장 모형 간의 최대 우도(Log Likelihood) 차이를 카이제곱 분포로 검정하는 기법입니다." 
   },
   { 
@@ -1969,8 +1829,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "입력 데이터를 인코더(Encoder)로 압축한 후에 디코더(Decoder)로 형태를 재구성하여 원래의 형태로 복원하는 비지도 학습 신경망 모델은?", 
-    choices: ["합성곱 신경망(CNN)", "순환 신경망(RNN)", "오토인코더(AutoEncoder)", "트랜스포머(Transformer)"], 
-    ans: 2, 
+    choices: ["오토인코더(AutoEncoder)", "순환 신경망(RNN)", "합성곱 신경망(CNN)", "트랜스포머(Transformer)"], 
+    ans: 0, 
     exp: "오토인코더(AutoEncoder)는 차원 축소와 데이터 복원을 학습하는 과정에서 유의미한 특징을 추출하며, VAE나 GAN과 같은 생성형 AI의 기반 모델로 활용됩니다." 
   },
   { 
@@ -2004,8 +1864,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "앙상블 분석에서 이전 모델이 잘못 분류한 데이터에 큰 가중치를 부여하여 다음 모델이 이를 집중적으로 학습하도록 순차적으로 진행하는 기법은?", 
-    choices: ["보팅(Voting)", "배깅(Bagging)", "부스팅(Boosting)", "스태킹(Stacking)"], 
-    ans: 2, 
+    choices: ["보팅(Voting)", "배깅(Bagging)", "스태킹(Stacking)", "부스팅(Boosting)"], 
+    ans: 3, 
     exp: "부스팅(Boosting)은 오분류된 데이터에 집중하여 약한 학습기들을 결합해 강력한 모델을 만들지만, 이상치(Outlier)에 민감하다는 단점이 있습니다." 
   },
   { 
@@ -2018,8 +1878,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "앙상블 분석에서 여러 개의 예측 모형이 도출한 결과들을 다수결 방식으로 취합하여 최종 모델을 선택하는 결합 기법은?", 
-    choices: ["스태킹(Stacking)", "보팅(Voting)", "부스팅(Boosting)", "배깅(Bagging)"], 
-    ans: 1, 
+    choices: ["스태킹(Stacking)", "배깅(Bagging)", "부스팅(Boosting)", "보팅(Voting)"], 
+    ans: 3, 
     exp: "보팅(Voting)은 각기 다른 알고리즘을 가진 모델들의 예측값을 단순히 다수결로 정하는 하드 보팅과, 확률값의 평균을 사용하는 소프트 보팅으로 나뉩니다." 
   },
   { 
@@ -2060,8 +1920,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "서포트벡터머신(SVM) 알고리즘에서 선형으로 분리할 수 없는 저차원 데이터를 비선형 분류가 가능한 고차원 공간의 데이터로 변환해 주는 수학적 도구는?", 
-    choices: ["활성 함수(Activation Function)", "손실 함수(Loss Function)", "커널 함수(Kernel Function)", "목적 함수(Objective Function)"], 
-    ans: 2, 
+    choices: ["활성 함수(Activation Function)", "손실 함수(Loss Function)", "목적 함수(Objective Function)", "커널 함수(Kernel Function)"], 
+    ans: 3, 
     exp: "커널 함수(Kernel Function)는 데이터 벡터들을 실제로 고차원으로 변환하는 복잡한 연산 없이도 고차원 공간에서의 내적 값을 쉽게 계산해 주는 역할을 합니다." 
   },
   { 
@@ -2088,8 +1948,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "교차표(분할표)를 활용하는 통계적 검정 방법 중, 두 개의 범주형 변수가 서로 관계가 있는지, 아니면 서로 아무런 영향을 미치지 않는지를 카이제곱 통계량을 통해 확인하는 검정은?", 
-    choices: ["적합도 검정(Goodness of fit test)", "동질성 검정(Test of Homogeneity)", "독립성 검정(Test of Independence)", "T-검정(T-Test)"], 
-    ans: 2, 
+    choices: ["독립성 검정(Test of Independence)", "동질성 검정(Test of Homogeneity)", "적합도 검정(Goodness of fit test)", "T-검정(T-Test)"], 
+    ans: 0, 
     exp: "독립성 검정(Test of Independence)은 변수 간의 독립 여부를 판단하며, 동질성 검정은 여러 집단이 동일한 분포를 따르는지 비교하는 검정입니다." 
   },
   { 
@@ -2099,26 +1959,167 @@ const QUESTION_BANK = [
     ans: 2, 
     exp: "추세 요인(Trend Factor)은 단기적인 변동을 넘어 시계열 자료가 장기적으로 나타내는 상승, 하락, 또는 평형 상태의 일관된 방향성을 의미합니다." 
   },
+  {
+    subj: 3,
+    q: "빅데이터 분석 도구인 R과 Python을 비교한 설명으로 가장 옳은 것은?",
+    choices: ["R은 범용 프로그래밍 언어로 웹 개발과 시스템 프로그래밍에 적합하다.", "Python은 통계 분석 전용 언어로 데이터 구조가 데이터프레임 중심이다.", "R은 통계 및 데이터 분석에 특화되었으며, CRAN을 통해 다양한 패키지를 제공한다.", "Python보다 R이 딥러닝 프레임워크 지원이 더 풍부하다."],
+    ans: 2,
+    exp: "R은 통계학자들이 개발한 통계 분석 전용 언어로, CRAN(Comprehensive R Archive Network)을 통해 방대한 통계/시각화 패키지를 제공합니다. Python은 범용 언어로 TensorFlow, PyTorch 등 딥러닝 프레임워크 지원이 더 풍부합니다. ☞ 암기 팁: R=통계(CRAN), Python=범용(딥러닝)"
+  },
+  {
+    subj: 3,
+    q: "다항 회귀(Polynomial Regression)에 대한 설명으로 옳은 것은?",
+    choices: ["독립변수 간의 상호작용항을 제거하여 선형성을 확보하는 기법이다.", "독립변수의 거듭제곱 항을 추가하여 비선형 관계를 선형 모형으로 표현하는 기법이다.", "종속변수가 범주형일 때 사용하는 비선형 회귀 기법이다.", "두 개 이상의 종속변수를 동시에 예측하는 다변량 회귀 기법이다."],
+    ans: 1,
+    exp: "다항 회귀는 x², x³ 등 독립변수의 거듭제곱 항을 새로운 변수로 추가하여 비선형 패턴을 선형 모형의 형태로 적합시키는 방법입니다. 계수 추정은 여전히 최소제곱법(OLS)을 사용하므로 '선형 모형'의 범주에 포함됩니다. ☞ 암기 팁: 다항회귀 = x의 거듭제곱 추가 → 비선형 관계를 선형으로 표현"
+  },
+  {
+    subj: 3,
+    q: "Ridge와 Lasso의 장점을 결합한 정규화 회귀 기법으로, L1과 L2 페널티를 모두 사용하는 방법은?",
+    choices: ["스텝와이즈 회귀(Stepwise Regression)", "편최소자승 회귀(PLS)", "주성분 회귀(PCR)", "엘라스틱 넷(Elastic Net)"],
+    ans: 3,
+    exp: "엘라스틱 넷(Elastic Net)은 L1 페널티(Lasso의 변수 선택 특성)와 L2 페널티(Ridge의 다중공선성 처리 특성)를 혼합(α 비율로 조합)하여 두 방법의 장점을 모두 취합니다. ☞ 암기 팁: Elastic Net = L1(Lasso) + L2(Ridge) 혼합"
+  },
+  {
+    subj: 3,
+    q: "다중 회귀분석에서 다중공선성(Multicollinearity) 진단에 사용되는 VIF(Variance Inflation Factor)의 일반적인 기준값으로 옳은 것은?",
+    choices: ["VIF > 1이면 다중공선성 문제가 있다.", "VIF > 5 또는 10이면 다중공선성 문제가 있다고 판단한다.", "VIF > 100이면 다중공선성 문제가 있다.", "VIF 값이 음수이면 다중공선성 문제가 있다."],
+    ans: 1,
+    exp: "VIF(분산팽창인수)는 특정 독립변수가 나머지 독립변수들에 의해 얼마나 설명되는지를 나타냅니다. 일반적으로 VIF > 10(보수적으로 VIF > 5)이면 심각한 다중공선성이 있다고 판단합니다. VIF=1은 공선성이 전혀 없음을 의미합니다. ☞ 암기 팁: VIF 경고 기준 = 5 또는 10"
+  },
+  {
+    subj: 3,
+    q: "로지스틱 회귀(Logistic Regression) 모형의 계수를 추정할 때 사용하는 주된 방법은?",
+    choices: ["최대우도추정법(MLE: Maximum Likelihood Estimation)", "최소자승법(OLS: Ordinary Least Squares)", "경사하강법만을 단독으로 사용한다.", "모멘트 추정법(Method of Moments)"],
+    ans: 0,
+    exp: "로지스틱 회귀는 종속변수가 0 또는 1의 이진형이므로 OLS가 적용되지 않습니다. 대신 관측된 데이터가 나올 우도(Likelihood)를 최대화하는 계수를 찾는 최대우도추정법(MLE)을 사용하며, 실제 계산은 반복 가중 최소자승법(IRLS)이나 경사하강법으로 수행합니다. ☞ 암기 팁: 로지스틱 회귀 계수 추정 = MLE(최대우도추정법)"
+  },
+  {
+    subj: 3,
+    q: "의사결정나무에서 과적합을 방지하기 위해 이미 성장한 나무의 불필요한 가지를 제거하는 기법은?",
+    choices: ["가지치기(Pruning)", "분리(Splitting)", "부트스트래핑(Bootstrapping)", "배깅(Bagging)"],
+    ans: 0,
+    exp: "가지치기(Pruning)는 나무가 훈련 데이터에 과적합되지 않도록 복잡한 가지를 제거하는 기법입니다. 사전 가지치기(Pre-pruning)는 성장 중에 중단하고, 사후 가지치기(Post-pruning)는 완전히 성장한 후 가지를 제거합니다. ☞ 암기 팁: Pruning(가지치기) = 과적합 방지를 위해 나무 가지를 제거"
+  },
+  {
+    subj: 3,
+    q: "의사결정나무 알고리즘 C4.5가 분리 기준으로 사용하는 지표는?",
+    choices: ["정보 이득 비율(Gain Ratio)", "지니 지수(Gini Index)", "카이제곱 통계량(Chi-square)", "F 통계량"],
+    ans: 0,
+    exp: "C4.5는 ID3의 정보 이득(Information Gain)이 다범주 속성에 편향되는 단점을 보완하여, 정보 이득을 분리 정보(Split Information)로 나눈 정보 이득 비율(Gain Ratio)을 분리 기준으로 사용합니다. CART는 지니 지수, CHAID는 카이제곱 통계량을 사용합니다. ☞ 암기 팁: C4.5 = Gain Ratio(정보이득비율), CART = Gini Index"
+  },
+  {
+    subj: 3,
+    q: "군집분석에서 K-평균(K-means) 알고리즘은 연속형 변수에 적합하지만, 범주형 변수가 포함된 데이터에는 어떤 알고리즘을 사용하는 것이 더 적합한가?",
+    choices: ["DBSCAN", "계층적 군집분석(Hierarchical Clustering)", "자기조직화지도(SOM)", "K-최빈값(K-modes)"],
+    ans: 3,
+    exp: "K-modes는 K-means를 범주형 변수에 맞게 확장한 알고리즘으로, 거리 대신 불일치(Dissimilarity) 측도를 사용하고 클러스터 중심으로 평균 대신 최빈값(Mode)을 사용합니다. ☞ 암기 팁: 범주형 군집 → K-modes(최빈값 사용), 연속형 → K-means(평균 사용)"
+  },
+  {
+    subj: 3,
+    q: "퍼지 군집분석(Fuzzy Clustering)의 특징으로 옳은 것은?",
+    choices: ["각 데이터 포인트가 반드시 하나의 군집에만 완전히 속한다.", "군집 간 경계가 불분명할 때 데이터 포인트가 여러 군집에 소속 확률을 가지며 속할 수 있다.", "노이즈와 이상값에 매우 강건하여 이상값 탐지에 특화되어 있다.", "군집의 수 K를 미리 지정하지 않아도 된다."],
+    ans: 1,
+    exp: "퍼지 군집분석(예: FCM, Fuzzy C-Means)은 각 데이터 포인트가 모든 군집에 0~1 사이의 소속도(Membership)를 가지는 방식으로, 군집 경계가 명확하지 않은 데이터에 적합합니다. 반면 K-means는 하나의 군집에만 속하는 경성(Hard) 분류입니다. ☞ 암기 팁: 퍼지 군집 = 여러 군집에 소속도(멤버십) 부여"
+  },
+  {
+    subj: 3,
+    q: "시계열 모형 중 MA(이동평균) 모형의 특징으로 옳은 것은?",
+    choices: ["현재 값이 과거 자신의 값들의 선형 결합으로 표현된다.", "현재 값이 과거 오차항(백색잡음)들의 선형 결합으로 표현된다.", "비정상 시계열을 정상 시계열로 변환하는 차분 횟수를 나타낸다.", "자기상관함수(ACF)가 천천히 감소하는 특징을 갖는다."],
+    ans: 1,
+    exp: "MA(q) 모형은 현재 시점의 값을 과거 q개의 오차항(백색잡음, ε)의 가중 합으로 표현합니다. 반면 AR(p) 모형은 과거 자신의 관측값들의 선형 결합입니다. MA 모형은 ACF가 q 시차 이후 절단(Cut-off)되는 특징이 있습니다. ☞ 암기 팁: MA = 과거 오차항의 선형결합, AR = 과거 자신의 값의 선형결합"
+  },
+  {
+    subj: 3,
+    q: "ARIMA(p, d, q) 모형에서 d 값의 의미로 옳은 것은?",
+    choices: ["자기회귀(AR) 모형의 차수로, 과거 몇 개의 값을 사용하는지를 나타낸다.", "이동평균(MA) 모형의 차수로, 과거 몇 개의 오차항을 사용하는지를 나타낸다.", "시계열을 정상 상태로 만들기 위해 필요한 차분(Differencing) 횟수를 나타낸다.", "계절성 주기를 나타내는 파라미터이다."],
+    ans: 2,
+    exp: "ARIMA(p, d, q)에서 p는 AR 차수, q는 MA 차수, d는 차분 횟수입니다. 비정상 시계열을 정상화하기 위해 d번 차분을 수행합니다. d=0이면 ARMA 모형과 동일합니다. 계절성 주기는 SARIMA에서 S로 표현됩니다. ☞ 암기 팁: ARIMA(p,d,q) → p=AR차수, d=차분횟수, q=MA차수"
+  },
+  {
+    subj: 3,
+    q: "계절성이 있는 시계열 데이터를 분석하기 위해 ARIMA를 확장한 모형은?",
+    choices: ["VAR(Vector Autoregression)", "GARCH(Generalized ARCH)", "SARIMA(Seasonal ARIMA)", "ARCH(Autoregressive Conditional Heteroskedasticity)"],
+    ans: 2,
+    exp: "SARIMA(Seasonal ARIMA)는 ARIMA 모형에 계절성 성분(Seasonal AR, Seasonal MA, Seasonal Differencing)을 추가한 모형으로 ARIMA(p,d,q)(P,D,Q)s로 표기합니다. 여기서 s는 계절 주기(예: 월별 데이터면 s=12)입니다. ☞ 암기 팁: 계절성 시계열 → SARIMA = ARIMA + 계절성 성분"
+  },
+  {
+    subj: 3,
+    q: "나이브 베이즈(Naive Bayes) 분류기의 핵심 가정은?",
+    choices: ["모든 독립변수가 정규분포를 따른다고 가정한다.", "각 독립변수(특성)들이 클래스가 주어졌을 때 서로 조건부 독립이라고 가정한다.", "클래스 간의 결정 경계가 항상 선형(Linear)이라고 가정한다.", "훈련 데이터가 반드시 균형 클래스 분포를 가져야 한다."],
+    ans: 1,
+    exp: "나이브 베이즈는 베이즈 정리를 기반으로 하며, 계산 단순화를 위해 각 특성이 클래스가 주어진 조건 하에서 서로 독립(Conditionally Independent)이라는 '순진한(Naive)' 가정을 합니다. 실제로 이 가정이 성립하지 않아도 텍스트 분류 등에서 잘 작동합니다. ☞ 암기 팁: Naive Bayes의 'Naive' = 특성 간 조건부 독립 가정"
+  },
+  {
+    subj: 3,
+    q: "잠재 의미 분석(LSA: Latent Semantic Analysis)에 대한 설명으로 옳은 것은?",
+    choices: ["단어 임베딩을 위해 신경망을 사용하여 단어의 분산 표현을 학습한다.", "단어-문서 행렬에 특이값 분해(SVD)를 적용하여 잠재적 의미 구조를 추출한다.", "각 문서에서 잠재 토픽의 분포를 확률적으로 추정하는 생성 모델이다.", "문장 내 단어의 순서(문맥)를 고려하여 순차적으로 의미를 학습한다."],
+    ans: 1,
+    exp: "LSA(잠재 의미 분석)는 TF-IDF 등으로 구성된 단어-문서 행렬에 SVD(특이값 분해)를 적용하여 차원을 축소하고 단어와 문서 간의 잠재적 의미 관계를 추출합니다. 신경망 기반 임베딩은 Word2Vec, GloVe 등이며, 확률적 토픽 모델은 LDA입니다. ☞ 암기 팁: LSA = 단어-문서 행렬 + SVD(특이값 분해)"
+  },
+  {
+    subj: 3,
+    q: "Word2Vec과 달리 말뭉치 전체의 단어 동시 출현(Co-occurrence) 통계 정보를 활용하여 단어 벡터를 학습하는 임베딩 방법은?",
+    choices: ["BERT", "FastText", "GloVe(Global Vectors for Word Representation)", "ELMo"],
+    ans: 2,
+    exp: "GloVe는 전체 말뭉치에서 단어 쌍의 동시 출현 빈도 행렬을 구축하고, 두 단어 벡터의 내적이 동시 출현 확률의 로그값에 근사하도록 학습합니다. FastText는 하위 단어(subword) 정보를 활용하고, BERT/ELMo는 문맥 기반 임베딩입니다. ☞ 암기 팁: GloVe = 전체 말뭉치 동시출현 통계 + 행렬 분해"
+  },
+  {
+    subj: 3,
+    q: "소셜 네트워크 분석(SNA)에서 노드의 중요도를 측정하는 중심성 지표 중, 한 노드가 다른 두 노드 간의 최단 경로 위에 위치하는 정도를 측정하는 지표는?",
+    choices: ["매개 중심성(Betweenness Centrality)", "근접 중심성(Closeness Centrality)", "연결 중심성(Degree Centrality)", "고유벡터 중심성(Eigenvector Centrality)"],
+    ans: 0,
+    exp: "매개 중심성(Betweenness Centrality)은 노드가 네트워크에서 정보 흐름의 '교량(Bridge)' 역할을 하는 정도를 측정합니다. 연결 중심성은 직접 연결된 노드 수, 근접 중심성은 다른 모든 노드까지의 거리 합의 역수입니다. ☞ 암기 팁: 매개 중심성 = 최단 경로 위에 얼마나 자주 위치하는가"
+  },
+  {
+    subj: 3,
+    q: "생성 모델(Generative Model) 중 인코더-디코더 구조에 잠재 공간(Latent Space)에 대한 확률 분포를 도입하여 새로운 데이터를 생성할 수 있도록 한 모델은?",
+    choices: ["오토인코더(Autoencoder)", "변분 오토인코더(VAE: Variational Autoencoder)", "생성적 적대 신경망(GAN)", "제한 볼츠만 머신(RBM)"],
+    ans: 1,
+    exp: "VAE(변분 오토인코더)는 일반 오토인코더와 달리 잠재 공간을 확률 분포(평균, 분산)로 표현하여, 분포에서 샘플링을 통해 새로운 데이터를 생성할 수 있습니다. 손실 함수는 재구성 오차와 KL 발산(KL Divergence)의 합으로 구성됩니다. ☞ 암기 팁: VAE = 오토인코더 + 잠재 공간의 확률 분포(생성 가능)"
+  },
+  {
+    subj: 3,
+    q: "앙상블 기법 중 부스팅(Boosting)에 대한 설명으로 옳은 것은?",
+    choices: ["여러 모델을 병렬로 학습한 후 다수결이나 평균으로 결합하는 기법이다.", "이전 모델이 잘못 분류한 샘플에 더 높은 가중치를 부여하여 순차적으로 모델을 학습하는 기법이다.", "훈련 데이터를 여러 서브셋으로 나누어 각각 독립적인 모델을 학습하는 기법이다.", "랜덤하게 선택된 특성의 부분 집합을 사용하여 의사결정나무를 병렬로 구성하는 기법이다."],
+    ans: 1,
+    exp: "부스팅(Boosting)은 이전 모델의 예측 오류에 집중하여 순차적으로 약한 학습기를 결합하는 기법입니다. 대표 알고리즘으로 AdaBoost, GBM, XGBoost, LightGBM이 있습니다. 병렬로 학습하는 것은 배깅(Bagging)이며, 랜덤 특성 선택을 추가한 것이 랜덤 포레스트입니다. ☞ 암기 팁: Boosting = 순차학습 + 이전 오류에 가중치 증가"
+  },
+  {
+    subj: 3,
+    q: "딥러닝에서 기울기 소실(Vanishing Gradient) 문제를 해결하기 위해 LSTM에서 도입된 핵심 메커니즘은?",
+    choices: ["드롭아웃(Dropout)을 통한 정규화", "게이트(Gate) 구조와 셀 상태(Cell State)를 이용한 정보 흐름 제어", "배치 정규화(Batch Normalization)를 통한 입력 분포 안정화", "잔차 연결(Residual Connection)을 통한 기울기 직접 전달"],
+    ans: 1,
+    exp: "LSTM(Long Short-Term Memory)은 입력 게이트, 망각 게이트, 출력 게이트와 셀 상태(Cell State)를 도입하여, 셀 상태를 통해 중요한 정보를 장기간 유지하고 불필요한 정보를 선택적으로 삭제함으로써 기울기 소실 문제를 완화합니다. ☞ 암기 팁: LSTM = 게이트(입력/망각/출력) + 셀 상태로 기울기 소실 해결"
+  },
+  {
+    subj: 3,
+    q: "Transformer 모델의 핵심 메커니즘으로, 입력 시퀀스의 모든 위치에서 각 위치가 다른 모든 위치와의 관계를 동시에 계산하여 문맥을 파악하는 기법은?",
+    choices: ["셀프 어텐션(Self-Attention)", "순환 연결(Recurrent Connection)", "합성곱 연산(Convolution Operation)", "풀링(Pooling)"],
+    ans: 0,
+    exp: "셀프 어텐션(Self-Attention)은 시퀀스 내의 각 토큰이 다른 모든 토큰과의 관련성(Attention Score)을 동시에 계산하여, 문장 내 단어 간의 장거리 의존 관계를 효과적으로 포착합니다. Transformer는 이 셀프 어텐션을 병렬로 처리하므로 RNN보다 학습 속도가 빠릅니다. ☞ 암기 팁: Transformer의 핵심 = Self-Attention(모든 위치 간 관계 동시 계산)"
+  },
+
   { 
     subj: 4, 
     q: "분류 모델의 성능을 평가하는 혼동행렬(오분류표) 지표 중, 실제 값이 True인 데이터 중에서 모델이 True라고 정확하게 맞춘 비율을 의미하는 지표는?", 
-    choices: ["정밀도(Precision)", "특이도(Specificity)", "재현율(Recall)", "정확도(Accuracy)"], 
+    choices: ["정밀도(Precision)", "특이도(Specificity)", "재현율(Recall)", "음성예측도(Negative Predictive Value, NPV)"], 
     ans: 2, 
-    exp: "재현율(Recall)은 민감도(Sensitivity) 또는 TP Rate라고도 불리며, 실제 True인 전체 집단(TP+FN) 중 정답을 맞춘 TP의 비율로 산출됩니다." 
+    exp: "재현율(Recall) = TP/(TP+FN): 실제 양성 중 맞게 예측한 비율. 정밀도(Precision) = TP/(TP+FP): 양성 예측 중 실제 양성 비율. 특이도(Specificity) = TN/(TN+FP): 실제 음성 중 올바르게 음성 예측 비율. NPV = TN/(TN+FN): 음성 예측 중 실제 음성 비율. ☞ 암기 팁: 재현율=실제양성 잡아내는 비율(FN 최소화) / 정밀도=예측양성의 정확도(FP 최소화)" 
   },
   { 
     subj: 4, 
     q: "분류 모델의 평가지표 중 모델이 True라고 예측한 것 중에서 실제 True인 정밀도(Precision)와, 실제 True인 것 중에서 모델이 예측한 재현율(Recall) 사이의 조화평균을 구한 지표는?", 
-    choices: ["F-1 Score", "F-B Score", "FP Rate", "이익도표(Lift chart)"], 
+    choices: ["F1-Score", "정확도(Accuracy)", "AUC-ROC", "Matthews Correlation Coefficient(MCC)"], 
     ans: 0, 
-    exp: "F-1 Score는 정밀도와 재현율이 한쪽으로 치우치지 않는지를 나타내는 지표로, 데이터 클래스가 불균형할 때 모델의 성능을 정확히 평가하기 위해 사용됩니다." 
+    exp: "F1-Score = 2×(Precision×Recall)/(Precision+Recall)로 정밀도와 재현율의 조화평균입니다. 정확도는 전체 중 올바른 예측 비율(클래스 불균형 시 부적합), AUC-ROC는 임계값 무관한 분류 성능, MCC는 불균형 이진 분류에 더 강건한 지표입니다. ☞ 암기 팁: F1=정밀도·재현율 조화평균(불균형 데이터에 정확도보다 적합)" 
   },
   { 
     subj: 4, 
     q: "분석모형 평가에서 가로축을 1-특이도(False Positive Rate)로, 세로축을 민감도(True Positive Rate)로 설정하여 모델의 분류 성능을 시각적으로 나타낸 그래프는?", 
-    choices: ["학습 곡선(Learning Curve)", "이익 도표(Lift Chart)", "ROC 커브(ROC Curve)", "향상도 곡선(Lift Curve)"], 
+    choices: ["ROC 커브(Receiver Operating Characteristic Curve)", "PR 커브(Precision-Recall Curve)", "학습 곡선(Learning Curve)", "이익 도표(Lift Chart)"], 
     ans: 2, 
-    exp: "ROC 커브는 이진 분류 모델의 임계값 변화에 따른 FPR과 TPR의 관계를 보여주며, 이 곡선 아래의 면적인 AUC가 1에 가까울수록 성능이 우수한 모델입니다." 
+    exp: "ROC 커브: x=FPR(1-특이도=위양성률), y=TPR(민감도=재현율). AUC=ROC 아래 면적(1=완벽, 0.5=랜덤). PR 커브는 x=재현율, y=정밀도(불균형 데이터에 더 유용). 학습 곡선은 데이터 크기 vs 성능, 이익 도표는 향상도 시각화입니다. ☞ 암기 팁: ROC=FPR vs TPR(x=위양성률, y=민감도) / PR커브=재현율 vs 정밀도" 
   },
   { 
     subj: 4, 
@@ -2144,16 +2145,16 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석 모형의 진단 과정에서, 모델이 훈련용 데이터는 완벽에 가깝게 설명하지만 모델이 지나치게 복잡해져서 새로운 평가용 데이터에는 성능이 현저히 떨어지는 상태는?", 
-    choices: ["과소적합(Underfitting)", "과대적합(Overfitting)", "다중공선성(Multicollinearity)", "데이터 편향(Data Bias)"], 
-    ans: 1, 
-    exp: "과대적합(Overfitting)은 모델이 훈련 데이터의 무작위적인 노이즈까지 학습하여 분산(Variance)이 높고 편향(Bias)이 낮은 상태를 의미합니다." 
+    choices: ["과소적합(Underfitting)", "과대적합(Overfitting)", "편향-분산 트레이드오프(Bias-Variance Tradeoff)", "모델 드리프트(Model Drift)"], 
+    ans: 0, 
+    exp: "과적합: 훈련오차↓·검증오차↑. 과소적합: 훈련오차·검증오차 모두 높음. 편향-분산 트레이드오프는 과적합(분산↑·편향↓)과 과소적합(분산↓·편향↑)의 상충관계. 모델 드리프트는 배포 후 데이터 분포 변화로 인한 성능 저하입니다. ☞ 암기 팁: 과적합=훈련↑·검증↓(너무 외움) / 과소적합=훈련↓·검증↓(너무 단순)" 
   },
   { 
     subj: 4, 
     q: "모델 평가 기법 중 전체 데이터를 K개의 집단으로 나눈 뒤, K-1개 집단으로 모델을 학습시키고 나머지 1개의 집단으로 검증하는 과정을 집단을 번갈아가며 총 K번 반복하는 기법은?", 
-    choices: ["홀드아웃(Hold-out)", "LOOCV(Leave-One-Out Cross Validation)", "부트스트래핑(Bootstrapping)", "K-fold 교차검증(K-fold Cross Validation)"], 
+    choices: ["K-겹 교차검증(K-Fold Cross Validation)", "홀드아웃 검증(Hold-out Validation)", "LOOCV(Leave-One-Out Cross Validation)", "층화 K-겹 교차검증(Stratified K-Fold)"], 
     ans: 3, 
-    exp: "K-fold 교차검증은 모든 데이터를 학습과 검증에 고르게 활용할 수 있어, 데이터 수가 적을 때 홀드아웃 방식이 가지는 편향 문제를 해결하는 데 유용합니다." 
+    exp: "K-겹 교차검증은 K번 반복으로 모든 데이터를 검증에 활용, 과적합 방지+안정적 성능 추정. LOOCV는 K=n(데이터 적을 때), 홀드아웃은 1회 분할(빠르지만 불안정), 층화 K-겹은 클래스 비율을 유지하며 분할(불균형 데이터에 적합). ☞ 암기 팁: K-겹=K번 반복 검증 / 층화 K-겹=클래스비율 유지 / LOOCV=K=n(극단적)" 
   },
   { 
     subj: 4, 
@@ -2165,8 +2166,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "데이터의 적합도 검정 시, 표본 데이터의 분위수와 이론적인 정규분포의 분위수를 점으로 찍어 시각화하여 점들이 대각선(45도) 직선 위에 고르게 분포하면 정규성을 가진다고 판단하는 그래프는?", 
-    choices: ["산점도(Scatter Plot)", "히스토그램(Histogram)", "Q-Q Plot(Quantile-Quantile Plot)", "박스플롯(Box Plot)"], 
-    ans: 2, 
+    choices: ["Q-Q Plot(Quantile-Quantile Plot)", "히스토그램(Histogram)", "산점도(Scatter Plot)", "박스플롯(Box Plot)"], 
+    ans: 0, 
     exp: "Q-Q Plot은 데이터가 정규분포를 따르는지 시각적으로 빠르게 판단할 수 있는 도구이며, 샤피로-윌크 검정 등과 함께 모수 검정의 전제 조건을 확인할 때 자주 쓰입니다." 
   },
   { 
@@ -2179,23 +2180,23 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "인공신경망 등의 모델 학습 시 과대적합(Overfitting)을 방지하기 위해, 훈련 오차는 계속 줄어들더라도 검증용 데이터의 오차가 오히려 증가하기 시작하는 최적의 지점에서 학습을 멈추게 하는 기법은?", 
-    choices: ["드롭아웃(Dropout)", "배치 정규화(Batch Normalization)", "조기 종료(Early Stopping)", "데이터 증강(Data Augmentation)"], 
+    choices: ["조기 종료(Early Stopping)", "드롭아웃(Dropout)", "L2 정규화(Ridge Regularization)", "배치 정규화(Batch Normalization)"], 
     ans: 2, 
-    exp: "조기 종료(Early Stopping)는 모델이 훈련 데이터에 너무 과하게 맞춰지기 전에 에포크(Epoch) 진행을 강제로 중단시켜 일반화 성능을 높이는 방지 방안입니다." 
+    exp: "조기 종료(Early Stopping)는 검증 오차가 증가하기 시작하는 시점에서 학습을 중단합니다. 드롭아웃은 노드 무작위 비활성화, L2 정규화는 가중치 크기 제한, 배치 정규화는 입력 분포 정규화입니다. ☞ 암기 팁: 조기 종료=검증오차 증가 시 학습 중단(최적 에포크 찾기) / 드롭아웃=노드 무작위 비활성화" 
   },
   { 
     subj: 4, 
     q: "경사하강법의 옵티마이저(Optimizer) 알고리즘 중, 누적된 기울기 정보를 활용하여 각 매개변수별로 학습률(Learning Rate)을 자동으로 조절하며 학습 횟수가 늘어날수록 보폭(학습률)을 점차 줄여나가는 기법은?", 
-    choices: ["Momentum", "Adagrad", "RMSProp", "Adam"], 
+    choices: ["Adagrad", "RMSprop", "Adam", "SGD(Stochastic Gradient Descent)"], 
     ans: 1, 
-    exp: "Adagrad는 한 번도 갱신되지 않은 변수는 큰 폭으로 갱신하고, 이미 크게 갱신된 변수는 세밀하게 갱신하여 최적점에 도달하도록 돕습니다." 
+    exp: "Adagrad는 파라미터별 누적 기울기 제곱합으로 학습률을 조절(많이 갱신된 파라미터 학습률↓). 단점은 학습이 진행될수록 학습률이 0에 수렴. RMSprop은 지수이동평균으로 Adagrad 단점 보완, Adam은 Momentum+RMSprop 결합, SGD는 기본 경사하강법입니다. ☞ 암기 팁: Adagrad=파라미터별 학습률 조절(누적제곱합) / RMSprop=Adagrad 단점 보완 / Adam=Momentum+RMSprop" 
   },
   { 
     subj: 4, 
     q: "모델의 하이퍼파라미터를 튜닝할 때 분석가가 지정한 모든 파라미터 후보들의 가능한 모든 조합을 하나씩 전부 대입해 보고 가장 성능이 좋은 최적의 조합을 찾아내는 방법은?", 
-    choices: ["랜덤 서치(Random Search)", "베이지안 최적화(Bayesian Optimization)", "메뉴얼 서치(Manual Search)", "그리드 서치(Grid Search)"], 
+    choices: ["그리드 서치(Grid Search)", "랜덤 서치(Random Search)", "베이지안 최적화(Bayesian Optimization)", "하이퍼밴드(Hyperband)"], 
     ans: 3, 
-    exp: "그리드 서치(Grid Search)는 격자망처럼 모든 경우의 수를 촘촘히 탐색하므로 튜닝 시간이 오래 걸린다는 단점이 있어 최근에는 랜덤 서치나 베이지안 최적화가 자주 병행됩니다." 
+    exp: "그리드 서치는 모든 조합을 전수 탐색하므로 최적값 보장되지만 시간·자원 많이 소요됩니다. 랜덤 서치는 무작위 조합 탐색(빠르지만 최적 미보장), 베이지안 최적화는 이전 결과를 확률 모델로 추정하여 효율적 탐색, 하이퍼밴드는 자원 제약 하에 빠른 탐색입니다. ☞ 암기 팁: 그리드서치=전수탐색(확실·느림) / 랜덤서치=무작위(빠름·부정확) / 베이지안=이전결과활용(효율적)" 
   },
   { 
     subj: 4, 
@@ -2221,8 +2222,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "주성분 분석(PCA)에서 최적의 주성분 개수를 선택하기 위해 시각화하는 도구로, x축을 주성분의 개수로 하고 y축을 분산의 크기로 설정하여 그래프의 기울기가 완만해져 수평을 이루기 바로 직전 단계의 개수를 채택하는 방법은?", 
-    choices: ["박스플롯(Box Plot)", "스크리플롯(Screeplot)", "덴드로그램(Dendrogram)", "산점도(Scatter Plot)"], 
-    ans: 1, 
+    choices: ["박스플롯(Box Plot)", "산점도(Scatter Plot)", "덴드로그램(Dendrogram)", "스크리플롯(Screeplot)"], 
+    ans: 3, 
     exp: "스크리플롯(Screeplot)은 주성분이 추가될 때마다 새롭게 설명해 내는 분산의 양이 어떻게 줄어드는지를 시각적으로 보여주어 적절한 차원 축소 규모를 결정하게 해줍니다." 
   },
   { 
@@ -2242,8 +2243,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석모형 진단 시 모델이 과소적합(Underfitting) 상태일 때 나타나는 통계적 특성으로 올바른 것은?", 
-    choices: ["높은 분산, 낮은 편향", "낮은 분산, 높은 편향", "높은 분산, 높은 편향", "낮은 분산, 낮은 편향"], 
-    ans: 1, 
+    choices: ["낮은 분산, 높은 편향", "높은 분산, 낮은 편향", "높은 분산, 높은 편향", "낮은 분산, 낮은 편향"], 
+    ans: 0, 
     exp: "과소적합(Underfitting)은 모델이 지나치게 단순하여 데이터를 충분히 설명하지 못하는 상태로, 데이터의 변동에 덜 민감하여 분산은 낮지만 실제값과의 오차인 편향은 높게 나타납니다." 
   },
   { 
@@ -2270,16 +2271,16 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "모델 최적화를 위해 사용자가 직접 수동으로 설정해 주어야 하며, 인공신경망의 은닉층 수나 노드 수, 혹은 경사하강법의 학습률 등이 이에 해당하는 변수를 무엇이라 하는가?", 
-    choices: ["가중치(Weight)", "파라미터(Parameter)", "하이퍼파라미터(Hyperparameter)", "편향(Bias)"], 
-    ans: 2, 
-    exp: "하이퍼파라미터(초매개변수)는 알고리즘 자체가 학습을 통해 찾아내는 가중치나 편향 등의 파라미터와 달리, 분석가가 튜닝을 위해 직접 값을 지정해야 하는 설정값입니다." 
+    choices: ["가중치(Weight)", "모수(Parameter)", "하이퍼파라미터(Hyperparameter)", "편향(Bias)"], 
+    ans: 0, 
+    exp: "하이퍼파라미터는 학습 전 사람이 설정하는 값(학습률, 층수, 노드수, 배치사이즈 등)입니다. 모수(파라미터)는 학습 중 데이터로 자동 최적화되는 값(가중치, 편향). 가중치와 편향은 신경망 파라미터의 구체적 예시입니다. ☞ 암기 팁: 하이퍼파라미터=사람이 설정(학습전) / 파라미터=모델이 학습(가중치·편향)" 
   },
   { 
     subj: 4, 
     q: "딥러닝 모델 등의 학습 단위에서, 모델이 제공된 전체 훈련 데이터 세트를 한 번 모두 사용하여 학습을 완료하는 사이클을 뜻하는 용어는?", 
-    choices: ["배치 사이즈(Batch Size)", "에포크(Epoch)", "이터레이션(Iteration)", "스텝(Step)"], 
+    choices: ["에포크(Epoch)", "배치(Batch)", "이터레이션(Iteration)", "스텝(Step)"], 
     ans: 1, 
-    exp: "에포크(Epoch)는 전체 데이터셋을 한 번 훑고 지나가며 학습을 1회 마치는 단위이며, 에포크 횟수가 늘어날수록 모델은 데이터를 반복해서 학습하게 됩니다." 
+    exp: "에포크는 전체 훈련 데이터를 1회 완전히 학습하는 단위입니다. 배치(Batch)는 한 번에 처리하는 데이터 서브셋, 이터레이션(Iteration)=배치 수=데이터수/배치사이즈. 예: 1000개 데이터, 배치100→1에포크=10이터레이션. ☞ 암기 팁: 에포크=전체 데이터 1회 완주 / 배치=한번에 처리하는 묶음 / 이터레이션=에포크÷배치사이즈" 
   },
   { 
     subj: 4, 
@@ -2291,23 +2292,23 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "경사하강법의 옵티마이저(Optimizer) 알고리즘 중, 지수이동평균을 이용하여 최근의 기울기 정보를 더 크게 반영함으로써 Adagrad의 단점인 학습률이 급격히 0으로 감소하는 현상을 방지하는 기법은?", 
-    choices: ["SGD(Stochastic Gradient Descent)", "Momentum", "RMSProp", "NAG(Nesterov Accelerated Gradient)"], 
-    ans: 2, 
-    exp: "RMSProp은 과거의 모든 기울기를 균일하게 누적하지 않고 이전 맥락을 파악하며 보폭을 조절하여 학습률이 소실되는 문제를 보완한 최적화 기법입니다." 
+    choices: ["Momentum SGD", "Adagrad", "RMSprop", "Adam"], 
+    ans: 0, 
+    exp: "RMSprop은 기울기 제곱의 지수이동평균으로 학습률 조절하여 Adagrad의 학습률 급감소 문제를 보완합니다. Adagrad는 누적 제곱합(학습률 0 수렴), Momentum은 관성 활용, Adam은 Momentum+RMSprop 결합입니다. ☞ 암기 팁: RMSprop=지수이동평균으로 Adagrad 보완 / Adam=Momentum+RMSprop(가장 많이 사용)" 
   },
   { 
     subj: 4, 
     q: "경사하강법 옵티마이저 중에서 이전 기울기를 반영하여 관성으로 이동하는 모멘텀(Momentum) 기법과, 보폭을 조절하는 RMSProp 기법의 장점을 모두 결합하여 가장 널리 사용되는 알고리즘은?", 
-    choices: ["Adam(Adaptive Moment Estimation)", "Adagrad", "AdaDelta", "NADAM"], 
+    choices: ["Adam(Adaptive Moment Estimation)", "Adagrad", "RMSprop", "SGD with Momentum"], 
     ans: 0, 
-    exp: "Adam 옵티마이저는 방향을 유지하는 모멘텀 방식과 스텝 사이즈를 최적화하는 RMSProp 방식을 결합하여 빠르고 안정적인 학습 수렴 속도를 보여줍니다." 
+    exp: "Adam = Momentum(1차 모멘트) + RMSprop(2차 모멘트) 결합으로 빠르고 안정적인 최적화. 편향 보정 포함. 대부분의 딥러닝 모델에서 기본 옵티마이저로 사용됩니다. Adagrad는 학습률 급감소 문제, RMSprop은 Adagrad 보완, SGD with Momentum은 모멘텀만 적용입니다. ☞ 암기 팁: Adam=Momentum+RMSprop 결합(딥러닝 기본 옵티마이저)" 
   },
   { 
     subj: 4, 
     q: "데이터의 분포와 기초 통계량을 나타내는 박스플롯(Box Plot) 그래프를 해석할 때, 시각적으로 표현된 요소를 통해 직관적으로 파악할 수 없는 지표는?", 
-    choices: ["중앙값(Median)", "사분위수 범위(IQR)", "평균값(Mean)", "이상치(Outlier) 유무"], 
+    choices: ["중앙값(Median)", "사분위수 범위(IQR)", "산술 평균(Arithmetic Mean)", "이상값(Outlier)"], 
     ans: 2, 
-    exp: "박스플롯은 데이터의 최솟값, 1사분위수, 중앙값(Q2), 3사분위수, 최댓값, 그리고 상하한선을 벗어난 이상치를 보여주지만, 평균값은 그래프에 표시되지 않습니다." 
+    exp: "박스플롯에서 직접 표현되는 요소: 중앙값(상자 중앙선), Q1·Q3(상자 경계), IQR(상자 높이), 이상값(점·별표), 범위(수염). 산술 평균은 박스플롯에 직접 표현되지 않습니다(왜도에 따라 중앙값과 다를 수 있음). ☞ 암기 팁: 박스플롯=중앙값·IQR·이상값 표현 / 평균은 직접 표현 안됨" 
   },
   { 
     subj: 4, 
@@ -2319,8 +2320,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "변수 간 상관관계를 색상의 농도로 시각화한 히트맵(Heatmap)을 분석할 때, 두 독립변수 간의 상관계수가 1 또는 -1에 가까운 매우 짙은 색상으로 표현된 것을 발견했다면 어떤 통계적 문제를 의심해야 하는가?", 
-    choices: ["과소적합(Underfitting)", "이분산성(Heteroscedasticity)", "다중공선성(Multicollinearity)", "자기상관성(Autocorrelation)"], 
-    ans: 2, 
+    choices: ["다중공선성(Multicollinearity)", "이분산성(Heteroscedasticity)", "과소적합(Underfitting)", "자기상관성(Autocorrelation)"], 
+    ans: 0, 
     exp: "독립변수들 간에 강한 상관관계가 존재하면 회귀 계수의 추정이 불안정해지는 다중공선성 문제가 발생하므로, PCA 등 차원 축소나 변수 제거를 고려해야 합니다." 
   },
   { 
@@ -2340,9 +2341,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "주성분 분석(PCA) 수행 결과를 해석할 때, 도출된 첫 번째 주성분(PC1)이 갖는 가장 핵심적인 수학적 특징은 무엇인가?", 
-    choices: ["자료의 분산이 가장 작은 축이다.", "자료의 분산이 가장 큰 축이다.", "모든 변수들의 평균을 나타내는 축이다.", "원래 데이터의 범주를 분류하는 결정 경계이다."], 
+    choices: ["데이터의 분산이 최대가 되는 방향으로 투영된 주성분이다.", "데이터의 평균과 가장 가까운 방향으로 투영된 주성분이다.", "독립변수와 종속변수 간의 상관계수가 가장 큰 주성분이다.", "데이터의 이상값이 가장 많이 포함된 방향의 주성분이다."], 
     ans: 1, 
-    exp: "주성분 분석은 데이터의 정보(분산)를 최대한 보존하면서 차원을 축소하는 기법이므로, PC1은 원본 데이터의 흩어짐(분산)을 가장 많이 설명하는 방향의 축이 됩니다." 
+    exp: "PCA에서 PC1은 데이터의 분산(정보량)이 최대가 되는 방향입니다. PC2는 PC1에 직교하는 방향 중 분산이 최대, 이후 주성분도 마찬가지입니다. 주성분은 서로 직교(uncorrelated)합니다. ☞ 암기 팁: PCA PC1=분산 최대 방향 / PC2=PC1에 직교하며 분산 최대 / 주성분들은 서로 직교" 
   },
   { 
     subj: 4, 
@@ -2368,8 +2369,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "공간 시각화 기법 중에서, 데이터의 값이 크거나 작은 정도를 강조하기 위해 실제 지리적 면적의 크기나 형태를 데이터 수치에 비례하도록 의도적으로 왜곡시켜 표현하는 통계 지도는?", 
-    choices: ["단계구분도(Choropleth Map)", "카토그램(Cartogram)", "등치선도(Isoline Map)", "버블 플롯 맵(Bubble Plot Map)"], 
-    ans: 1, 
+    choices: ["단계구분도(Choropleth Map)", "버블 플롯 맵(Bubble Plot Map)", "등치선도(Isoline Map)", "카토그램(Cartogram)"], 
+    ans: 3, 
     exp: "카토그램(왜상통계지도)은 지리적인 정확성보다는 데이터 값의 크기를 면적의 크기로 치환하여 정보의 시각적 임팩트를 극대화하는 기법입니다." 
   },
   { 
@@ -2396,8 +2397,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "비교 시각화 도구 중, 두 개의 비교 집단이 가지는 다양한 항목별 데이터를 중앙의 Y축을 기준으로 좌우 대칭이 되도록 뻗어 나가는 막대그래프 형태로 나타내어 양측을 직관적으로 비교하는 기법은?", 
-    choices: ["레이더 차트(Radar Chart)", "체르노프 페이스(Chernoff Face)", "버터플라이 차트(Butterfly Chart)", "평행 좌표 그래프(Parallel Coordinates Plot)"], 
-    ans: 2, 
+    choices: ["버터플라이 차트(Butterfly Chart)", "체르노프 페이스(Chernoff Face)", "레이더 차트(Radar Chart)", "평행 좌표 그래프(Parallel Coordinates Plot)"], 
+    ans: 0, 
     exp: "버터플라이 차트는 나비의 날개 모양처럼 중앙을 기준으로 두 집단의 데이터를 양옆으로 전개하여 항목별 차이를 선명하게 대조해 볼 수 있습니다." 
   },
   { 
@@ -2410,16 +2411,16 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "다차원 데이터를 사람의 눈, 코, 입, 얼굴 형태 등 인간에게 친숙한 시각적 요소의 크기와 모양으로 변환하여, 작은 데이터 차이도 직관적인 표정 변화로 쉽게 인식할 수 있도록 고안된 비교 시각화 기법은?", 
-    choices: ["카토그램(Cartogram)", "체르노프 페이스(Chernoff Face)", "평행 좌표 그래프(Parallel Coordinates)", "히트맵(Heatmap)"], 
-    ans: 1, 
+    choices: ["카토그램(Cartogram)", "히트맵(Heatmap)", "평행 좌표 그래프(Parallel Coordinates)", "체르노프 페이스(Chernoff Face)"], 
+    ans: 3, 
     exp: "체르노프 페이스는 인간이 미세한 얼굴 표정 차이를 매우 빠르게 인지한다는 심리학적 특징을 응용하여 복잡한 다변량 데이터를 얼굴 그림으로 형상화한 기법입니다." 
   },
   { 
     subj: 4, 
     q: "일반 대중에게 설득력 있는 메시지를 효과적으로 전달하기 위해 목적에 맞게 정보를 취합하고 시각적 형상(Graphic)을 더하여 디자인하는 가공 매체는?", 
-    choices: ["탐색적 자료 분석(EDA)", "인포그래픽(Infographics)", "데이터 레이크(Data Lake)", "교차표(Cross Tabulation)"], 
-    ans: 1, 
-    exp: "인포그래픽은 단순한 분석 패턴 발견보다는 정보를 전달하고 대중을 설득하기 위한 목적이 강하며, 정제되지 않은 원본 데이터(Raw Data)를 그대로 취급하지 않고 가공된 의미를 전달합니다." 
+    choices: ["인포그래픽(Infographics)", "인터랙티브 차트(Interactive Chart)", "대시보드(Dashboard)", "데이터 시각화(Data Visualization)"], 
+    ans: 3, 
+    exp: "인포그래픽은 정보(Info)+그래픽(Graphic)으로, 복잡한 정보를 직관적 이미지·아이콘·다이어그램으로 전달하는 매체입니다. 데이터 시각화는 데이터를 시각적으로 표현하는 총칭, 대시보드는 실시간 지표 모니터링 화면, 인터랙티브 차트는 사용자 상호작용이 가능한 차트입니다. ☞ 암기 팁: 인포그래픽=정보+그래픽(스토리+디자인 결합) / 대시보드=KPI 실시간 모니터링" 
   },
   { 
     subj: 4, 
@@ -2431,9 +2432,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석 결과 활용 단계에서, 테스트를 마친 새로운 분석 모형을 실제 비즈니스 운영 시스템 환경에 설치하고 작동하도록 하여 업무 프로세스에 통합하는 전체 과정을 뜻하는 용어는?", 
-    choices: ["분석 요건 정의", "탐색적 데이터 분석(EDA)", "하이퍼파라미터 튜닝", "분석모형 전개(Deployment)"], 
+    choices: ["모형 배포(Model Deployment)", "모형 검증(Model Validation)", "모형 훈련(Model Training)", "모형 모니터링(Model Monitoring)"], 
     ans: 3, 
-    exp: "분석모형 전개(Deployment)는 구축된 머신러닝 모델의 분석 결과를 확장하고 실제 운영 환경에 적용하여 현업에서 가치를 창출할 수 있게 하는 필수 과정입니다." 
+    exp: "모형 배포(Deployment)는 학습·검증된 모델을 운영 시스템에 통합하여 실제 서비스에 적용하는 전 과정입니다. 모형 검증은 성능 평가 단계, 모형 훈련은 학습 단계, 모형 모니터링은 배포 후 성능 추적 단계입니다. ☞ 암기 팁: 분석 프로세스=훈련→검증→배포→모니터링 / 배포=운영 환경 통합" 
   },
   { 
     subj: 4, 
@@ -2445,9 +2446,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분류 모델의 평가지표인 F-베타(F-Beta) 스코어에서, 베타(β) 값이 1보다 클 때(예: β=2) 모델 평가 시 정밀도(Precision)보다 더 큰 비중을 두어 중요하게 고려하는 지표는?", 
-    choices: ["정확도(Accuracy)", "특이도(Specificity)", "FP Rate", "재현율(Recall)"], 
+    choices: ["재현율(Recall)", "정밀도(Precision)", "특이도(Specificity)", "정확도(Accuracy)"], 
     ans: 3, 
-    exp: "F-베타 스코어 공식에 따라 베타 값이 1보다 크면 분모에서 재현율의 영향력이 커지므로, 실제 양성을 놓치지 않는 재현율(민감도)을 더 중요하게 평가하고자 할 때 사용합니다." 
+    exp: "F-β = (1+β²)×(Precision×Recall) / (β²×Precision+Recall). β>1이면 재현율(Recall) 가중치↑, β<1이면 정밀도(Precision) 가중치↑, β=1이면 F1(동일 비중). 암 진단처럼 위음성을 줄여야 할 때 β>1(재현율 중시)를 사용합니다. ☞ 암기 팁: β>1=재현율 중시(놓치면 안됨), β<1=정밀도 중시(오탐 방지)" 
   },
   { 
     subj: 4, 
@@ -2480,8 +2481,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "딥러닝 가중치 갱신 알고리즘(옵티마이저) 중, 매 스텝마다 이전 기울기를 일정 비율로 누적 반영하여 이동하던 방향의 관성을 유지함으로써 지역 최소값(Local Minima)을 더 쉽게 빠져나오게 돕는 기법은?", 
-    choices: ["Adagrad", "Momentum", "RMSProp", "SGD"], 
-    ans: 1, 
+    choices: ["Momentum", "Adagrad", "RMSProp", "SGD"], 
+    ans: 0, 
     exp: "Momentum(관성) 기법은 언덕을 내려오는 공이 가속도를 얻어 작은 웅덩이를 쉽게 넘어가듯, 기울기 진동을 완화하고 학습의 수렴 속도를 크게 향상시켜 줍니다." 
   },
   { 
@@ -2529,8 +2530,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "이진 분류 모델에서 실제 거짓(Negative)인 데이터를 모델이 거짓으로 올바르게 예측한 비율을 의미하는 지표는?", 
-    choices: ["민감도(Sensitivity)", "특이도(Specificity)", "거짓 긍정률(False Positive Rate)", "재현율(Recall)"], 
-    ans: 1, 
+    choices: ["특이도(Specificity)", "민감도(Sensitivity)", "거짓 긍정률(False Positive Rate)", "재현율(Recall)"], 
+    ans: 0, 
     exp: "특이도(Specificity)는 실제 거짓(Negative)인 전체 데이터 중에서 모델이 거짓으로 정확하게 분류해 낸 비율을 의미합니다." 
   },
   { 
@@ -2543,9 +2544,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "ROC 곡선(Receiver Operating Characteristic Curve)에 대한 설명으로 올바르지 않은 것은?", 
-    choices: ["X축은 거짓 긍정률(FPR)이고 Y축은 참 긍정률(TPR)이다.", "곡선 아래의 면적을 AUC(Area Under Curve)라고 한다.", "AUC 값이 0.5에 가까울수록 성능이 우수한 모델이다.", "분류 모델의 임계값 변화에 따른 성능을 시각적으로 평가한다."], 
+    choices: ["x축은 위양성률(FPR, 1-특이도)이고 y축은 민감도(TPR)이다.", "AUC값이 1에 가까울수록 분류 성능이 우수하다.", "AUC가 0.5이면 완벽한 분류 성능을 의미한다.", "임계값을 변경하더라도 ROC 곡선의 형태는 변하지 않는다."], 
     ans: 2, 
-    exp: "AUC 값이 0.5라는 것은 무작위로 예측하는 것과 같다는 의미이며, 이 값이 1에 가까울수록 예측 성능이 우수한 모델로 평가합니다." 
+    exp: "AUC=0.5는 대각선(랜덤 분류기, 무작위 예측)을 의미하며 완벽한 성능이 아닙니다. AUC=1이 완벽한 분류기입니다. ROC 곡선은 다양한 임계값에서의 FPR·TPR을 그린 것이며, 임계값이 바뀌어도 곡선 형태는 동일합니다(AUC는 임계값 무관). ☞ 암기 팁: AUC=1(완벽), AUC=0.5(랜덤·무쓸모), AUC<0.5(랜덤보다 나쁨→예측 반전하면 좋음)" 
   },
   { 
     subj: 4, 
@@ -2564,15 +2565,15 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "군집 분석의 결과를 평가할 때, 각 데이터가 자신이 속한 군집 내에서는 얼마나 밀집되어 있고 다른 군집과는 얼마나 떨어져 있는지를 계산하여 -1에서 1 사이의 값으로 나타내는 지표는?", 
-    choices: ["Dunn Index", "실루엣 계수(Silhouette Coefficient)", "엘보우 기법(Elbow Method)", "지니 지수(Gini Index)"], 
-    ans: 1, 
+    choices: ["실루엣 계수(Silhouette Coefficient)", "Dunn Index", "엘보우 기법(Elbow Method)", "지니 지수(Gini Index)"], 
+    ans: 0, 
     exp: "실루엣 계수(Silhouette Coefficient)가 1에 가까울수록 데이터가 올바른 군집에 잘 할당되었음을 의미하며, 0에 가까우면 군집 간 경계에 위치함을 뜻합니다." 
   },
   { 
     subj: 4, 
     q: "연관규칙 분석(Association Rule)의 평가지표 중, 품목 A를 구매한 거래 중에서 품목 B를 함께 구매한 거래의 비율을 의미하는 조건부 확률은?", 
-    choices: ["지지도(Support)", "신뢰도(Confidence)", "향상도(Lift)", "이익도(Profit)"], 
-    ans: 1, 
+    choices: ["신뢰도(Confidence)", "지지도(Support)", "향상도(Lift)", "이익도(Profit)"], 
+    ans: 0, 
     exp: "신뢰도(Confidence)는 품목 A를 구매했을 때 품목 B를 구매할 확률(P(B|A))로, 연관규칙의 강도와 신뢰성을 나타냅니다." 
   },
   { 
@@ -2634,8 +2635,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "다변량 데이터의 값을 행렬(Matrix) 형태로 배열하고, 각 값의 크기에 따라 각기 다른 색상이나 명암을 부여하여 상관관계나 데이터의 군집 패턴을 직관적으로 보여주는 시각화 도구는?", 
-    choices: ["평행 좌표 그래프(Parallel Coordinates)", "버터플라이 차트(Butterfly Chart)", "히트맵(Heatmap)", "카토그램(Cartogram)"], 
-    ans: 2, 
+    choices: ["히트맵(Heatmap)", "버터플라이 차트(Butterfly Chart)", "평행 좌표 그래프(Parallel Coordinates)", "카토그램(Cartogram)"], 
+    ans: 0, 
     exp: "히트맵(Heatmap)은 변수 간의 상관계수나 시계열 및 공간 데이터를 바둑판 형태의 색상 변화로 나타내어 정보의 밀집도를 파악하는 데 유용합니다." 
   },
   { 
@@ -2648,9 +2649,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "데이터 시각화의 요소 중 정보 수용자가 직관적으로 내용을 이해하고 흥미를 느낄 수 있도록, 데이터와 분석 결과를 서사 구조를 갖춘 이야기 형태로 전달하는 기법을 무엇이라 하는가?", 
-    choices: ["데이터 스크래핑(Data Scraping)", "데이터 스토리텔링(Data Storytelling)", "데이터 거버넌스(Data Governance)", "데이터 모델링(Data Modeling)"], 
-    ans: 1, 
-    exp: "데이터 스토리텔링(Data Storytelling)은 데이터, 시각화, 내러티브(이야기)를 결합하여 분석 결과의 배경과 원인을 설득력 있게 전달하는 커뮤니케이션 기법입니다." 
+    choices: ["데이터 시각화(Data Visualization)", "데이터 스토리텔링(Data Storytelling)", "인포그래픽(Infographics)", "대시보드(Dashboard)"], 
+    ans: 0, 
+    exp: "데이터 스토리텔링은 데이터+시각화+서사(내러티브)를 결합하여 의사결정자가 인사이트를 행동으로 연결하도록 돕습니다. 데이터 시각화는 총칭, 인포그래픽은 이미지 중심의 정보 디자인, 대시보드는 실시간 지표 모니터링입니다. ☞ 암기 팁: 스토리텔링=데이터+시각화+서사(행동 유도) / 인포그래픽=정보+그래픽(직관적 전달)" 
   },
   { 
     subj: 4, 
@@ -2683,9 +2684,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "예측 모델의 예측 결과를 현업 사용자가 직관적으로 이해할 수 있도록, 블랙박스 모델의 예측 과정과 각 변수의 중요도를 설명 가능하게 만들어주는 기술 분야를 무엇이라 하는가?", 
-    choices: ["전이 학습(Transfer Learning)", "강화 학습(Reinforcement Learning)", "설명 가능한 인공지능(Explainable AI, XAI)", "생성형 인공지능(Generative AI)"], 
+    choices: ["설명 가능한 인공지능(XAI: eXplainable AI)", "강화학습(Reinforcement Learning)", "연합학습(Federated Learning)", "전이학습(Transfer Learning)"], 
     ans: 2, 
-    exp: "설명 가능한 인공지능(Explainable AI)은 복잡한 딥러닝 등의 모델이 어떻게 특정 결과를 도출했는지 인과관계와 이유를 시각적으로나 수치로 설명하여 모델의 신뢰성을 높입니다." 
+    exp: "XAI(설명 가능한 AI)는 블랙박스 모델의 예측 근거를 사람이 이해할 수 있도록 설명하는 기술(SHAP, LIME, 특성 중요도 등). 강화학습은 보상 기반 학습, 연합학습은 분산 데이터 공동 학습, 전이학습은 사전 학습 모델 재사용입니다. ☞ 암기 팁: XAI=블랙박스 모델을 설명가능하게(SHAP·LIME 등 활용)" 
   },
   { 
     subj: 4, 
@@ -2725,15 +2726,15 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석 결과를 기반으로 의사결정을 수행할 때 발생할 수 있는 데이터 윤리 문제로, 학습 데이터에 내재된 특정 인종이나 성별에 대한 차별적 패턴을 인공지능이 그대로 모방하여 불공정한 예측 결과를 내놓는 현상은?", 
-    choices: ["과대적합(Overfitting)", "알고리즘 편향(Algorithmic Bias)", "차원의 저주(Curse of Dimensionality)", "정보 누출(Data Leakage)"], 
-    ans: 1, 
+    choices: ["과대적합(Overfitting)", "정보 누출(Data Leakage)", "차원의 저주(Curse of Dimensionality)", "알고리즘 편향(Algorithmic Bias)"], 
+    ans: 3, 
     exp: "알고리즘 편향(Algorithmic Bias)은 편향된 데이터를 학습한 모델이 불평등이나 차별을 알고리즘적으로 재생산하는 문제로, 모델 배포 시 반드시 윤리적 검토가 필요합니다." 
   },
   { 
     subj: 4, 
     q: "다수의 모델을 결합하여 예측 성능을 향상시키는 앙상블 모형(Ensemble Model)의 일반적인 장단점과 관련이 없는 것은?", 
-    choices: ["단일 모델에 비해 과대적합 문제를 완화할 수 있다.", "단일 모델보다 예측 정확도가 높고 안정적이다.", "모델의 내부 구조가 투명해져서 각 변수의 영향력을 해석하기가 매우 쉽다.", "학습에 필요한 시간과 계산 연산량이 많이 소모된다."], 
-    ans: 2, 
+    choices: ["단일 모델에 비해 과대적합 문제를 완화할 수 있다.", "단일 모델보다 예측 정확도가 높고 안정적이다.", "학습에 필요한 시간과 계산 연산량이 많이 소모된다.", "모델의 내부 구조가 투명해져서 각 변수의 영향력을 해석하기가 매우 쉽다."], 
+    ans: 3, 
     exp: "앙상블 모형은 여러 모델의 결과를 결합하므로 성능은 향상되지만, 내부 로직이 복잡한 블랙박스(Black Box) 형태가 되어 결과 도출 과정의 해석력이 오히려 떨어지는 단점이 있습니다." 
   },
   { 
@@ -2760,8 +2761,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "모델 모니터링 과정에서 모델의 예측값 분포나 입력 변수의 중요도가 학습 당시와는 완전히 다르게 지속적으로 어긋나기 시작하는 것이 감지되었을 때 취해야 할 가장 올바른 조치는?", 
-    choices: ["기존 모델의 가중치를 영구적으로 고정한다.", "새로운 트렌드를 반영한 데이터를 수집하여 모델을 재학습(Retraining)시킨다.", "경고 메시지를 무시하고 앙상블 기법만 추가로 적용한다.", "운영 환경 서버의 메모리를 증설한다."], 
-    ans: 1, 
+    choices: ["새로운 트렌드를 반영한 데이터를 수집하여 모델을 재학습(Retraining)시킨다.", "기존 모델의 가중치를 영구적으로 고정한다.", "경고 메시지를 무시하고 앙상블 기법만 추가로 적용한다.", "운영 환경 서버의 메모리를 증설한다."], 
+    ans: 0, 
     exp: "시간 흐름에 따른 데이터 변화(Data Drift)가 발생하여 성능이 저하된 모델은 반드시 최신 데이터를 반영한 리모델링(재학습)이나 하이퍼파라미터 재조정을 통해 생명주기를 연장해야 합니다." 
   },
   { 
@@ -2795,8 +2796,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "배포된 모델의 투자 수익률(ROI)을 계산할 때, '순이익(Net Profit) / 투자 비용(Investment Cost) × 100' 의 공식을 사용합니다. 다음 중 투자 비용(Investment Cost) 요소에 해당하지 않는 것은?", 
-    choices: ["데이터 수집 및 정제 비용", "모델 개발 및 인프라 구축 비용", "분석으로 인해 감소된 업무 처리 시간 비용", "시스템 유지보수 및 라이선스 비용"], 
-    ans: 2, 
+    choices: ["분석으로 인해 감소된 업무 처리 시간 비용", "모델 개발 및 인프라 구축 비용", "데이터 수집 및 정제 비용", "시스템 유지보수 및 라이선스 비용"], 
+    ans: 0, 
     exp: "모델 도입으로 인해 감소된 업무 처리 시간 비용 등은 절감된 비용으로서 최종적으로 순이익(비즈니스 효과, Return) 부문에 포함되어 계산됩니다. 인프라나 개발비는 직접적인 투자 비용(Cost)입니다." 
   }
 ];

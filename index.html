@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>빅데이터분석기사 필기 CBT</title>
 <style>
-  /* ══ THEME VARIABLES ══
-     모든 색상은 각 테마 블록 안에 정의 → 모드 전환 시 전부 자동 교체됨
-  ══════════════════════════════════════ */
+  /* ══ THEME VARIABLES ══ */
 
   [data-theme="dark"] {
     /* 배경/표면 */
@@ -44,41 +42,6 @@
     --wrong-text:     #ff5370;
   }
 
-  [data-theme="light"] {
-    /* 배경/표면 */
-    --bg:      #f0f4ff;
-    --surface: #e4e9f8;
-    --card:    #ffffff;
-    --border:  #bcc5e4;
-    --shadow:  rgba(80,60,200,.07);
-
-    /* 텍스트 — 밝은 배경에서 진한 색 */
-    --text:    #0d0d2b;
-    --sub:     #3a4268;
-
-    /* 버튼 보조 */
-    --btn-secondary:      #dde2f5;
-    --btn-secondary-text: #0d0d2b;
-
-    /* 네온 강조색 (글로우·테두리용 — 밝아도 장식 OK) */
-    --accent:  #00b8d4;
-    --accent2: #9c27b0;
-
-    /* 텍스트용 강조색 (밝은 배경 위에서 잘 보이도록 진하게) */
-    --accent-text:  #005f7a;
-    --accent2-text: #6a0080;
-    --badge-text:   #005f7a;
-    --timer-color:  #005f7a;
-
-    /* 정답/오답 */
-    --correct-bg:     rgba(0,160,80,.10);
-    --correct-border: rgba(0,140,70,.55);
-    --correct-text:   #006830;
-    --wrong-bg:       rgba(200,0,40,.09);
-    --wrong-border:   rgba(185,0,35,.50);
-    --wrong-text:     #b0001a;
-  }
-
   /* ══ BASE ══ */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -94,33 +57,6 @@
   .screen.active { display: block !important; }
   #home.active   { display: flex !important; }
   #result.active { display: flex !important; }
-
-  /* ══ THEME TOGGLE ══ */
-  #themeToggle {
-    position: fixed; top: 1rem; right: 1rem; z-index: 999;
-    width: 46px; height: 26px;
-    background: none; border: none; cursor: pointer; padding: 0;
-  }
-  .toggle-track {
-    width: 46px; height: 26px;
-    border-radius: 13px;
-    background: var(--border);
-    border: 1.5px solid var(--accent);
-    box-shadow: 0 0 8px var(--accent), inset 0 0 4px rgba(0,245,255,.15);
-    position: relative;
-    transition: all .3s;
-  }
-  .toggle-thumb {
-    position: absolute; top: 3px; left: 3px;
-    width: 18px; height: 18px; border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 8px var(--accent);
-    transition: transform .3s;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px;
-  }
-  [data-theme="light"] .toggle-thumb { transform: translateX(20px); background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
-  [data-theme="light"] .toggle-track  { border-color: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
 
   /* ══ NEON GLOW HELPER ══ */
   .neon-box {
@@ -322,7 +258,7 @@
   }
   .fb-title { font-weight: 900; margin-bottom: .3rem; font-size: 1.05rem; }
 
-  .nav-row { display: flex; gap: .7rem; justify-content: flex-end; margin-top: 1rem; }
+  .nav-row { display: flex; gap: .7rem; justify-content: flex-end; margin-top: .7rem; }
   .btn-next {
     padding: .7rem 1.8rem;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -485,13 +421,6 @@
 </head>
 <body>
 
-<!-- 다크/라이트 토글 -->
-<button id="themeToggle" onclick="toggleTheme()" title="테마 전환">
-  <div class="toggle-track">
-    <div class="toggle-thumb" id="toggleIcon">🌙</div>
-  </div>
-</button>
-
 <div id="home" class="screen active">
   <div class="home-card">
     <h1>📊 빅데이터분석기사</h1>
@@ -568,16 +497,6 @@
 <script src="questions.js"></script>
 
 <script>
-// ══════════════════════════════════════════
-//  THEME
-// ══════════════════════════════════════════
-function toggleTheme() {
-  const html = document.documentElement;
-  const isDark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  document.getElementById('toggleIcon').textContent = isDark ? '☀️' : '🌙';
-}
-
 // ══════════════════════════════════════════
 //  STATE
 // ══════════════════════════════════════════
