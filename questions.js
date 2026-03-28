@@ -1402,8 +1402,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "분석모형 정의 시 모델이 훈련 데이터의 특징과 노이즈까지 지나치게 세밀하게 학습하여, 새로운 테스트 데이터에 대한 예측 성능이 오히려 떨어지는 현상을 무엇이라 하는가?", 
-    choices: ["과대적합(Overfitting)", "과소적합(Underfitting)", "편향(Bias)", "분산(Variance)"], 
-    ans: 1, 
+    choices: ["과대적합(Overfitting)", "과소적합(Underfitting)", "편향(Bias)", "분산(Variance)"],
+    ans: 0,
     exp: "과대적합(Overfitting)은 모델이 훈련 데이터의 노이즈까지 학습하여 새 데이터에 성능이 낮아지는 현상입니다. 과소적합(Underfitting)은 모델이 너무 단순하여 훈련 데이터조차 제대로 학습하지 못하는 상태입니다. 편향(Bias)은 예측이 실제값에서 얼마나 벗어나는지, 분산(Variance)은 예측값의 변동성입니다. 과적합=높은 분산+낮은 편향. ☞ 암기 팁: 과적합=훈련정확도↑·테스트정확도↓(노이즈까지 암기) / 과소적합=훈련·테스트 모두 낮음" 
   },
   { 
@@ -1444,8 +1444,8 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "다중 선형 회귀분석에서 독립변수들 간에 강한 상관관계가 존재하여 회귀계수 추정의 신뢰도를 떨어뜨리는 현상을 무엇이라 하는가?", 
-    choices: ["다중공선성(Multicollinearity)", "이분산성(Heteroscedasticity)", "자기상관(Autocorrelation)", "내생성(Endogeneity)"], 
-    ans: 2, 
+    choices: ["내생성(Endogeneity)", "이분산성(Heteroscedasticity)", "자기상관(Autocorrelation)", "다중공선성(Multicollinearity)"],
+    ans: 3,
     exp: "다중공선성은 독립변수 간 강한 상관관계로 회귀계수 추정 불안정·분산팽창(VIF 증가)을 초래합니다. 이분산성은 오차분산이 일정하지 않은 상태, 자기상관은 오차항 간에 상관이 있는 상태, 내생성은 독립변수와 오차항이 상관된 상태입니다. ☞ 암기 팁: 다중공선성=독립변수 간 상관↑(VIF>10이면 문제) / Ridge로 완화 가능" 
   },
   { 
@@ -1465,29 +1465,29 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "인공신경망의 은닉층에서 입력 신호의 총합을 출력 신호로 변환하는 활성함수(Activation Function) 중, 입력값이 0보다 작으면 0을 반환하고 0보다 크면 그 값을 그대로 반환하여 기울기 소실 문제를 효과적으로 극복한 함수는?", 
-    choices: ["ReLU(Rectified Linear Unit)", "시그모이드(Sigmoid)", "하이퍼볼릭 탄젠트(tanh)", "Leaky ReLU"], 
-    ans: 3, 
+    choices: ["Leaky ReLU", "시그모이드(Sigmoid)", "하이퍼볼릭 탄젠트(tanh)", "ReLU(Rectified Linear Unit)"],
+    ans: 3,
     exp: "ReLU(f(x)=max(0,x))는 양수 기울기=1로 기울기 소실 완화, 계산 단순합니다. 시그모이드는 출력 0~1(이진분류 출력층), tanh는 출력 -1~1, Leaky ReLU는 음수 구간도 작은 기울기(αx, α≈0.01)를 허용하여 dead neuron 문제를 보완합니다. ☞ 암기 팁: ReLU=max(0,x)(양수 그대로, 음수 0) / Leaky ReLU=음수 구간도 작은 기울기 허용" 
   },
   { 
     subj: 3, 
     q: "딥러닝 모델 학습 과정에서 과대적합(Overfitting)을 방지하기 위해 신경망의 은닉층에 있는 일부 노드(퍼셉트론)를 무작위로 비활성화한 상태로 학습을 진행하는 기법은?", 
-    choices: ["드롭아웃(Dropout)", "배치 정규화(Batch Normalization)", "조기 종료(Early Stopping)", "가중치 감쇠(Weight Decay)"], 
-    ans: 2, 
+    choices: ["가중치 감쇠(Weight Decay)", "배치 정규화(Batch Normalization)", "조기 종료(Early Stopping)", "드롭아웃(Dropout)"],
+    ans: 3,
     exp: "드롭아웃(Dropout)은 매 학습 배치마다 일부 노드를 무작위로 비활성화하여 앙상블 효과·과적합 방지에 사용됩니다. 배치 정규화는 레이어 입력 분포 정규화(학습 안정), 조기 종료는 검증 오차 증가 시 학습 중단, 가중치 감쇠는 L2 정규화로 가중치 크기 제한입니다. ☞ 암기 팁: 드롭아웃=노드 무작위 비활성화 / 배치 정규화=입력 분포 정규화 / 조기 종료=검증오차 기준 학습 중단" 
   },
   { 
     subj: 3, 
     q: "서포트벡터머신(SVM)에서 원래 2차원 등 저차원 공간에서 선형으로 완벽하게 분리할 수 없는 데이터를 고차원 공간으로 매핑하여 비선형 분류를 가능하게 해주는 수학적 함수는?", 
-    choices: ["커널 함수(Kernel Function)", "활성화 함수(Activation Function)", "링크 함수(Link Function)", "손실 함수(Loss Function)"], 
-    ans: 3, 
+    choices: ["손실 함수(Loss Function)", "활성화 함수(Activation Function)", "링크 함수(Link Function)", "커널 함수(Kernel Function)"],
+    ans: 3,
     exp: "커널 함수는 내적 계산만으로 고차원 매핑 효과를 얻는 커널 트릭에 사용됩니다. 대표 커널: RBF(Gaussian), 다항식, 선형 커널. 활성화 함수는 신경망, 손실 함수는 예측오차 측정, 링크 함수는 GLM(일반화선형모델)에서 선형 결합→반응변수 연결에 사용됩니다. ☞ 암기 팁: SVM 비선형 분류=커널 함수(RBF·다항식 등)로 고차원 매핑" 
   },
   { 
     subj: 3, 
     q: "연관성 분석(Association Analysis)에서 항목 A가 포함된 거래 중에서 항목 B도 함께 포함된 거래의 비율을 나타내는 지표로, 조건부 확률 P(B|A)에 해당하는 것은?", 
-    choices: ["신뢰도(Confidence)", "기대 신뢰도(Expected Confidence)", "향상도(Lift)", "지지도(Support)"], 
-    ans: 3, 
+    choices: ["기대 신뢰도(Expected Confidence)", "신뢰도(Confidence)", "향상도(Lift)", "지지도(Support)"],
+    ans: 1,
     exp: "신뢰도(Confidence) = P(A∩B)/P(A) = P(B|A). 지지도(Support) = P(A∩B) = 전체 거래 중 A∩B 비율. 향상도(Lift) = 신뢰도/P(B) = P(A∩B)/(P(A)·P(B)). 기대 신뢰도는 향상도 계산을 위한 기준값 P(B)입니다. ☞ 암기 팁: 지지도=P(A∩B), 신뢰도=P(B|A)=P(A∩B)/P(A), 향상도=신뢰도/P(B)" 
   },
   { 
@@ -1507,15 +1507,15 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "K-평균 군집화(K-means Clustering) 알고리즘의 특징으로 가장 올바르지 않은 것은?", 
-    choices: ["군집의 수(K)를 사전에 결정해야 한다.", "초기 중심점 선정에 따라 결과가 달라질 수 있다.", "군집의 형태가 항상 타원형 혹은 볼록 형태일 필요가 없다.", "범주형 변수보다 연속형 수치 변수에 더 적합하다."], 
-    ans: 3, 
+    choices: ["군집의 수(K)를 사전에 결정해야 한다.", "초기 중심점 선정에 따라 결과가 달라질 수 있다.", "군집의 형태가 항상 타원형 혹은 볼록 형태일 필요가 없다.", "범주형 변수보다 연속형 수치 변수에 더 적합하다."],
+    ans: 2,
     exp: "K-means는 구형(원형) 군집을 가정하며 타원형·오목형 군집에는 잘 작동하지 않습니다. K 사전 결정 필요, 초기 중심점 의존성, 연속형 수치 변수에 적합(범주형에는 K-modes)은 올바른 특징입니다. ☞ 암기 팁: K-means 단점=K 사전지정·초기값 의존·구형 군집만·이상값 민감·범주형 불가" 
   },
   { 
     subj: 3, 
     q: "비계층적 군집분석 기법 중 데이터가 모여 있는 밀도(Density)를 계산하여, 일정 반경(Eps) 내에 지정된 최소 데이터 수(MinPts)가 존재하는 핵심 노드를 중심으로 군집을 확장해 나가는 알고리즘은?", 
-    choices: ["DBSCAN", "K-평균(K-means)", "계층적 군집분석(Hierarchical Clustering)", "자기조직화지도(SOM)"], 
-    ans: 3, 
+    choices: ["자기조직화지도(SOM)", "K-평균(K-means)", "계층적 군집분석(Hierarchical Clustering)", "DBSCAN"],
+    ans: 3,
     exp: "DBSCAN은 Eps(반경)와 MinPts(최소 데이터 수)로 핵심점·경계점·잡음점을 구분하며, 군집 수를 사전에 지정하지 않아도 되고 비구형·임의 형태 군집 및 이상값 탐지에 유리합니다. K-means는 K 사전 지정+구형 군집, 계층적 군집은 덴드로그램 사용, SOM은 자기조직화 신경망 기반입니다. ☞ 암기 팁: DBSCAN=밀도기반·K 불필요·이상값 탐지 가능·비구형 군집" 
   },
   { 
@@ -1535,15 +1535,15 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "딥러닝의 합성곱 신경망(CNN) 구조에서 컨볼루션 레이어를 거친 후, 데이터의 중요한 공간적 특성은 유지하면서 행렬의 크기를 줄여 연산량을 대폭 감소시키는 역할을 하는 계층은?", 
-    choices: ["풀링 레이어(Pooling Layer)", "완전연결 레이어(Fully Connected Layer)", "드롭아웃(Dropout)", "배치 정규화(Batch Normalization)"], 
-    ans: 2, 
+    choices: ["배치 정규화(Batch Normalization)", "완전연결 레이어(Fully Connected Layer)", "드롭아웃(Dropout)", "풀링 레이어(Pooling Layer)"],
+    ans: 3,
     exp: "풀링 레이어는 최대 풀링(Max Pooling)이나 평균 풀링(Average Pooling)으로 특징 맵 크기를 축소합니다. 완전연결 레이어는 최종 분류 단계, 드롭아웃은 과적합 방지, 배치 정규화는 입력 분포 정규화입니다. ☞ 암기 팁: CNN 구조=Conv(특징추출)→Pooling(크기축소)→FC(분류) / Max/Average Pooling" 
   },
   { 
     subj: 3, 
     q: "범주형 자료 분석에서 두 범주형 변수 간의 연관성이 있는지 확인하기 위해, 관측된 빈도와 기대 빈도의 차이를 활용하는 통계적 검정 방법은?", 
-    choices: ["카이제곱 검정(Chi-square Test)", "t-검정(t-test)", "F-검정(F-test)", "맥니마 검정(McNemar Test)"], 
-    ans: 2, 
+    choices: ["F-검정(F-test)", "t-검정(t-test)", "카이제곱 검정(Chi-square Test)", "맥니마 검정(McNemar Test)"],
+    ans: 2,
     exp: "카이제곱 검정은 교차표에서 관측빈도와 기대빈도의 차이(χ²)로 두 범주형 변수 간의 독립성·연관성을 검정합니다. t-검정은 연속형 변수의 평균 비교, F-검정은 분산 비교·ANOVA, 맥니마 검정은 대응 이진 변수의 변화 검정에 사용됩니다. ☞ 암기 팁: 범주형 두 변수 관계=카이제곱 검정 / 연속형 평균 비교=t-검정" 
   },
   { 
@@ -1556,15 +1556,15 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "다변량 분석 기법 중, 세 개 이상의 여러 집단 간의 평균을 비교하여 그 차이가 통계적으로 유의미한지 확인하는 분석 방법은?", 
-    choices: ["다중회귀분석(Multiple Regression)", "독립표본 t-검정(Independent t-test)", "분산분석(ANOVA: Analysis of Variance)", "주성분분석(PCA)"], 
-    ans: 0, 
+    choices: ["다중회귀분석(Multiple Regression)", "독립표본 t-검정(Independent t-test)", "분산분석(ANOVA: Analysis of Variance)", "주성분분석(PCA)"],
+    ans: 2,
     exp: "ANOVA는 3개 이상 집단의 평균 비교 시 사용합니다. 독립표본 t-검정은 2개 집단 평균 비교, 다중회귀는 여러 독립변수로 종속변수 예측, PCA는 차원 축소입니다. ANOVA 후 사후검정(Tukey, Bonferroni 등)으로 어느 집단 간 차이가 유의한지 확인합니다. ☞ 암기 팁: ANOVA=3개↑집단 평균 비교 / t-검정=2개 집단 평균 비교" 
   },
   { 
     subj: 3, 
     q: "요인 분석(Factor Analysis)의 요인 추출 방법 중, 데이터의 전체 분산을 토대로 상관성이 높은 변수들을 선형 결합하여 분산이 가장 큰 축부터 순차적으로 주성분을 추출하는 방법은?", 
-    choices: ["주성분 분석(PCA: Principal Component Analysis)", "공통 요인 분석(Common Factor Analysis)", "최대 우도법(Maximum Likelihood Method)", "알파 요인 추출(Alpha Factoring)"], 
-    ans: 3, 
+    choices: ["최대 우도법(Maximum Likelihood Method)", "공통 요인 분석(Common Factor Analysis)", "주성분 분석(PCA: Principal Component Analysis)", "알파 요인 추출(Alpha Factoring)"],
+    ans: 2,
     exp: "PCA는 전체 분산을 최대화하는 방향으로 주성분을 추출하는 방법입니다. 공통 요인 분석은 공통 분산(공통인자)만을 기반으로 잠재 요인 추출, 최대 우도법은 정규분포 가정 하에 MLE로 요인 추출, 알파 요인 추출은 척도의 신뢰도 최적화 방법입니다. ☞ 암기 팁: PCA=전체분산 최대화→주성분 추출(비지도, 방향성 있음)" 
   },
   { 
@@ -2117,8 +2117,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석모형 평가에서 가로축을 1-특이도(False Positive Rate)로, 세로축을 민감도(True Positive Rate)로 설정하여 모델의 분류 성능을 시각적으로 나타낸 그래프는?", 
-    choices: ["ROC 커브(Receiver Operating Characteristic Curve)", "PR 커브(Precision-Recall Curve)", "학습 곡선(Learning Curve)", "이익 도표(Lift Chart)"], 
-    ans: 2, 
+    choices: ["이익 도표(Lift Chart)", "PR 커브(Precision-Recall Curve)", "학습 곡선(Learning Curve)", "ROC 커브(Receiver Operating Characteristic Curve)"],
+    ans: 3,
     exp: "ROC 커브: x=FPR(1-특이도=위양성률), y=TPR(민감도=재현율). AUC=ROC 아래 면적(1=완벽, 0.5=랜덤). PR 커브는 x=재현율, y=정밀도(불균형 데이터에 더 유용). 학습 곡선은 데이터 크기 vs 성능, 이익 도표는 향상도 시각화입니다. ☞ 암기 팁: ROC=FPR vs TPR(x=위양성률, y=민감도) / PR커브=재현율 vs 정밀도" 
   },
   { 
@@ -2145,15 +2145,15 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석 모형의 진단 과정에서, 모델이 훈련용 데이터는 완벽에 가깝게 설명하지만 모델이 지나치게 복잡해져서 새로운 평가용 데이터에는 성능이 현저히 떨어지는 상태는?", 
-    choices: ["과소적합(Underfitting)", "과대적합(Overfitting)", "편향-분산 트레이드오프(Bias-Variance Tradeoff)", "모델 드리프트(Model Drift)"], 
-    ans: 0, 
+    choices: ["과소적합(Underfitting)", "과대적합(Overfitting)", "편향-분산 트레이드오프(Bias-Variance Tradeoff)", "모델 드리프트(Model Drift)"],
+    ans: 1,
     exp: "과적합: 훈련오차↓·검증오차↑. 과소적합: 훈련오차·검증오차 모두 높음. 편향-분산 트레이드오프는 과적합(분산↑·편향↓)과 과소적합(분산↓·편향↑)의 상충관계. 모델 드리프트는 배포 후 데이터 분포 변화로 인한 성능 저하입니다. ☞ 암기 팁: 과적합=훈련↑·검증↓(너무 외움) / 과소적합=훈련↓·검증↓(너무 단순)" 
   },
   { 
     subj: 4, 
     q: "모델 평가 기법 중 전체 데이터를 K개의 집단으로 나눈 뒤, K-1개 집단으로 모델을 학습시키고 나머지 1개의 집단으로 검증하는 과정을 집단을 번갈아가며 총 K번 반복하는 기법은?", 
-    choices: ["K-겹 교차검증(K-Fold Cross Validation)", "홀드아웃 검증(Hold-out Validation)", "LOOCV(Leave-One-Out Cross Validation)", "층화 K-겹 교차검증(Stratified K-Fold)"], 
-    ans: 3, 
+    choices: ["층화 K-겹 교차검증(Stratified K-Fold)", "홀드아웃 검증(Hold-out Validation)", "LOOCV(Leave-One-Out Cross Validation)", "K-겹 교차검증(K-Fold Cross Validation)"],
+    ans: 3,
     exp: "K-겹 교차검증은 K번 반복으로 모든 데이터를 검증에 활용, 과적합 방지+안정적 성능 추정. LOOCV는 K=n(데이터 적을 때), 홀드아웃은 1회 분할(빠르지만 불안정), 층화 K-겹은 클래스 비율을 유지하며 분할(불균형 데이터에 적합). ☞ 암기 팁: K-겹=K번 반복 검증 / 층화 K-겹=클래스비율 유지 / LOOCV=K=n(극단적)" 
   },
   { 
@@ -2180,22 +2180,22 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "인공신경망 등의 모델 학습 시 과대적합(Overfitting)을 방지하기 위해, 훈련 오차는 계속 줄어들더라도 검증용 데이터의 오차가 오히려 증가하기 시작하는 최적의 지점에서 학습을 멈추게 하는 기법은?", 
-    choices: ["조기 종료(Early Stopping)", "드롭아웃(Dropout)", "L2 정규화(Ridge Regularization)", "배치 정규화(Batch Normalization)"], 
-    ans: 2, 
+    choices: ["배치 정규화(Batch Normalization)", "드롭아웃(Dropout)", "L2 정규화(Ridge Regularization)", "조기 종료(Early Stopping)"],
+    ans: 3,
     exp: "조기 종료(Early Stopping)는 검증 오차가 증가하기 시작하는 시점에서 학습을 중단합니다. 드롭아웃은 노드 무작위 비활성화, L2 정규화는 가중치 크기 제한, 배치 정규화는 입력 분포 정규화입니다. ☞ 암기 팁: 조기 종료=검증오차 증가 시 학습 중단(최적 에포크 찾기) / 드롭아웃=노드 무작위 비활성화" 
   },
   { 
     subj: 4, 
     q: "경사하강법의 옵티마이저(Optimizer) 알고리즘 중, 누적된 기울기 정보를 활용하여 각 매개변수별로 학습률(Learning Rate)을 자동으로 조절하며 학습 횟수가 늘어날수록 보폭(학습률)을 점차 줄여나가는 기법은?", 
-    choices: ["Adagrad", "RMSprop", "Adam", "SGD(Stochastic Gradient Descent)"], 
-    ans: 1, 
+    choices: ["Adagrad", "RMSprop", "Adam", "SGD(Stochastic Gradient Descent)"],
+    ans: 0,
     exp: "Adagrad는 파라미터별 누적 기울기 제곱합으로 학습률을 조절(많이 갱신된 파라미터 학습률↓). 단점은 학습이 진행될수록 학습률이 0에 수렴. RMSprop은 지수이동평균으로 Adagrad 단점 보완, Adam은 Momentum+RMSprop 결합, SGD는 기본 경사하강법입니다. ☞ 암기 팁: Adagrad=파라미터별 학습률 조절(누적제곱합) / RMSprop=Adagrad 단점 보완 / Adam=Momentum+RMSprop" 
   },
   { 
     subj: 4, 
     q: "모델의 하이퍼파라미터를 튜닝할 때 분석가가 지정한 모든 파라미터 후보들의 가능한 모든 조합을 하나씩 전부 대입해 보고 가장 성능이 좋은 최적의 조합을 찾아내는 방법은?", 
-    choices: ["그리드 서치(Grid Search)", "랜덤 서치(Random Search)", "베이지안 최적화(Bayesian Optimization)", "하이퍼밴드(Hyperband)"], 
-    ans: 3, 
+    choices: ["하이퍼밴드(Hyperband)", "랜덤 서치(Random Search)", "베이지안 최적화(Bayesian Optimization)", "그리드 서치(Grid Search)"],
+    ans: 3,
     exp: "그리드 서치는 모든 조합을 전수 탐색하므로 최적값 보장되지만 시간·자원 많이 소요됩니다. 랜덤 서치는 무작위 조합 탐색(빠르지만 최적 미보장), 베이지안 최적화는 이전 결과를 확률 모델로 추정하여 효율적 탐색, 하이퍼밴드는 자원 제약 하에 빠른 탐색입니다. ☞ 암기 팁: 그리드서치=전수탐색(확실·느림) / 랜덤서치=무작위(빠름·부정확) / 베이지안=이전결과활용(효율적)" 
   },
   { 
@@ -2278,8 +2278,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "딥러닝 모델 등의 학습 단위에서, 모델이 제공된 전체 훈련 데이터 세트를 한 번 모두 사용하여 학습을 완료하는 사이클을 뜻하는 용어는?", 
-    choices: ["에포크(Epoch)", "배치(Batch)", "이터레이션(Iteration)", "스텝(Step)"], 
-    ans: 1, 
+    choices: ["에포크(Epoch)", "배치(Batch)", "이터레이션(Iteration)", "스텝(Step)"],
+    ans: 0,
     exp: "에포크는 전체 훈련 데이터를 1회 완전히 학습하는 단위입니다. 배치(Batch)는 한 번에 처리하는 데이터 서브셋, 이터레이션(Iteration)=배치 수=데이터수/배치사이즈. 예: 1000개 데이터, 배치100→1에포크=10이터레이션. ☞ 암기 팁: 에포크=전체 데이터 1회 완주 / 배치=한번에 처리하는 묶음 / 이터레이션=에포크÷배치사이즈" 
   },
   { 
@@ -2292,8 +2292,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "경사하강법의 옵티마이저(Optimizer) 알고리즘 중, 지수이동평균을 이용하여 최근의 기울기 정보를 더 크게 반영함으로써 Adagrad의 단점인 학습률이 급격히 0으로 감소하는 현상을 방지하는 기법은?", 
-    choices: ["Momentum SGD", "Adagrad", "RMSprop", "Adam"], 
-    ans: 0, 
+    choices: ["Momentum SGD", "Adagrad", "RMSprop", "Adam"],
+    ans: 2,
     exp: "RMSprop은 기울기 제곱의 지수이동평균으로 학습률 조절하여 Adagrad의 학습률 급감소 문제를 보완합니다. Adagrad는 누적 제곱합(학습률 0 수렴), Momentum은 관성 활용, Adam은 Momentum+RMSprop 결합입니다. ☞ 암기 팁: RMSprop=지수이동평균으로 Adagrad 보완 / Adam=Momentum+RMSprop(가장 많이 사용)" 
   },
   { 
@@ -2341,8 +2341,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "주성분 분석(PCA) 수행 결과를 해석할 때, 도출된 첫 번째 주성분(PC1)이 갖는 가장 핵심적인 수학적 특징은 무엇인가?", 
-    choices: ["데이터의 분산이 최대가 되는 방향으로 투영된 주성분이다.", "데이터의 평균과 가장 가까운 방향으로 투영된 주성분이다.", "독립변수와 종속변수 간의 상관계수가 가장 큰 주성분이다.", "데이터의 이상값이 가장 많이 포함된 방향의 주성분이다."], 
-    ans: 1, 
+    choices: ["독립변수와 종속변수 간의 상관계수가 가장 큰 주성분이다.", "데이터의 평균과 가장 가까운 방향으로 투영된 주성분이다.", "데이터의 분산이 최대가 되는 방향으로 투영된 주성분이다.", "데이터의 이상값이 가장 많이 포함된 방향의 주성분이다."],
+    ans: 2,
     exp: "PCA에서 PC1은 데이터의 분산(정보량)이 최대가 되는 방향입니다. PC2는 PC1에 직교하는 방향 중 분산이 최대, 이후 주성분도 마찬가지입니다. 주성분은 서로 직교(uncorrelated)합니다. ☞ 암기 팁: PCA PC1=분산 최대 방향 / PC2=PC1에 직교하며 분산 최대 / 주성분들은 서로 직교" 
   },
   { 
@@ -2418,8 +2418,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "일반 대중에게 설득력 있는 메시지를 효과적으로 전달하기 위해 목적에 맞게 정보를 취합하고 시각적 형상(Graphic)을 더하여 디자인하는 가공 매체는?", 
-    choices: ["인포그래픽(Infographics)", "인터랙티브 차트(Interactive Chart)", "대시보드(Dashboard)", "데이터 시각화(Data Visualization)"], 
-    ans: 3, 
+    choices: ["데이터 시각화(Data Visualization)", "인터랙티브 차트(Interactive Chart)", "대시보드(Dashboard)", "인포그래픽(Infographics)"],
+    ans: 3,
     exp: "인포그래픽은 정보(Info)+그래픽(Graphic)으로, 복잡한 정보를 직관적 이미지·아이콘·다이어그램으로 전달하는 매체입니다. 데이터 시각화는 데이터를 시각적으로 표현하는 총칭, 대시보드는 실시간 지표 모니터링 화면, 인터랙티브 차트는 사용자 상호작용이 가능한 차트입니다. ☞ 암기 팁: 인포그래픽=정보+그래픽(스토리+디자인 결합) / 대시보드=KPI 실시간 모니터링" 
   },
   { 
@@ -2432,8 +2432,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분석 결과 활용 단계에서, 테스트를 마친 새로운 분석 모형을 실제 비즈니스 운영 시스템 환경에 설치하고 작동하도록 하여 업무 프로세스에 통합하는 전체 과정을 뜻하는 용어는?", 
-    choices: ["모형 배포(Model Deployment)", "모형 검증(Model Validation)", "모형 훈련(Model Training)", "모형 모니터링(Model Monitoring)"], 
-    ans: 3, 
+    choices: ["모형 배포(Model Deployment)", "모형 검증(Model Validation)", "모형 훈련(Model Training)", "모형 모니터링(Model Monitoring)"],
+    ans: 0,
     exp: "모형 배포(Deployment)는 학습·검증된 모델을 운영 시스템에 통합하여 실제 서비스에 적용하는 전 과정입니다. 모형 검증은 성능 평가 단계, 모형 훈련은 학습 단계, 모형 모니터링은 배포 후 성능 추적 단계입니다. ☞ 암기 팁: 분석 프로세스=훈련→검증→배포→모니터링 / 배포=운영 환경 통합" 
   },
   { 
@@ -2446,8 +2446,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "분류 모델의 평가지표인 F-베타(F-Beta) 스코어에서, 베타(β) 값이 1보다 클 때(예: β=2) 모델 평가 시 정밀도(Precision)보다 더 큰 비중을 두어 중요하게 고려하는 지표는?", 
-    choices: ["재현율(Recall)", "정밀도(Precision)", "특이도(Specificity)", "정확도(Accuracy)"], 
-    ans: 3, 
+    choices: ["재현율(Recall)", "정밀도(Precision)", "특이도(Specificity)", "정확도(Accuracy)"],
+    ans: 0,
     exp: "F-β = (1+β²)×(Precision×Recall) / (β²×Precision+Recall). β>1이면 재현율(Recall) 가중치↑, β<1이면 정밀도(Precision) 가중치↑, β=1이면 F1(동일 비중). 암 진단처럼 위음성을 줄여야 할 때 β>1(재현율 중시)를 사용합니다. ☞ 암기 팁: β>1=재현율 중시(놓치면 안됨), β<1=정밀도 중시(오탐 방지)" 
   },
   { 
@@ -2649,8 +2649,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "데이터 시각화의 요소 중 정보 수용자가 직관적으로 내용을 이해하고 흥미를 느낄 수 있도록, 데이터와 분석 결과를 서사 구조를 갖춘 이야기 형태로 전달하는 기법을 무엇이라 하는가?", 
-    choices: ["데이터 시각화(Data Visualization)", "데이터 스토리텔링(Data Storytelling)", "인포그래픽(Infographics)", "대시보드(Dashboard)"], 
-    ans: 0, 
+    choices: ["데이터 시각화(Data Visualization)", "데이터 스토리텔링(Data Storytelling)", "인포그래픽(Infographics)", "대시보드(Dashboard)"],
+    ans: 1,
     exp: "데이터 스토리텔링은 데이터+시각화+서사(내러티브)를 결합하여 의사결정자가 인사이트를 행동으로 연결하도록 돕습니다. 데이터 시각화는 총칭, 인포그래픽은 이미지 중심의 정보 디자인, 대시보드는 실시간 지표 모니터링입니다. ☞ 암기 팁: 스토리텔링=데이터+시각화+서사(행동 유도) / 인포그래픽=정보+그래픽(직관적 전달)" 
   },
   { 
@@ -2684,8 +2684,8 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "예측 모델의 예측 결과를 현업 사용자가 직관적으로 이해할 수 있도록, 블랙박스 모델의 예측 과정과 각 변수의 중요도를 설명 가능하게 만들어주는 기술 분야를 무엇이라 하는가?", 
-    choices: ["설명 가능한 인공지능(XAI: eXplainable AI)", "강화학습(Reinforcement Learning)", "연합학습(Federated Learning)", "전이학습(Transfer Learning)"], 
-    ans: 2, 
+    choices: ["연합학습(Federated Learning)", "강화학습(Reinforcement Learning)", "설명 가능한 인공지능(XAI: eXplainable AI)", "전이학습(Transfer Learning)"],
+    ans: 2,
     exp: "XAI(설명 가능한 AI)는 블랙박스 모델의 예측 근거를 사람이 이해할 수 있도록 설명하는 기술(SHAP, LIME, 특성 중요도 등). 강화학습은 보상 기반 학습, 연합학습은 분산 데이터 공동 학습, 전이학습은 사전 학습 모델 재사용입니다. ☞ 암기 팁: XAI=블랙박스 모델을 설명가능하게(SHAP·LIME 등 활용)" 
   },
   { 
