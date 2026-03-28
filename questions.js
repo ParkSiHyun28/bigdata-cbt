@@ -1360,9 +1360,9 @@ const QUESTION_BANK = [
   { 
     subj: 2, 
     q: "불균형 데이터 처리 기법 중 소수 클래스 데이터들의 공간적 거리를 계산하여 그 사이에 새로운 가상의 데이터 포인트를 생성해 내는 오버샘플링(OverSampling) 기법은?", 
-    choices: ["랜덤 언더샘플링(Random Under-Sampling)", "SMOTE(Synthetic Minority Over-sampling Technique)", "가중치 균형 적용(Weighted Balance)", "계통 추출법(Systematic Sampling)"], 
+    choices: ["ADASYN(Adaptive Synthetic Sampling)", "SMOTE(Synthetic Minority Over-sampling Technique)", "ROS(Random Over-Sampling)", "랜덤 언더샘플링(Random Under-Sampling)"], 
     ans: 1, 
-    exp: "SMOTE는 단순히 소수 데이터를 복제하는 것이 아니라, K-최근접 이웃 알고리즘을 활용하여 기존 소수 데이터들 사이의 특징을 보간해 새로운 합성 데이터를 생성하는 기법입니다." 
+    exp: "① ADASYN: 소수 클래스 데이터 중 학습이 어려운 경계 부근 샘플에 더 많은 합성 데이터를 집중 생성하는 오버샘플링 기법입니다. ② SMOTE: K-최근접 이웃 알고리즘으로 소수 클래스 데이터 사이의 공간적 거리를 계산해 그 사이에 새로운 가상 데이터를 생성합니다. ③ ROS(Random Over-Sampling): 소수 클래스 데이터를 단순 복제하여 수를 늘리는 가장 기본적인 오버샘플링 기법입니다. ④ 랜덤 언더샘플링: 오버샘플링이 아닌 언더샘플링 기법으로, 다수 클래스 데이터를 무작위로 제거하여 균형을 맞춥니다." 
   },
   { 
     subj: 2, 
@@ -1509,7 +1509,7 @@ const QUESTION_BANK = [
     q: "K-평균 군집화(K-means Clustering) 알고리즘의 특징으로 가장 올바르지 않은 것은?", 
     choices: ["군집의 수(K)를 사전에 결정해야 한다.", "초기 중심점 선정에 따라 결과가 달라질 수 있다.", "군집의 형태가 항상 타원형 혹은 볼록 형태일 필요가 없다.", "범주형 변수보다 연속형 수치 변수에 더 적합하다."],
     ans: 2,
-    exp: "K-means는 구형(원형) 군집을 가정하며 타원형·오목형 군집에는 잘 작동하지 않습니다. K 사전 결정 필요, 초기 중심점 의존성, 연속형 수치 변수에 적합(범주형에는 K-modes)은 올바른 특징입니다. ☞ 암기 팁: K-means 단점=K 사전지정·초기값 의존·구형 군집만·이상값 민감·범주형 불가" 
+    exp: "K-means는 유클리드 거리 기반으로 군집을 나누기 때문에 군집이 원형(볼록형)일 때를 가정합니다. 따라서 '볼록 형태일 필요가 없다'는 설명은 틀렸습니다. 타원형·오목형·불규칙형 군집에는 잘 작동하지 않으며, 이 경우 DBSCAN 등 다른 알고리즘을 사용해야 합니다. K 사전 결정 필요, 초기 중심점 의존성, 연속형 수치 변수에 적합(범주형에는 K-modes)은 올바른 특징입니다. ☞ 암기 팁: K-means 단점=K 사전지정·초기값 의존·원형 군집만·이상값 민감·범주형 불가" 
   },
   { 
     subj: 3, 
@@ -1815,7 +1815,7 @@ const QUESTION_BANK = [
   { 
     subj: 3, 
     q: "회귀 모델의 예측 성능을 평가하는 손실 함수 지표들 중에서, 모든 관측치에 대하여 예측값과 실제값 차이의 절댓값을 합산한 후 관측치의 전체 개수로 나누어 도출한 평균 절대 오차를 의미하는 약어는?", 
-    choices: ["MSE(Mean Squared Error)", "RMSE(Root Mean Squared Error)", "MAPE(Mean Absolute Percentage Error)", "MAE(Mean Absolute Error)"], 
+    choices: ["MSE", "RMSE", "MAPE", "MAE"], 
     ans: 3, 
     exp: "MAE(Mean Absolute Error)는 각 오차의 절댓값 평균이므로 계산 방식이 직관적이며 제곱을 취하는 MSE에 비해 큰 이상치에 덜 민감하다는 특성을 가집니다." 
   },
@@ -2039,7 +2039,7 @@ const QUESTION_BANK = [
   {
     subj: 3,
     q: "계절성이 있는 시계열 데이터를 분석하기 위해 ARIMA를 확장한 모형은?",
-    choices: ["VAR(Vector Autoregression)", "GARCH(Generalized ARCH)", "SARIMA(Seasonal ARIMA)", "ARCH(Autoregressive Conditional Heteroskedasticity)"],
+    choices: ["VAR", "GARCH", "SARIMA", "ARCH"],
     ans: 2,
     exp: "SARIMA(Seasonal ARIMA)는 ARIMA 모형에 계절성 성분(Seasonal AR, Seasonal MA, Seasonal Differencing)을 추가한 모형으로 ARIMA(p,d,q)(P,D,Q)s로 표기합니다. 여기서 s는 계절 주기(예: 월별 데이터면 s=12)입니다. ☞ 암기 팁: 계절성 시계열 → SARIMA = ARIMA + 계절성 성분"
   },
@@ -2124,7 +2124,7 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "회귀 모델의 성능을 진단하는 손실함수(비용함수) 지표 중, 예측값과 실제값 차이의 제곱들을 모두 더한 후 데이터의 개수로 나누어 구하는 오차 지표는?", 
-    choices: ["MAE(Mean Absolute Error)", "RMSE(Root Mean Squared Error)", "MAPE(Mean Absolute Percentage Error)", "MSE(Mean Squared Error)"], 
+    choices: ["MAE", "RMSE", "MAPE", "MSE"], 
     ans: 3, 
     exp: "MSE(Mean Squared Error)는 잔차의 제곱을 평균 낸 값으로, 척도의 단위가 제곱이 되므로 오차의 크기를 직관적으로 파악하기 위해 여기에 루트를 씌운 RMSE를 자주 사용합니다." 
   },
@@ -2250,9 +2250,9 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "데이터 교차 검증 방법 중 단 1개의 데이터만을 검증용으로 사용하고 나머지 전체 데이터를 학습용으로 사용하는 과정을 데이터 개수만큼 반복하여, 신뢰도는 높지만 연산량이 매우 많은 기법은?", 
-    choices: ["홀드아웃(Hold-out)", "K-fold 교차검증", "LOOCV(Leave-One-Out Cross Validation)", "부트스트래핑(Bootstrapping)"], 
+    choices: ["홀드아웃(Hold-out)", "K-fold 교차검증", "LOOCV", "부트스트래핑(Bootstrapping)"], 
     ans: 2, 
-    exp: "LOOCV 기법은 단 하나의 관측치만 검증 데이터로 남기고 나머지를 모델 학습에 사용하는 가장 철저하고 반복적인 교차 검증 방식입니다." 
+    exp: "LOOCV(Leave-One-Out Cross Validation) 기법은 단 하나의 관측치만 검증 데이터로 남기고 나머지를 모델 학습에 사용하는 가장 철저하고 반복적인 교차 검증 방식입니다." 
   },
   { 
     subj: 4, 
@@ -2439,7 +2439,7 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "실제 운영 중인 분석 모형의 예측 성능 저하를 방지하기 위해, 시간이 지남에 따라 새롭게 수집된 데이터 트렌드나 최신 알고리즘을 반영하여 기존 모델을 갱신하거나 재학습시키는 과정은?", 
-    choices: ["데이터 수집(Data Collection)", "비즈니스 기여도 평가", "분석모형 리모델링(Remodeling)", "가설 검정(Hypothesis Testing)"], 
+    choices: ["분석모형 전개", "분석모형 모니터링", "분석모형 리모델링", "분석결과 활용 시나리오 개발"], 
     ans: 2, 
     exp: "데이터 분포는 시간이 흐름에 따라 변화할 수 있으므로, 주기적인 모니터링을 거쳐 분석모형 리모델링을 수행해야만 모델의 정확도와 실효성을 지속적으로 유지할 수 있습니다." 
   },
@@ -2460,7 +2460,7 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "회귀 분석의 여러 예측 오차 평가지표 중, 실제값과 예측값의 차이(오차)를 실제값으로 나눈 비율의 평균을 백분율(%)로 나타내는 지표로 수식 형태가 (1/n) * Σ((y - y_hat)/y) * 100 인 것은?", 
-    choices: ["MSE(Mean Squared Error)", "MPE(Mean Percentage Error)", "RMSE(Root Mean Squared Error)", "MAE(Mean Absolute Error)"], 
+    choices: ["MSE", "MPE", "RMSE", "MAE"], 
     ans: 1, 
     exp: "MPE는 오차의 부호가 그대로 유지되는 백분율 지표이므로, 모델이 실제값보다 전반적으로 과대 예측(양수)하는지 과소 예측(음수)하는지의 편향성 추이를 파악하는 데 용이합니다." 
   },
@@ -2551,14 +2551,14 @@ const QUESTION_BANK = [
   { 
     subj: 4, 
     q: "회귀 모델의 성능 평가지표 중, 실제값과 예측값의 오차를 절댓값으로 변환하여 평균을 낸 것으로 이상치(Outlier)에 상대적으로 덜 민감한 지표는?", 
-    choices: ["MSE(Mean Squared Error)", "RMSE(Root Mean Squared Error)", "MAE(Mean Absolute Error)", "MAPE(Mean Absolute Percentage Error)"], 
+    choices: ["MSE", "RMSE", "MAE", "MAPE"], 
     ans: 2, 
     exp: "MAE(Mean Absolute Error)는 오차의 절댓값 평균이므로, 오차를 제곱하여 계산하는 MSE나 RMSE에 비해 극단적인 이상치의 영향을 적게 받습니다." 
   },
   { 
     subj: 4, 
     q: "회귀 모델 평가지표 중 실제값 대비 오차의 비율을 백분율로 나타내어 서로 다른 단위의 데이터 모델 간 성능을 비교할 때 유용한 지표는?", 
-    choices: ["MSE(Mean Squared Error)", "RMSE(Root Mean Squared Error)", "MAE(Mean Absolute Error)", "MAPE(Mean Absolute Percentage Error)"], 
+    choices: ["MSE", "RMSE", "MAE", "MAPE"], 
     ans: 3, 
     exp: "MAPE(Mean Absolute Percentage Error)는 오차를 실제값으로 나눈 비율의 평균이므로 척도에 의존하지 않고 백분율로 모델 성능을 직관적으로 파악할 수 있습니다." 
   },
