@@ -258,21 +258,26 @@
   }
   .fb-title { font-weight: 900; margin-bottom: .3rem; font-size: 1.05rem; }
 
-  .nav-row { display: flex; gap: .7rem; justify-content: flex-end; margin-top: .7rem; }
-  .btn-next {
+  .nav-row { display: flex; gap: .7rem; justify-content: space-between; margin-top: .7rem; }
+  .btn-next, .btn-prev {
     padding: .7rem 1.8rem;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
     color: #0a0a14;
     border: none; border-radius: 10px;
     font-size: .95rem; font-weight: 800;
-    cursor: pointer; display: none;
+    cursor: pointer; display: block;
     box-shadow: 0 0 16px rgba(0,245,255,.4);
     transition: all .2s;
   }
-  .btn-next.show { display: block; }
-  .btn-next:hover {
+  .btn-next:hover, .btn-prev:hover {
     box-shadow: 0 0 24px rgba(0,245,255,.6);
     transform: translateY(-1px);
+  }
+  .btn-prev:disabled {
+    opacity: 0.3;
+    cursor: default;
+    box-shadow: none;
+    transform: none;
   }
 
   /* ══ RESULT ══ */
@@ -465,6 +470,7 @@
       <div id="fbBody"></div>
     </div>
     <div class="nav-row">
+      <button class="btn-prev" id="btnPrev" onclick="prevQ()">← 이전 문제</button>
       <button class="btn-next" id="btnNext" onclick="nextQ()">다음 문제 →</button>
     </div>
   </div>
@@ -611,7 +617,8 @@ function renderQ() {
 
   const fb = document.getElementById('feedbackBox');
   fb.className = 'feedback-box';
-  document.getElementById('btnNext').className = 'btn-next';
+
+  document.getElementById('btnPrev').disabled = (curIdx === 0);
 
   const prev = answered[curIdx];
   if(prev !== null) showFeedback(prev.selected, q.ans, q.exp, false);
@@ -638,12 +645,21 @@ function showFeedback(selected, ans, exp, animate) {
   fb.className = 'feedback-box show ' + (isCorrect ? 'correct-fb' : 'wrong-fb');
   document.getElementById('fbTitle').textContent = isCorrect ? '✅ 정답입니다!' : '❌ 오답입니다';
   document.getElementById('fbBody').innerHTML = `<strong>정답: </strong>${['①','②','③','④'][ans]} ${allQ[curIdx]?.choices[ans] ?? ''}<br><br><strong>해설: </strong>${exp}`;
-  document.getElementById('btnNext').className = 'btn-next show';
+  // btn-next is always visible
 }
 
 function nextQ() {
+  if(answered[curIdx] === null) {
+    answered[curIdx] = { selected: -1, correct: false };
+  }
   curIdx++;
   if(curIdx >= allQ.length) { finishExam(); return; }
+  renderQ();
+}
+
+function prevQ() {
+  if(curIdx === 0) return;
+  curIdx--;
   renderQ();
 }
 
