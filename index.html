@@ -27,6 +27,10 @@
     --accent:  #00f5ff;
     --accent2: #bf00ff;
 
+    /* 버튼 그라데이션용 색상 */
+    --btn-grad1: #00f5ff;
+    --btn-grad2: #bf00ff;
+
     /* 텍스트용 강조색 (배경 위에 읽기 편한 색) */
     --accent-text:  #00f5ff;
     --accent2-text: #d480ff;
@@ -40,6 +44,45 @@
     --wrong-bg:       rgba(255,45,85,.14);
     --wrong-border:   rgba(255,45,85,.75);
     --wrong-text:     #ff5370;
+  }
+
+  [data-theme="light"] {
+    /* 배경/표면 */
+    --bg:      #f0f4ff;
+    --surface: #e4e8f8;
+    --card:    #ffffff;
+    --border:  #c0cae8;
+    --shadow:  rgba(80,100,200,.08);
+
+    /* 텍스트 — 밝은 배경에서 어두운 색 */
+    --text:    #0f1020;
+    --sub:     #505878;
+
+    /* 버튼 보조 */
+    --btn-secondary:      #e0e4f4;
+    --btn-secondary-text: #0f1020;
+
+    /* 강조색 (밝은 배경에서 읽기 편한 채도 낮춘 색) */
+    --accent:  #0099bb;
+    --accent2: #9900cc;
+
+    /* 버튼 그라데이션용 색상 (라이트모드에서 더 밝고 선명하게) */
+    --btn-grad1: #00d4f0;
+    --btn-grad2: #cc44ff;
+
+    /* 텍스트용 강조색 */
+    --accent-text:  #006e88;
+    --accent2-text: #7700aa;
+    --badge-text:   #005f7a;
+    --timer-color:  #006e88;
+
+    /* 정답/오답 */
+    --correct-bg:     rgba(0,160,70,.1);
+    --correct-border: rgba(0,140,60,.55);
+    --correct-text:   #006030;
+    --wrong-bg:       rgba(200,30,60,.1);
+    --wrong-border:   rgba(180,30,60,.55);
+    --wrong-text:     #9e0030;
   }
 
   /* ══ BASE ══ */
@@ -135,7 +178,7 @@
 
   .start-btn {
     width: 100%; padding: 1rem;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    background: linear-gradient(135deg, var(--btn-grad1), var(--btn-grad2));
     color: #0a0a14;
     border: none; border-radius: 12px;
     font-size: 1.05rem; font-weight: 800;
@@ -158,7 +201,7 @@
     justify-content: space-between; margin-bottom: 1rem;
   }
   .subj-label {
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background: linear-gradient(90deg, var(--btn-grad1), var(--btn-grad2));
     color: #0a0a14;
     padding: .3rem .9rem; border-radius: 999px;
     font-size: .82rem; font-weight: 800;
@@ -177,7 +220,7 @@
   }
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background: linear-gradient(90deg, var(--btn-grad1), var(--btn-grad2));
     border-radius: 3px; transition: width .3s;
     box-shadow: 0 0 8px var(--accent);
   }
@@ -262,7 +305,7 @@
   .nav-row { display: flex; gap: .7rem; justify-content: space-between; margin-top: .7rem; }
   .btn-next, .btn-prev {
     padding: .7rem 1.8rem;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    background: linear-gradient(135deg, var(--btn-grad1), var(--btn-grad2));
     color: #0a0a14;
     border: none; border-radius: 10px;
     font-size: .95rem; font-weight: 800;
@@ -279,6 +322,20 @@
     cursor: default;
     box-shadow: none;
     transform: none;
+  }
+  .btn-quiz-home {
+    padding: .7rem 1.8rem;
+    background: linear-gradient(135deg, var(--btn-grad1), var(--btn-grad2));
+    color: #0a0a14;
+    border: none; border-radius: 10px;
+    font-size: .95rem; font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(0,245,255,.4);
+    transition: all .2s;
+  }
+  .btn-quiz-home:hover {
+    box-shadow: 0 0 24px rgba(0,245,255,.6);
+    transform: translateY(-1px);
   }
 
   /* ══ RESULT ══ */
@@ -352,7 +409,7 @@
     transition: all .2s;
   }
   .btn-review {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    background: linear-gradient(135deg, var(--btn-grad1), var(--btn-grad2));
     color: #0a0a14;
     box-shadow: 0 0 14px rgba(0,245,255,.4);
   }
@@ -419,6 +476,27 @@
   }
   .back-btn:hover { border-color: var(--accent); box-shadow: 0 0 10px rgba(0,245,255,.2); }
 
+  /* ══ THEME TOGGLE ══ */
+  .theme-toggle {
+    position: fixed; top: 1rem; right: 1rem; z-index: 999;
+    height: 38px;
+    padding: 0 .9rem;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: .82rem; font-weight: 700;
+    color: var(--text);
+    display: flex; align-items: center; gap: .35rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px var(--shadow);
+    transition: all .2s;
+  }
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(0,200,220,.3);
+  }
+
   @media (max-width: 500px) {
     .subject-grid     { grid-template-columns: 1fr; }
     .subj-result-grid { grid-template-columns: 1fr; }
@@ -426,6 +504,8 @@
 </style>
 </head>
 <body>
+
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()"><span id="themeIcon">🌙</span><span id="themeLabel">다크모드</span></button>
 
 <div id="home" class="screen active">
   <div class="home-card">
@@ -472,6 +552,7 @@
     </div>
     <div class="nav-row">
       <button class="btn-prev" id="btnPrev" onclick="prevQ()">← 이전 문제</button>
+      <button class="btn-quiz-home" onclick="goHome()">홈으로</button>
       <button class="btn-next" id="btnNext" onclick="nextQ()">다음 문제 →</button>
     </div>
   </div>
@@ -505,6 +586,26 @@
 
 <script>
 // ══════════════════════════════════════════
+//  THEME
+// ══════════════════════════════════════════
+(function() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.getElementById('themeIcon').textContent  = saved === 'dark' ? '🌙' : '☀️';
+  document.getElementById('themeLabel').textContent = saved === 'dark' ? '다크모드' : '라이트모드';
+})();
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  document.getElementById('themeIcon').textContent  = next === 'dark' ? '🌙' : '☀️';
+  document.getElementById('themeLabel').textContent = next === 'dark' ? '다크모드' : '라이트모드';
+  localStorage.setItem('theme', next);
+}
+
+// ══════════════════════════════════════════
 //  STATE
 // ══════════════════════════════════════════
 let selectedSubjects = [1,2,3,4];
@@ -518,9 +619,14 @@ let seconds = 7200;
 //  HOME
 // ══════════════════════════════════════════
 function toggleSubj(n) {
-  const idx = selectedSubjects.indexOf(n);
-  if(idx > -1) { if(selectedSubjects.length > 1) selectedSubjects.splice(idx,1); }
-  else selectedSubjects.push(n);
+  if(selectedSubjects.length === 4) {
+    // 전과목 상태 → 클릭한 과목 하나만 선택
+    selectedSubjects = [n];
+  } else {
+    const idx = selectedSubjects.indexOf(n);
+    if(idx > -1) { if(selectedSubjects.length > 1) selectedSubjects.splice(idx,1); }
+    else selectedSubjects.push(n);
+  }
   updateSubjBtns();
 }
 
