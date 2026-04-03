@@ -857,6 +857,7 @@ document.addEventListener('keydown', function(e) {
 
   // 1~4: 보기 선택
   if (e.key === '1' || e.key === '2' || e.key === '3' || e.key === '4') {
+    e.preventDefault();
     const idx = parseInt(e.key) - 1;
     selectAnswer(idx);
     return;
@@ -864,12 +865,14 @@ document.addEventListener('keydown', function(e) {
 
   // 오른쪽 화살표: 다음 문제
   if (e.key === 'ArrowRight') {
+    e.preventDefault();
     nextQ();
     return;
   }
 
   // 왼쪽 화살표: 이전 문제
   if (e.key === 'ArrowLeft') {
+    e.preventDefault();
     prevQ();
     return;
   }
