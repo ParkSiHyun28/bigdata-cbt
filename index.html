@@ -579,6 +579,7 @@
     <button class="back-btn" onclick="showResult()">← 결과로 돌아가기</button>
     <h2>📝 전체 풀이 &amp; 해설</h2>
     <div id="reviewList"></div>
+    <button class="back-btn" onclick="showResult()" style="margin-top:1.2rem">← 결과로 돌아가기</button>
   </div>
 </div>
 
@@ -846,6 +847,33 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
   window.scrollTo(0,0);
 }
+
+// ══════════════════════════════════════════
+//  KEYBOARD SHORTCUTS
+// ══════════════════════════════════════════
+document.addEventListener('keydown', function(e) {
+  const quizActive = document.getElementById('quiz').classList.contains('active');
+  if (!quizActive) return;
+
+  // 1~4: 보기 선택
+  if (e.key === '1' || e.key === '2' || e.key === '3' || e.key === '4') {
+    const idx = parseInt(e.key) - 1;
+    selectAnswer(idx);
+    return;
+  }
+
+  // 오른쪽 화살표: 다음 문제
+  if (e.key === 'ArrowRight') {
+    nextQ();
+    return;
+  }
+
+  // 왼쪽 화살표: 이전 문제
+  if (e.key === 'ArrowLeft') {
+    prevQ();
+    return;
+  }
+});
 </script>
 </body>
 </html>
